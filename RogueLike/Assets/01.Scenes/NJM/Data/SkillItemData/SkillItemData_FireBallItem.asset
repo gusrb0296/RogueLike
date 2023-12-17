@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb25e5380f7e4bd469abe45960954561, type: 3}
+  m_Name: SkillItemData_FireBallItem
+  m_EditorClassIdentifier: 
+  Type: 2
+  Name: FireBall
+  Disription: "\uD30C\uC774\uC5B4\uBCFC\uC744 \uBC1C\uC0AC\uD569\uB2C8\uB2E4."
+  Atk: 10
+  Stamina: 10
+  CoolTime: 0.5
+  SkillSpeed: 10
+  SkillPrefab: {fileID: 6371152401660906179, guid: cda94a7305499c444889a0fd10b39ebb, type: 3}
+  SkillEffect: {fileID: 6848153838122083876, guid: 28942c94e1308e141845d2f0edf80b39, type: 3}
+  SkillMissEffect: {fileID: 3896721516930894050, guid: baebfd3395ca77547b9aa431aa638610, type: 3}
+  SkillIcon: {fileID: 21300000, guid: 9091e85596f8242479c0f5d067bac3d5, type: 3}
+  SkillEffectPosition: {x: 0.6, y: 0, z: 0}

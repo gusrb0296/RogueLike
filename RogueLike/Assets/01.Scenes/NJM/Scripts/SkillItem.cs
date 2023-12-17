@@ -5,8 +5,6 @@ using UnityEngine;
 public class SkillItem : MonoBehaviour
 {
     public SkillItemData SkillData;
-    public PlayerNJM Player;
-
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -17,9 +15,7 @@ public class SkillItem : MonoBehaviour
     }
 
     void UseItem()
-    {
-        Player.IsSkill = true;
-        Player.SkillData = SkillData;
+    {       
         Destroy(gameObject);
     }
 
