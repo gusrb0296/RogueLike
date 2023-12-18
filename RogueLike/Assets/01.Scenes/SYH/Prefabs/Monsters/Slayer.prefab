@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5867988316350016762}
   - component: {fileID: 6034489907599560656}
   - component: {fileID: 8863251752982014508}
-  - component: {fileID: 7521870330918805639}
+  - component: {fileID: 5631664210928028968}
   m_Layer: 7
   m_Name: Slayer
   m_TagString: Untagged
@@ -159,7 +159,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!95 &8863251752982014508
 Animator:
   serializedVersion: 5
@@ -181,7 +181,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &7521870330918805639
+--- !u!114 &5631664210928028968
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -190,7 +190,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4684487991050142955}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e69a92e71a6880543a23f0763d902fe9, type: 3}
+  m_Script: {fileID: 11500000, guid: 674bb675df1f8bb40acda97973346815, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50

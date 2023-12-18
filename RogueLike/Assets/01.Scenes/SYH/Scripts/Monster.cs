@@ -3,8 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Monster : MonoBehaviour
+public class Monster : MonoBehaviour, IDamagable
 {
+    //Stat SO 만들어지면 대체하려고 함.
     #region Factors
     [Header("Stats")]
     public float health;
@@ -28,9 +29,9 @@ public class Monster : MonoBehaviour
     protected float wanderingTime = 0;
     protected float waitingTime = 0;
     protected bool isLeft, isMove;
-    
+
     protected float playerDistance;
-    
+
     protected Animator animator;
     protected Rigidbody2D rigid;
     protected SpriteRenderer spriteRenderer;
@@ -49,14 +50,14 @@ public class Monster : MonoBehaviour
 
     private void Update()
     {
-        
+
     }
     #endregion
 
     #region MonsterStates
     protected void Chasing()
     {
-        if(playerDistance < attackDistance)
+        if (playerDistance < attackDistance)
         {
             Attack();
         }
@@ -64,14 +65,14 @@ public class Monster : MonoBehaviour
         {
             Run();
         }
-        
+
     }
 
     protected virtual void Attack() { }
 
     protected void Run()
     {
-        Vector2 playerDirection = player.transform.position - transform.position; 
+        Vector2 playerDirection = player.transform.position - transform.position;
         isMove = true;
         animator.SetBool("isMove", true);
 
@@ -84,14 +85,14 @@ public class Monster : MonoBehaviour
         }
         else //오른쪽
         {
-            spriteRenderer.flipX= false;
+            spriteRenderer.flipX = false;
             rigid.velocity = Vector2.right * runSpeed;
         }
     }
 
     protected void Waiting()
     {
-        if(waitingTime>wanderWaitTime)
+        if (waitingTime > wanderWaitTime)
         {
             isMove = true;
             animator.SetBool("isMove", true);
@@ -143,6 +144,21 @@ public class Monster : MonoBehaviour
             }
         }
 
+    }
+
+    public void TakeDamage(float damage)
+    {
+        //넉백효과
+        health = health - damage > 0 ? health - damage : 0;
+        Debug.Log($"체력이 {damage}만큼 달았습니다.");
+        if (health == 0) StartCoroutine("Die");
+    }
+
+    IEnumerator Die()
+    {
+        animator.SetTrigger("Die");
+        yield return new WaitForSecondsRealtime(1f);
+        Destroy(gameObject);
     }
     #endregion
 }

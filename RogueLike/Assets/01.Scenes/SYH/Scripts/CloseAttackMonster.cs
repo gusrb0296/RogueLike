@@ -34,7 +34,18 @@ public class CloseAttackMonster : Monster
             lastAttackTime = Time.time;
 
             animator.SetTrigger("Attack");
-
+            //TODO: 플레이어 대미지 계산
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.layer == gameObject.layer)
+        {
+            TakeDamage(damage);
+
+            Debug.Log($"체력이 {damage}만큼 달았습니다.");
+        }
+        
     }
 }
