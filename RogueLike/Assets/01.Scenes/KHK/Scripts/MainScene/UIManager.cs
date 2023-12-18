@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UIManager_KHK : MonoBehaviour
+public class UIManager : MonoBehaviour
 {
     public bool GameIsPaused = false;
     public GameObject PuaseMenuPanel;
