@@ -1,0 +1,6023 @@
+fileFormatVersion: 2
+guid: f0bb73cb05c156d4b9f7f6f68a7eb56d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 176
+        width: 14
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24943caf96ec4a14baa74b6d0010865d
+      internalID: 1338553484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_1
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 176
+        width: 11
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d98a67545d7d2da42a73c9fa5c24b329
+      internalID: 1034070339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_2
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 192
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da246788e6e24924386808de1ab70219
+      internalID: 1953825081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_3
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 176
+        width: 10
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bf1743f3db629a499347274e8e7c095
+      internalID: -879574003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_4
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 176
+        width: 10
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49bf6fd24c4927b41b3322890c431ba8
+      internalID: 1810784637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_5
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 176
+        width: 10
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d798b6c210810a49b8a0dc4a26a4734
+      internalID: -201471080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_6
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 176
+        width: 32
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e856e666c58c86458450bcb50a0e9a9
+      internalID: -1561643869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_7
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 192
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6aa4f85fc07452449e70c144c746adb
+      internalID: 1035091325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_8
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 196
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c69c80f12f378d418a44d7afc8b9acf
+      internalID: -296236757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_9
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 187
+        width: 30
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85d3161dd48100e47b05722f0a6dba4d
+      internalID: 1962269806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_10
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 192
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a0f05f8d786b9e4e9ec32108a424e94
+      internalID: 670019170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_11
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 176
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d120c748241f3b41a43cd0509f82b0d
+      internalID: -1189523985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_12
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 192
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76e229c0ed35e7149b2aa6551f21ad56
+      internalID: -1459765303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_13
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 183
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4435de2a4465134e87bd2e904353bea
+      internalID: -1239420353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_14
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 192
+        width: 64
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c46f658e8fd4d72468883491ac9ee421
+      internalID: -1163806240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_15
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 195
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f6b94c5bdbd54247870b01df40a5298
+      internalID: 822949264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_16
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 196
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a64e5987089bac044b236fd165a67659
+      internalID: 1986276896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_17
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 196
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d412bcd2c4a2804fbae532ead25686c
+      internalID: -1131254319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_18
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 196
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aceee3e21dedf54b854eab355eb13d7
+      internalID: -1691730994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_19
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 196
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60a224c512fd1f94fa9b2025a044c876
+      internalID: -1621775850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_20
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 193
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f585db58dff79c8408a7575253461114
+      internalID: -1868074901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_21
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 193
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4bc6c922587b4140863d0ba4f66949e
+      internalID: 398591690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_22
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 193
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f753c6d5e9cb0a43a8db0f3b0762936
+      internalID: -639926207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_23
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 192
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 760f64aa5a070b44bafc5aaf1f26f464
+      internalID: -193562312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_24
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 165
+        width: 32
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c244d2cb49d6ad74eb98e421385db3ac
+      internalID: 330672701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_25
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 176
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20605d1422d4e8743a18be8abead695c
+      internalID: -217415852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_26
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 178
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fb64d0e101fe174f91ff51e3e1d0624
+      internalID: 1647850010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_27
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 178
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a822ea615faf6c14abae1f53f8099b5d
+      internalID: 1522315762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_28
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 178
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e56367bbdbfee64c87c05e24f118d9f
+      internalID: -1450792492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_29
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 180
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8df96d80b3e9b94479f153033b6a0ed1
+      internalID: 70663299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_30
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 177
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f43033ddb9da7743b663b21438d8556
+      internalID: 462877481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_31
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 179
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcc77a2c7fec41142bf9db54a1c56577
+      internalID: 1372418750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_32
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 180
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9b3b62e54b270143a21384464bf5d51
+      internalID: 2094306207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_33
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 182
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f1cf9e0bdc10504d97882150bf2df96
+      internalID: -519779687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_34
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 184
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1e2e54b5bd538e4ebf1b62086c9b85e
+      internalID: 508512637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_35
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 180
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 339d3c9ac643d8c44abe7cd5629d11b4
+      internalID: -1864317959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_36
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 177
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5486a80fd077e2344b41807e9f2f83fa
+      internalID: 1812060913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_37
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 176
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26dd6e5770a5c264989044d969f7a44a
+      internalID: -818571770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_38
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 176
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 553aba2466d9ed642b852e917b8f896f
+      internalID: -1693189870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_39
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 177
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5159217a409242a46b150bbc79c7b68a
+      internalID: -1054899092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_40
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 176
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f946f24fd1cb774e8514e2a86ff33ef
+      internalID: -1230167354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_41
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 177
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d29d7cb7b309bc346bef21d3a0caef9c
+      internalID: -355648058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_42
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 186
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ced6f8df7d9f6b44581d0f59672c50f7
+      internalID: 2130167636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_43
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 185
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 819213300f9c4d2409c3c819ae9430e0
+      internalID: 1780339634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_44
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 181
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc2e73e57325314498fe14153ecbe911
+      internalID: -734798914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_45
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 177
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b4c8206a24cc9545a6319638ca840b9
+      internalID: 1758490948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_46
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 176
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 542f50ea90a549e4ab4fbe4f9317a56d
+      internalID: -44755565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_47
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 165
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ef1bd0a5e228eb4384d3a087b872a1c
+      internalID: 755553041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_48
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 162
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a4856304b2f14041b4614da92a31668
+      internalID: 405209801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_49
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 160
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2afde399ae81a3c42b236e54d60b1707
+      internalID: 1750118103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_50
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 112
+        width: 32
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54f1d9fec37a4834196f3276fc30f631
+      internalID: -562192729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_51
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 144
+        width: 10
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76a72cfec6d740841a64adeb245e9230
+      internalID: -1691789056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_52
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 161
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1281a097ea773f4fb610649b40f72b2
+      internalID: -934962960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_53
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 163
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b47a5f3293d0de2439852c4c89d79ccd
+      internalID: -80606063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_54
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 160
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a50672f2d2ce3eb4aa0ec632393683f6
+      internalID: -299690026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_55
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 160
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c0002e053df26640b078e0ce535b9c0
+      internalID: -728155641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_56
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 160
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27257a628f3cb8043b0f732dd18286f7
+      internalID: -1744962952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_57
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 145
+        width: 15
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac680a44237d4274a9bfd9025ef00d7a
+      internalID: -2030550841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_58
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 146
+        width: 14
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b0121bfa3829a14c932819b0bf838d4
+      internalID: -1042768414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_59
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 160
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca90e4afdb515ef42823dbafc6af8540
+      internalID: 1350487599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_60
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 160
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 215861de6a1341541ac2ec3628920ebf
+      internalID: -1180515749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_61
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 160
+        width: 64
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91289ef91a44ae94698441a6609dbc04
+      internalID: 1789361564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_62
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 165
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45db220aca1547c45bf5a128d7bc9a3d
+      internalID: -813894492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_63
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 164
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61bd4afb86783b54a9cc2711cc6c7230
+      internalID: 123553240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_64
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 162
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd7000682bdced345bb05098a1618c75
+      internalID: -344339114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_65
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 157
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99ebe62293532274da3dfb502a9c3033
+      internalID: 1437105231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_66
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 134
+        width: 16
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 504a95d47b98cfb4a9a95acc354c58ba
+      internalID: 678791495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_67
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 160
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c9af1ab5c7e19e429fa50546abb5e39
+      internalID: 1057939246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_68
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 160
+        width: 4
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed5c9ba1c4bc75d408c31ff6a8bdcfb7
+      internalID: -701538416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_69
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 145
+        width: 15
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a15529d61231bba4ea4ade7ce447f072
+      internalID: -1156544917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_70
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 161
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e90768607d88d604f88b3588ad2d7f6d
+      internalID: 517161392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_71
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 149
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e0eb2abc5f49974eabd1bedf84f2570
+      internalID: -473403839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_72
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 148
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b48589ba31b9d6e46be32da8df4aa354
+      internalID: -1334442065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_73
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 144
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1c99658919ac594da0414f5365693a5
+      internalID: -1879092913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_74
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 150
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 791dd73fc302d9b48b5fd879ae3c296b
+      internalID: -768684131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_75
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 147
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0a0d3066bdefd64f89601a368e631f0
+      internalID: -97541681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_76
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 96
+        width: 15
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03179fd59d8071746b266621d91d38e7
+      internalID: -221054374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_77
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 146
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5e62274c3add184286d91a96dad2200
+      internalID: -1505627599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_78
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 152
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b98ec267f3707b34fa5e8551faedee35
+      internalID: 272558636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_79
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 147
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b98ec2131ace884f8a943bcb2de4be9
+      internalID: 256524438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_80
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 147
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61140bfc2551203469075b880f77a719
+      internalID: 1023945266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_81
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 148
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31338d74ff449f140acb6b794130861b
+      internalID: -1699572036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_82
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 147
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca73db74bbb918745851aff9390fc5fc
+      internalID: 1964397141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_83
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 148
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e577b29b36eb1544d855e50d5aed5a0c
+      internalID: -469828135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_84
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 149
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcec1382f90afb149a84e0e4a3939f2e
+      internalID: -1361482785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_85
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 147
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1402f86489c1a8144818368f381a70fa
+      internalID: 2099172434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_86
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 146
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fd80fd655198d14daa3c266a55bfa52
+      internalID: -1058465338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_87
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 144
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c197de220bbe7a048a2ed99d6e663cad
+      internalID: -1275466670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_88
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 149
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e7ed43707b945b4bbdfd5f98cd14863
+      internalID: 877809359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_89
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 147
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92f88798965652c44954ab3f8d6c9680
+      internalID: 963213984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_90
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 145
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb1f6912a98580c45a62eccf4b052aee
+      internalID: -1067685727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_91
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 135
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55c1d0b1ebc2cf041b9859f23f6c61df
+      internalID: 834630297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_92
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 148
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 266ae29d7a233774a9655ffdf6d84e8e
+      internalID: -1602475864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_93
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 137
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a544b6e8448dd34c8db1472e8107ac6
+      internalID: 1227999691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_94
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 136
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 701b9ca7efc94374695a3b80c84426c1
+      internalID: -883762041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_95
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 80
+        width: 64
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3e738cf12351ab4c9a30e91479a2d89
+      internalID: 839995520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_96
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 144
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 456c20a0420e1ee41a67197bb4581994
+      internalID: 1880976262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_97
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 131
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 346b3507a9f698643b49fe9b86f329e4
+      internalID: -1800278006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_98
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 131
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06e48ef62934a0f4fb2827a7f4e7337b
+      internalID: 1130663486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_99
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 131
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afb6d0ae23c22ad458cbca6aa6714bfc
+      internalID: 1573806251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_100
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 112
+        width: 11
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b91e2e7322a748b4eaf6ae0c0a31edca
+      internalID: -7734229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_101
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 702a92e7a7b781c42b1788d654806afe
+      internalID: -912858794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_102
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 130
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79fad1e097b8f03488883593795ad6eb
+      internalID: -270591571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_103
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 131
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5540c31d13808e241ab1b778aec41321
+      internalID: -1975947097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_104
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 129
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a7b4167c8ff47b47b88e96fd397f4dd
+      internalID: -498176462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_105
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9008ed35abe5085439cfebe8f7b31c8c
+      internalID: 1894890159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_106
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 119
+        width: 16
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 588b93225581bec468cb7dab61bb02d2
+      internalID: -1856678516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_107
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 130
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 058a342d84b5a6547898c360da75daee
+      internalID: 1192551134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_108
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 128
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00a441bd99561794fbf00fcf62600058
+      internalID: -1346520940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_109
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 132
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 246749e92311143438b636498c873a38
+      internalID: 2145953543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_110
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 133
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4173a62a07ac9794ca2dfaeee8cbd9e6
+      internalID: 47398950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_111
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 113
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c499bcf27353ff4db1f3857577e6eac
+      internalID: 1813046084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_112
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 133
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fad0791b28f1e548acff3cc648ef5df
+      internalID: -1892156217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_113
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 132
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32e9264f4d6084048ae7ce2b928b090d
+      internalID: 1753119354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_114
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 132
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02a8c6300975304408ab46c4adf979ef
+      internalID: 597202922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_115
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 132
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee3238b609edcc94789e569a0ab78cb6
+      internalID: 1272974997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_116
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 116
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5fdbfd8e1c31bb46a0465fada681191
+      internalID: -2126848236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_117
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 115
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c99a9acf9d7e1141822dcf3481b10da
+      internalID: -2022794431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_118
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 114
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c314f68389b68b4e81f7d1de4a9ee55
+      internalID: 1875400906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_119
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 114
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7297229c85fc12e4b96562b22eb36ef8
+      internalID: -377856818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_120
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e8b1937a8bd70141a78bbc145a75eda
+      internalID: 1800447083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_121
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 115
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19f8661d5ed221e47b10cfcaa160a387
+      internalID: 1054561081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_122
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 98
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14c5d78759a1c3b48b1551d0c40be6ab
+      internalID: 892729484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_123
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 117
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d006914b5aac8454d9a0fc1986f2f132
+      internalID: 1549375077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_124
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 117
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3ccb100d9ad93f4caef38190a3b1924
+      internalID: 162876951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_125
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 118
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c73286aee51f6448aac539f2ad24a0e
+      internalID: -1589970996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_126
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 113
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11fc3812558668841987c34bc25cf2ee
+      internalID: -12876279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_127
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 114
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68b2e4ea758983542ac0359cd3c91692
+      internalID: 1257835782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_128
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 115
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 040bb9887d795ec49ad284404cbd521a
+      internalID: -917800098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_129
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 116
+        width: 21
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4468d53081e7c5340bf7d70731ae07c3
+      internalID: 1170336079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_130
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 102
+        width: 14
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7528af41ec2d11341b9f5e1497e279f8
+      internalID: -87532823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_131
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 113
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 376a15373e1957747bc08fbe4a52b572
+      internalID: 474922579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_132
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 113
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1181285d66279a04597cba0ba575c8b3
+      internalID: -1367465544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_133
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 98
+        width: 14
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6313ceec1d48ce45a40cbd57b64a55f
+      internalID: 564906448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_134
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 100
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c390ee6042a16f147be6355ae8f62f68
+      internalID: 1852080061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_135
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 98
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba87ec8139ccfa74b9ad20b32a7cf2f5
+      internalID: 1102374409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_136
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 99
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b94269193890d0b4a929eeabfdc6bdfe
+      internalID: 1419819745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_137
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 97
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46174636111549a4fa8c4fa1722b396e
+      internalID: 552959153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_138
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 98
+        width: 5
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f25637c8b4725c444926f21bd38712ac
+      internalID: -1251796143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_139
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 99
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0ea5a4e0e97dd14cac4adf2a49ba208
+      internalID: 2027274538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_140
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 96
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5e9542e068cb1648a249c19663c7522
+      internalID: -1852754641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_141
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 99
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59bc40799b563f5498bc2d4b109c67a1
+      internalID: -1303054196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_142
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 99
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 115d07717a502d4408ca45bdb27ac7ed
+      internalID: -2046535263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_143
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 101
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3582d5628558784494c703fa7b2df1e
+      internalID: 1834240403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_144
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 100
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 692120283d5e6ab478e6c5bae476eee5
+      internalID: -2143656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_145
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 101
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a32e7fc215475a24f86cec55256cb05f
+      internalID: 706915066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_146
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 100
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31ee344312b668f459de02a99cc3abc4
+      internalID: 898250246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_147
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 99
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e73d323dab9cf034993c24d17fef871d
+      internalID: -1671723706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_148
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 96
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 675f75099b3b4b14ca3ea246178c384b
+      internalID: 1034825914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_149
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 96
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23e971c66594cee42a72b75c2f32cdf8
+      internalID: 1995538372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_150
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 82
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e45d7ba227b02ad48949cb8e23d6d980
+      internalID: 391947022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_151
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 101
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64952f0957b73574d911b51809730fc3
+      internalID: -643944790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_152
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 98
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f13548c560e7c94696246b28cb8dbcc
+      internalID: -1534090755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_153
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 48
+        width: 16
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93941c94884ba294098c7354b797777c
+      internalID: -646255682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_154
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 80
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e859623c723fc4449a903f8ce62626f5
+      internalID: 568716554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_155
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 96
+        width: 8
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c1c4e9ef02b2124686d09a244415799
+      internalID: 674579503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_156
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 80
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e2b1690778f8734cb98198c17342855
+      internalID: -255876430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_157
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 83
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f5f94e13a0c67d41b03a107a4e48d2b
+      internalID: -1930698530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_158
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 82
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a49fd6645eddd9f4aaf02ba8172d962a
+      internalID: 324588396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_159
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 258fed58a0b9f2940a295b125a34556c
+      internalID: 561317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_160
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 84
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 210edbdc28f28df4aaa0a697efe059a1
+      internalID: 388829060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_161
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 82
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8316f515aa972f49b9dcb4fef1dba46
+      internalID: -888025695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_162
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 84
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f98df74870da9b94baa57408dd170c5d
+      internalID: 495490878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_163
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12f2c71ce051f114c9ae072a6409b59a
+      internalID: 772738777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_164
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 84
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03bf385221be8d0449e15a672b5d7fd8
+      internalID: -1382762460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_165
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 83
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d39b957c8e0fee49aaee3bd7ea6febf
+      internalID: -594905242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_166
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 82
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a950c25da040804479a31ec810d81411
+      internalID: 252201506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_167
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 81
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b54bb1d269c04648b0a6c36d057d3ca
+      internalID: 1933550089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_168
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 80
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15040ec6264b18c479008718d7a2f9ed
+      internalID: 1371261929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_169
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 80
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54670be937e168b4eb115c1c8e546398
+      internalID: 901681164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_170
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 81
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12535603c2c75d142a7fd24883c9264c
+      internalID: -989388069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_171
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 71
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04de0eb8d85cb5544a68bb0a20e78376
+      internalID: -1018313365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_172
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 80
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e0fe0fcc06433248b3e4fd3fecfa139
+      internalID: 242592629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_173
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 80
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84859de2ff652d244ae41335f73db6b1
+      internalID: 1317613820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_174
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 80
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 991ecac95c3891946a5c088043a5ceaa
+      internalID: 712747738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_175
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 81
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e922a92229f0f54cb32457d62c666ad
+      internalID: 1838768121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_176
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 82
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce085d9f54f981e46b67c924d9ea0305
+      internalID: 177088554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_177
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 169e6195c2615cd41b041828231ef498
+      internalID: 341833854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_178
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 70
+        width: 14
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9cf5e3bcb934d54aaf5782e9aa906e4
+      internalID: 1867254181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_179
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 66
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cccf2f338721ab34787553d04d56433e
+      internalID: 2137891683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_180
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 65
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d58fce18f8bc10f41979b5bca7a7096b
+      internalID: 1124677401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_181
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 67
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7afc58cad3044643adc8ae7d3dcff2b
+      internalID: 1182393383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_182
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 48
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d925938935d20ba45b04c4ef1095afac
+      internalID: -1701052886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_183
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 65
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70815218e984ccf479e685c77babdbf2
+      internalID: -1677937367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_184
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 66
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc076caa0859ecb43818a02e5e00f0cb
+      internalID: 480378085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_185
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 72
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94250404a3b18b24f8658ef5d7e8de6f
+      internalID: -1685321951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_186
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d73c01d2db039440977e58083cb7ac9
+      internalID: 145307123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_187
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 66
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 707bcddae665ed1439b7b2d3e875d2ef
+      internalID: -1317601484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_188
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 48
+        width: 15
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a440d1a2aa8495418307911860033ab
+      internalID: -1953341114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_189
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 64
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9c5f47f49072bb49ac7e2fc0e83d4cc
+      internalID: -221716438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_190
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 64
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0910cec5b8c8a9042bd920ebc74aacc0
+      internalID: -925155403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_191
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 64
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93ae2c1510d4b5b4787513e59b752ffa
+      internalID: 2090104654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_192
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 64
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cd194a7bd1fe66429c7a101508431c1
+      internalID: -1802935240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_193
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 64
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cca01de7f72af1946adf4ce49d14801a
+      internalID: -1596330444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_194
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 69
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 586f6448943e2684cb1f65549ec59ef9
+      internalID: -1104932307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_195
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 74
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5568f09c9ec2eed41b912b6b2cdc2724
+      internalID: 2065411351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_196
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 65
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beabb9fd092d7c4468dfddd894b6d3af
+      internalID: 94430904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_197
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 66
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 526120c8fe41631439bab9bd5ab2e4ca
+      internalID: -913216444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_198
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 67
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91a86bf5cf30f9e419525777a6753201
+      internalID: 319972110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_199
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 68
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70eadb575cc39fd4293b111c068d1fea
+      internalID: -1153455004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_200
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 65
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2c9c36701c135c49a9ffe8b8222da3e
+      internalID: -487919761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_201
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 65
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7607cf02586f69343bd68f315c738978
+      internalID: 937285844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_202
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 67
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cb7afec4ee06cc499b1d31d1f2bb0f1
+      internalID: 1064126658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_203
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 67
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f8c92624c623c942849d6f2e71ad817
+      internalID: -1457376507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_204
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 64
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf5f1e7a94a6c9b4fbc0abed64a27a22
+      internalID: 574517920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_205
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 69
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3788871370829e24c95a0ef27157bee2
+      internalID: 2135315723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_206
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 52
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 675e25624fbb948458dec82cd99dff69
+      internalID: -961093306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_207
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a470a27cbb138941987dd4f7714142d
+      internalID: -867127438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_208
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 50
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c0b6d5407173284eb8d7faa9162c1a9
+      internalID: 900678404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_209
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7072aa9b83a0304db27dd345883427f
+      internalID: -1833187477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_210
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 49
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00ac979f149c0504bb5334d0dcec3a93
+      internalID: -326497741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_211
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 50
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2b66e5ac630d364988b1460e2272e7a
+      internalID: -636125731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_212
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 54
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a5a38b115f37354fa7e2b49f1e9cbd5
+      internalID: 2039302040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_213
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 52
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82dd7ba703cc8e0419b38a101e9cb3e6
+      internalID: 1056067284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_214
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 51
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50631939d397a9e4c8686c72fcb66506
+      internalID: 1864666255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_215
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 48
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05282e11bdb0cd84693bb809275fdece
+      internalID: -1874985097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_216
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 48
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7779cd0f5f70ce3468fec3d831be4c7e
+      internalID: 702699635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_217
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 48
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46d592957a37f2549a7ad4ab10d24d9f
+      internalID: 608110119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_218
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 50
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9491bff6d233a064b97ce1d8a7c97353
+      internalID: 1452979645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_219
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 50
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc01674eaba185446b9c2c1a5c263a4b
+      internalID: 1635915517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_220
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 50
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d13cf3ade3f8f44fa1c19a2e8e15630
+      internalID: -1732434006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_221
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 50
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b47d527d013e6d0459884421f9ebdfa8
+      internalID: -1948491631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_222
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 49
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccea504c8e3309341a3ad3981a4463d5
+      internalID: -659927584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_223
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 50
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70843897acda2d64a80da8ed998e84c3
+      internalID: 1368870642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_224
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 51
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b933d356bb39c0142999ab385e4efb42
+      internalID: -1100566101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_225
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 6
+        width: 28
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d621c2fd1260d14783eb4c1d131fda4
+      internalID: -1864883587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_226
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 34
+        width: 27
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18e8b76fc0f202b4f965dff1a679236a
+      internalID: -349744000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_227
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 38
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2753eba12d7bde34cb3b2fcd5fa71919
+      internalID: 1011762753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_228
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 36
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37da38807e7745c48bfebd6adc245b6d
+      internalID: -695102363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_229
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b49e9e13e987574ba2a63b26aeac3ec
+      internalID: 705592491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_230
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 33
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12ca3db370030b3439bcbc0b1e2c1ab6
+      internalID: -567859300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_231
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 33
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ccea5219de1a204f8733a598c5cb859
+      internalID: 707845698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_232
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 16
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32cbd966560ea0d499a55861838f9ec2
+      internalID: -1377066369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_233
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 16
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15360bfe6e257d74b88c3a105de34684
+      internalID: 315697777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_234
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 36
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a49fb6fbca598b64497a65b0badbc607
+      internalID: 163788721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_235
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 36
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfe6b911f7164b143b7b62382d27a244
+      internalID: 1346256901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_236
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 16
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fa19a714b691a043884642847ea3a66
+      internalID: 1201599922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_237
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 16
+        width: 14
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20ed50035e39f7344946bfaca84fe54a
+      internalID: 2045476785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_238
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 16
+        width: 14
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bea79c2f7834d17498a1a4de5ddfc62d
+      internalID: -1715295464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_239
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 34
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82027d539ac51104d99978c39b9fb163
+      internalID: 627586505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_240
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 34
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d86fa6376f2069429b8e8f25e492e7d
+      internalID: 140538222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_241
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 34
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 336b36726e1bc7d46a438e925c6a5d28
+      internalID: -1201767398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_242
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 34
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c76ab8e8871dea7488a2bd863e1785d9
+      internalID: 164817119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_243
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 33
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a3eedb4a2a57c54aa502a6994d3ec31
+      internalID: 1832653377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_244
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 33
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3edea2af1be521b4bbc1d425cdd05853
+      internalID: -132448611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_245
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 33
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c15ac085a2cb644418fcaa4eacd84929
+      internalID: 1305314185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_246
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 28
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54f9917a3c92f814d80afe0f71f8673a
+      internalID: -1774690564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_247
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 35
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88b3fd9bc33b0f64f9c395fb90ef52a6
+      internalID: -1336111850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_248
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 36
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71e7d4b6a4e5a9b4e815cde5bb00a5bb
+      internalID: -895273156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_249
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 35
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea6988c3eb10a0643a6b93253eafb25b
+      internalID: 1890101132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_250
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 36
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1517f7b4c386a8b4e8483f44fb9f6419
+      internalID: -1844229896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_251
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 37
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2819a59e0469dc478e194c65f7ecb52
+      internalID: 481070858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_252
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 18
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8b251956e668bd48a133bb91b50623d
+      internalID: -1566548988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_253
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 16
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99d54cf56e46537419aa170683e4a525
+      internalID: -1892737178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_254
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 64
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e5470a8bf73f2d4f998c3b0350cc328
+      internalID: -1000426394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_255
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 18
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9a142d4afdaa724a8801343ea144ee9
+      internalID: 1044386858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_256
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 4
+        width: 23
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0951b326f161c5b4fb1e7cdf6cb34bbf
+      internalID: -955340342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_257
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 18
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a134860fdf631dc4caf4eb168b19efb1
+      internalID: 1267356091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_258
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 2
+        width: 13
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4218949e3b693f4cb694d246417ead5
+      internalID: 668187126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_259
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 1
+        width: 15
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80d25508ab80940438aca166c60674c0
+      internalID: -1425570823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_260
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 9
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a15aaed7be1471e4a848c89d18c345f5
+      internalID: -1247528286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_261
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 0
+        width: 15
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b9ace3c46af8754e97f70880242e9af
+      internalID: 947371811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_262
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 0
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d856cb4cd2d3c7343a2fd81f8017756e
+      internalID: -1496524125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_263
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 0
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4efea15eac1b8945a908c0f880ff42d
+      internalID: 686913195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_264
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 0
+        width: 21
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83633a5080c3a6342869967017f70bae
+      internalID: -1906952037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_265
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 0
+        width: 5
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a9d220ae7c379e40b4029b1efd73d52
+      internalID: 1076999966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_266
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 0
+        width: 7
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c34633e83158ae641963e0f343b0e042
+      internalID: -1362753362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Effect and Bullet 16x16_267
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 0
+        width: 31
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 490083106d0733440a565999aadbbbcd
+      internalID: 811104936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Water Effect and Bullet 16x16_0: 1338553484
+      Water Effect and Bullet 16x16_1: 1034070339
+      Water Effect and Bullet 16x16_10: 670019170
+      Water Effect and Bullet 16x16_100: -7734229
+      Water Effect and Bullet 16x16_101: -912858794
+      Water Effect and Bullet 16x16_102: -270591571
+      Water Effect and Bullet 16x16_103: -1975947097
+      Water Effect and Bullet 16x16_104: -498176462
+      Water Effect and Bullet 16x16_105: 1894890159
+      Water Effect and Bullet 16x16_106: -1856678516
+      Water Effect and Bullet 16x16_107: 1192551134
+      Water Effect and Bullet 16x16_108: -1346520940
+      Water Effect and Bullet 16x16_109: 2145953543
+      Water Effect and Bullet 16x16_11: -1189523985
+      Water Effect and Bullet 16x16_110: 47398950
+      Water Effect and Bullet 16x16_111: 1813046084
+      Water Effect and Bullet 16x16_112: -1892156217
+      Water Effect and Bullet 16x16_113: 1753119354
+      Water Effect and Bullet 16x16_114: 597202922
+      Water Effect and Bullet 16x16_115: 1272974997
+      Water Effect and Bullet 16x16_116: -2126848236
+      Water Effect and Bullet 16x16_117: -2022794431
+      Water Effect and Bullet 16x16_118: 1875400906
+      Water Effect and Bullet 16x16_119: -377856818
+      Water Effect and Bullet 16x16_12: -1459765303
+      Water Effect and Bullet 16x16_120: 1800447083
+      Water Effect and Bullet 16x16_121: 1054561081
+      Water Effect and Bullet 16x16_122: 892729484
+      Water Effect and Bullet 16x16_123: 1549375077
+      Water Effect and Bullet 16x16_124: 162876951
+      Water Effect and Bullet 16x16_125: -1589970996
+      Water Effect and Bullet 16x16_126: -12876279
+      Water Effect and Bullet 16x16_127: 1257835782
+      Water Effect and Bullet 16x16_128: -917800098
+      Water Effect and Bullet 16x16_129: 1170336079
+      Water Effect and Bullet 16x16_13: -1239420353
+      Water Effect and Bullet 16x16_130: -87532823
+      Water Effect and Bullet 16x16_131: 474922579
+      Water Effect and Bullet 16x16_132: -1367465544
+      Water Effect and Bullet 16x16_133: 564906448
+      Water Effect and Bullet 16x16_134: 1852080061
+      Water Effect and Bullet 16x16_135: 1102374409
+      Water Effect and Bullet 16x16_136: 1419819745
+      Water Effect and Bullet 16x16_137: 552959153
+      Water Effect and Bullet 16x16_138: -1251796143
+      Water Effect and Bullet 16x16_139: 2027274538
+      Water Effect and Bullet 16x16_14: -1163806240
+      Water Effect and Bullet 16x16_140: -1852754641
+      Water Effect and Bullet 16x16_141: -1303054196
+      Water Effect and Bullet 16x16_142: -2046535263
+      Water Effect and Bullet 16x16_143: 1834240403
+      Water Effect and Bullet 16x16_144: -2143656
+      Water Effect and Bullet 16x16_145: 706915066
+      Water Effect and Bullet 16x16_146: 898250246
+      Water Effect and Bullet 16x16_147: -1671723706
+      Water Effect and Bullet 16x16_148: 1034825914
+      Water Effect and Bullet 16x16_149: 1995538372
+      Water Effect and Bullet 16x16_15: 822949264
+      Water Effect and Bullet 16x16_150: 391947022
+      Water Effect and Bullet 16x16_151: -643944790
+      Water Effect and Bullet 16x16_152: -1534090755
+      Water Effect and Bullet 16x16_153: -646255682
+      Water Effect and Bullet 16x16_154: 568716554
+      Water Effect and Bullet 16x16_155: 674579503
+      Water Effect and Bullet 16x16_156: -255876430
+      Water Effect and Bullet 16x16_157: -1930698530
+      Water Effect and Bullet 16x16_158: 324588396
+      Water Effect and Bullet 16x16_159: 561317
+      Water Effect and Bullet 16x16_16: 1986276896
+      Water Effect and Bullet 16x16_160: 388829060
+      Water Effect and Bullet 16x16_161: -888025695
+      Water Effect and Bullet 16x16_162: 495490878
+      Water Effect and Bullet 16x16_163: 772738777
+      Water Effect and Bullet 16x16_164: -1382762460
+      Water Effect and Bullet 16x16_165: -594905242
+      Water Effect and Bullet 16x16_166: 252201506
+      Water Effect and Bullet 16x16_167: 1933550089
+      Water Effect and Bullet 16x16_168: 1371261929
+      Water Effect and Bullet 16x16_169: 901681164
+      Water Effect and Bullet 16x16_17: -1131254319
+      Water Effect and Bullet 16x16_170: -989388069
+      Water Effect and Bullet 16x16_171: -1018313365
+      Water Effect and Bullet 16x16_172: 242592629
+      Water Effect and Bullet 16x16_173: 1317613820
+      Water Effect and Bullet 16x16_174: 712747738
+      Water Effect and Bullet 16x16_175: 1838768121
+      Water Effect and Bullet 16x16_176: 177088554
+      Water Effect and Bullet 16x16_177: 341833854
+      Water Effect and Bullet 16x16_178: 1867254181
+      Water Effect and Bullet 16x16_179: 2137891683
+      Water Effect and Bullet 16x16_18: -1691730994
+      Water Effect and Bullet 16x16_180: 1124677401
+      Water Effect and Bullet 16x16_181: 1182393383
+      Water Effect and Bullet 16x16_182: -1701052886
+      Water Effect and Bullet 16x16_183: -1677937367
+      Water Effect and Bullet 16x16_184: 480378085
+      Water Effect and Bullet 16x16_185: -1685321951
+      Water Effect and Bullet 16x16_186: 145307123
+      Water Effect and Bullet 16x16_187: -1317601484
+      Water Effect and Bullet 16x16_188: -1953341114
+      Water Effect and Bullet 16x16_189: -221716438
+      Water Effect and Bullet 16x16_19: -1621775850
+      Water Effect and Bullet 16x16_190: -925155403
+      Water Effect and Bullet 16x16_191: 2090104654
+      Water Effect and Bullet 16x16_192: -1802935240
+      Water Effect and Bullet 16x16_193: -1596330444
+      Water Effect and Bullet 16x16_194: -1104932307
+      Water Effect and Bullet 16x16_195: 2065411351
+      Water Effect and Bullet 16x16_196: 94430904
+      Water Effect and Bullet 16x16_197: -913216444
+      Water Effect and Bullet 16x16_198: 319972110
+      Water Effect and Bullet 16x16_199: -1153455004
+      Water Effect and Bullet 16x16_2: 1953825081
+      Water Effect and Bullet 16x16_20: -1868074901
+      Water Effect and Bullet 16x16_200: -487919761
+      Water Effect and Bullet 16x16_201: 937285844
+      Water Effect and Bullet 16x16_202: 1064126658
+      Water Effect and Bullet 16x16_203: -1457376507
+      Water Effect and Bullet 16x16_204: 574517920
+      Water Effect and Bullet 16x16_205: 2135315723
+      Water Effect and Bullet 16x16_206: -961093306
+      Water Effect and Bullet 16x16_207: -867127438
+      Water Effect and Bullet 16x16_208: 900678404
+      Water Effect and Bullet 16x16_209: -1833187477
+      Water Effect and Bullet 16x16_21: 398591690
+      Water Effect and Bullet 16x16_210: -326497741
+      Water Effect and Bullet 16x16_211: -636125731
+      Water Effect and Bullet 16x16_212: 2039302040
+      Water Effect and Bullet 16x16_213: 1056067284
+      Water Effect and Bullet 16x16_214: 1864666255
+      Water Effect and Bullet 16x16_215: -1874985097
+      Water Effect and Bullet 16x16_216: 702699635
+      Water Effect and Bullet 16x16_217: 608110119
+      Water Effect and Bullet 16x16_218: 1452979645
+      Water Effect and Bullet 16x16_219: 1635915517
+      Water Effect and Bullet 16x16_22: -639926207
+      Water Effect and Bullet 16x16_220: -1732434006
+      Water Effect and Bullet 16x16_221: -1948491631
+      Water Effect and Bullet 16x16_222: -659927584
+      Water Effect and Bullet 16x16_223: 1368870642
+      Water Effect and Bullet 16x16_224: -1100566101
+      Water Effect and Bullet 16x16_225: -1864883587
+      Water Effect and Bullet 16x16_226: -349744000
+      Water Effect and Bullet 16x16_227: 1011762753
+      Water Effect and Bullet 16x16_228: -695102363
+      Water Effect and Bullet 16x16_229: 705592491
+      Water Effect and Bullet 16x16_23: -193562312
+      Water Effect and Bullet 16x16_230: -567859300
+      Water Effect and Bullet 16x16_231: 707845698
+      Water Effect and Bullet 16x16_232: -1377066369
+      Water Effect and Bullet 16x16_233: 315697777
+      Water Effect and Bullet 16x16_234: 163788721
+      Water Effect and Bullet 16x16_235: 1346256901
+      Water Effect and Bullet 16x16_236: 1201599922
+      Water Effect and Bullet 16x16_237: 2045476785
+      Water Effect and Bullet 16x16_238: -1715295464
+      Water Effect and Bullet 16x16_239: 627586505
+      Water Effect and Bullet 16x16_24: 330672701
+      Water Effect and Bullet 16x16_240: 140538222
+      Water Effect and Bullet 16x16_241: -1201767398
+      Water Effect and Bullet 16x16_242: 164817119
+      Water Effect and Bullet 16x16_243: 1832653377
+      Water Effect and Bullet 16x16_244: -132448611
+      Water Effect and Bullet 16x16_245: 1305314185
+      Water Effect and Bullet 16x16_246: -1774690564
+      Water Effect and Bullet 16x16_247: -1336111850
+      Water Effect and Bullet 16x16_248: -895273156
+      Water Effect and Bullet 16x16_249: 1890101132
+      Water Effect and Bullet 16x16_25: -217415852
+      Water Effect and Bullet 16x16_250: -1844229896
+      Water Effect and Bullet 16x16_251: 481070858
+      Water Effect and Bullet 16x16_252: -1566548988
+      Water Effect and Bullet 16x16_253: -1892737178
+      Water Effect and Bullet 16x16_254: -1000426394
+      Water Effect and Bullet 16x16_255: 1044386858
+      Water Effect and Bullet 16x16_256: -955340342
+      Water Effect and Bullet 16x16_257: 1267356091
+      Water Effect and Bullet 16x16_258: 668187126
+      Water Effect and Bullet 16x16_259: -1425570823
+      Water Effect and Bullet 16x16_26: 1647850010
+      Water Effect and Bullet 16x16_260: -1247528286
+      Water Effect and Bullet 16x16_261: 947371811
+      Water Effect and Bullet 16x16_262: -1496524125
+      Water Effect and Bullet 16x16_263: 686913195
+      Water Effect and Bullet 16x16_264: -1906952037
+      Water Effect and Bullet 16x16_265: 1076999966
+      Water Effect and Bullet 16x16_266: -1362753362
+      Water Effect and Bullet 16x16_267: 811104936
+      Water Effect and Bullet 16x16_27: 1522315762
+      Water Effect and Bullet 16x16_28: -1450792492
+      Water Effect and Bullet 16x16_29: 70663299
+      Water Effect and Bullet 16x16_3: -879574003
+      Water Effect and Bullet 16x16_30: 462877481
+      Water Effect and Bullet 16x16_31: 1372418750
+      Water Effect and Bullet 16x16_32: 2094306207
+      Water Effect and Bullet 16x16_33: -519779687
+      Water Effect and Bullet 16x16_34: 508512637
+      Water Effect and Bullet 16x16_35: -1864317959
+      Water Effect and Bullet 16x16_36: 1812060913
+      Water Effect and Bullet 16x16_37: -818571770
+      Water Effect and Bullet 16x16_38: -1693189870
+      Water Effect and Bullet 16x16_39: -1054899092
+      Water Effect and Bullet 16x16_4: 1810784637
+      Water Effect and Bullet 16x16_40: -1230167354
+      Water Effect and Bullet 16x16_41: -355648058
+      Water Effect and Bullet 16x16_42: 2130167636
+      Water Effect and Bullet 16x16_43: 1780339634
+      Water Effect and Bullet 16x16_44: -734798914
+      Water Effect and Bullet 16x16_45: 1758490948
+      Water Effect and Bullet 16x16_46: -44755565
+      Water Effect and Bullet 16x16_47: 755553041
+      Water Effect and Bullet 16x16_48: 405209801
+      Water Effect and Bullet 16x16_49: 1750118103
+      Water Effect and Bullet 16x16_5: -201471080
+      Water Effect and Bullet 16x16_50: -562192729
+      Water Effect and Bullet 16x16_51: -1691789056
+      Water Effect and Bullet 16x16_52: -934962960
+      Water Effect and Bullet 16x16_53: -80606063
+      Water Effect and Bullet 16x16_54: -299690026
+      Water Effect and Bullet 16x16_55: -728155641
+      Water Effect and Bullet 16x16_56: -1744962952
+      Water Effect and Bullet 16x16_57: -2030550841
+      Water Effect and Bullet 16x16_58: -1042768414
+      Water Effect and Bullet 16x16_59: 1350487599
+      Water Effect and Bullet 16x16_6: -1561643869
+      Water Effect and Bullet 16x16_60: -1180515749
+      Water Effect and Bullet 16x16_61: 1789361564
+      Water Effect and Bullet 16x16_62: -813894492
+      Water Effect and Bullet 16x16_63: 123553240
+      Water Effect and Bullet 16x16_64: -344339114
+      Water Effect and Bullet 16x16_65: 1437105231
+      Water Effect and Bullet 16x16_66: 678791495
+      Water Effect and Bullet 16x16_67: 1057939246
+      Water Effect and Bullet 16x16_68: -701538416
+      Water Effect and Bullet 16x16_69: -1156544917
+      Water Effect and Bullet 16x16_7: 1035091325
+      Water Effect and Bullet 16x16_70: 517161392
+      Water Effect and Bullet 16x16_71: -473403839
+      Water Effect and Bullet 16x16_72: -1334442065
+      Water Effect and Bullet 16x16_73: -1879092913
+      Water Effect and Bullet 16x16_74: -768684131
+      Water Effect and Bullet 16x16_75: -97541681
+      Water Effect and Bullet 16x16_76: -221054374
+      Water Effect and Bullet 16x16_77: -1505627599
+      Water Effect and Bullet 16x16_78: 272558636
+      Water Effect and Bullet 16x16_79: 256524438
+      Water Effect and Bullet 16x16_8: -296236757
+      Water Effect and Bullet 16x16_80: 1023945266
+      Water Effect and Bullet 16x16_81: -1699572036
+      Water Effect and Bullet 16x16_82: 1964397141
+      Water Effect and Bullet 16x16_83: -469828135
+      Water Effect and Bullet 16x16_84: -1361482785
+      Water Effect and Bullet 16x16_85: 2099172434
+      Water Effect and Bullet 16x16_86: -1058465338
+      Water Effect and Bullet 16x16_87: -1275466670
+      Water Effect and Bullet 16x16_88: 877809359
+      Water Effect and Bullet 16x16_89: 963213984
+      Water Effect and Bullet 16x16_9: 1962269806
+      Water Effect and Bullet 16x16_90: -1067685727
+      Water Effect and Bullet 16x16_91: 834630297
+      Water Effect and Bullet 16x16_92: -1602475864
+      Water Effect and Bullet 16x16_93: 1227999691
+      Water Effect and Bullet 16x16_94: -883762041
+      Water Effect and Bullet 16x16_95: 839995520
+      Water Effect and Bullet 16x16_96: 1880976262
+      Water Effect and Bullet 16x16_97: -1800278006
+      Water Effect and Bullet 16x16_98: 1130663486
+      Water Effect and Bullet 16x16_99: 1573806251
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

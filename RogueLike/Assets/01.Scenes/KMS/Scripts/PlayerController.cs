@@ -20,8 +20,6 @@ public class PlayerController : MonoBehaviour
     private Vector2 boxCastSize = new Vector2(0.4f, 0.05f);
     private float boxCastMaxDistance = 0.7f;
 
-     public SkillItemData SkillData;
-
     private PlayerCollision _skill;
     private Rigidbody2D _rigidbody;
     private SpriteRenderer _spriteRenderer;
