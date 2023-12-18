@@ -4,19 +4,17 @@ using UnityEngine;
 
 public class DataManager : MonoBehaviour
 {
-    // 플레이어(능력치, 레벨, 골드 등) 정보의 변동이 생길 때, 정보를 이곳에 정보를 업데이트.
-    // 위의 정보가 필요할 때, 이곳을 통해서 가져가기
+    // 게임 데이터를 로드하고 저장하는 역할
 
-    // 몬스터, 아이템도 위와 동일하게 (region / endregion 으로 구분)
+    // 플레이어 정보, 아이템 데이터, 게임 설정 등의 데이터를 관리
 
-    void Start()
-    {
-        
-    }
-
+    // 데이터의 변경 및 업데이트가 필요한 경우 이벤트 시스템을 활용(구독)
 
     #region Player Data
-
+    public void UpdatePlayerData()
+    {
+        // 플레이어 정보 업데이트 로직 작성 (위 파라미터 추가 필요)
+    }
     #endregion
 
     #region Monster Data
