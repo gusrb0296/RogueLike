@@ -24,7 +24,8 @@ public class SpawnMonsters : MonoBehaviour
         foreach (Transform pos in spawnPositions)
         {
             int idx = Random.Range(0, monsters.Count);
-            GameObject monster = Instantiate(monsters[idx],pos);
+            GameObject monster = Instantiate(monsters[idx]);
+            monster.transform.position = pos.position;
         }
 
     }

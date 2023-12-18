@@ -34,13 +34,13 @@ public class Projectile : MonoBehaviour
             //TODO 플레이어 대미지 입히기
             Debug.Log($"hit {damage} to player");
             animator.SetTrigger("Destroy");
-            gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+            gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         }
 
         if (map.value == (map.value | (1 << collision.gameObject.layer)))
         {
             animator.SetTrigger("Destroy");
-            gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+            gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         }
     }
 

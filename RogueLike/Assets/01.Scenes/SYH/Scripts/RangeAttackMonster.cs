@@ -15,29 +15,16 @@ public class RangeAttackMonster : Monster
         base.Awake();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        playerDistance = Vector2.Distance(transform.position, player.transform.position);
-        if (isAttacking)
-        {
-            rigid.velocity = Vector2.zero;
-        }
-        else if (playerDistance < detectDistnce)
-        {
-            Chasing();
-        }
-        else
-        {
-            if (isMove) Moving();
-            else Waiting();
-        }
+       base.FixedUpdate();
     }
 
     protected override void Attack()
     {
         if (Time.time - lastAttackTime > attackRate)
         {
-            rigid.velocity = Vector3.zero;
+            rigid.velocity = Vector2.zero;
             isMove = false;
             animator.SetBool("isMove", false);
 
