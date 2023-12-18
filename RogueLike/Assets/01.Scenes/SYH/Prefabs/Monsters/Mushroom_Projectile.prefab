@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5936616449489183925}
   - component: {fileID: 2705340067781897405}
   - component: {fileID: -2004771669708218479}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mushroom_Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -189,36 +189,3 @@ MonoBehaviour:
   map:
     serializedVersion: 2
     m_Bits: 128
-  curve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: -0.0023923444
-      value: -0.0023584906
-      inSlope: 1.9951706
-      outSlope: 1.9951706
-      tangentMode: 65
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.5
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 136
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.99880385
-      value: -0.0023584906
-      inSlope: -2.0095243
-      outSlope: -2.0095243
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4

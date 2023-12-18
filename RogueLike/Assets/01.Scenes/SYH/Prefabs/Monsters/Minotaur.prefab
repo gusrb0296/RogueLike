@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8096899953005280267}
   - component: {fileID: 7200740926257502208}
   - component: {fileID: 4047007196762094581}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Minotaur
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,4 +204,4 @@ MonoBehaviour:
   attackDistance: 1.7
   wanderWaitTime: 2
   wanderMaxTime: 3
-  player: {fileID: 0}
+  player: {fileID: 4288028844983526216, guid: 8762bc798526607479dd95c994f02a2d, type: 3}

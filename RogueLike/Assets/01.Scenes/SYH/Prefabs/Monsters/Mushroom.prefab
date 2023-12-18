@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6297833259752727103}
   - component: {fileID: 3579476262471907507}
   - component: {fileID: 2473518131300230524}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Mushroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -205,7 +205,7 @@ MonoBehaviour:
   attackDistance: 3
   wanderWaitTime: 2
   wanderMaxTime: 3
-  player: {fileID: 0}
+  player: {fileID: 4288028844983526216, guid: 8762bc798526607479dd95c994f02a2d, type: 3}
   projectile: {fileID: 6430529077560341562, guid: f1f9ecc6dc4a89840b5a2825d9d01840, type: 3}
   projectileSpeed: 3
   muzzle: {fileID: 4388127038229170223}
@@ -218,7 +218,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4388127038229170223}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: muzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

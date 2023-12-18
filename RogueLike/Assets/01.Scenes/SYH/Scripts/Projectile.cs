@@ -32,11 +32,13 @@ public class Projectile : MonoBehaviour
             //TODO: ³ªÁß¿¡ Player ÄÄÆ÷³ÍÆ®·Î ¹Ù²ãÁà¾ß ÇÔ
             //collision.gameObject.GetComponent<CloseAttackMonster>().TakeDamage(10);
             animator.SetTrigger("Destroy");
+            gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         }
 
         if (map.value == (map.value | (1 << collision.gameObject.layer)))
         {
             animator.SetTrigger("Destroy");
+            gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         }
     }
 

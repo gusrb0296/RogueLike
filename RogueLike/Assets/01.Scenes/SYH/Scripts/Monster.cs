@@ -37,12 +37,13 @@ public class Monster : MonoBehaviour, IDamagable
     protected SpriteRenderer spriteRenderer;
 
     //임시로 사용할 예정
-    public GameObject player;
+    protected GameObject player;
     #endregion
 
     #region LifeCycles
     protected void Awake()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         animator = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
