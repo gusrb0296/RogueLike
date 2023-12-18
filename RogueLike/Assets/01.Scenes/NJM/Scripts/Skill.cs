@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,15 @@ using UnityEngine;
 public class Skill : MonoBehaviour
 {
     public SkillItemData SkillData;
+
+    private SpriteRenderer _spriteRenderer;
+    private Rigidbody2D _rigidbody;
+
+    private void Awake()
+    {
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        _rigidbody = GetComponent<Rigidbody2D>();
+    }
 
     private void Start()
     {
@@ -14,7 +24,7 @@ public class Skill : MonoBehaviour
 
     private void Update()
     {
-        transform.position += new Vector3(1, 0, 0) * SkillData.SkillSpeed * Time.deltaTime;
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -34,4 +44,14 @@ public class Skill : MonoBehaviour
 
     }
 
+    public void SkillShoot(Vector2 direction)
+    {
+        if (direction.x < 0)
+        {
+            if (_spriteRenderer.flipX == true) _spriteRenderer.flipX = false;
+            else _spriteRenderer.flipX = true;
+        }
+
+        _rigidbody.velocity = direction * SkillData.SkillSpeed;
+    }
 }
