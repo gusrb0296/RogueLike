@@ -22,6 +22,7 @@ public class Monster : MonoBehaviour, IDamagable
     protected float lastAttackTime;
     public float detectDistnce;
     public float attackDistance;
+    protected bool isAttacking = false;
 
     [Header("Wandering")]
     public float wanderWaitTime;
@@ -47,11 +48,7 @@ public class Monster : MonoBehaviour, IDamagable
         animator = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-    }
-
-    private void Update()
-    {
-
+        
     }
     #endregion
 

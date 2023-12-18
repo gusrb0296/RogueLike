@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CloseAttackMonster : Monster
 {
+    
     private new void Awake()
     {
         base.Awake();
@@ -12,7 +13,11 @@ public class CloseAttackMonster : Monster
     private void Update()
     {
         playerDistance = Vector2.Distance(transform.position, player.transform.position);
-        if (playerDistance < detectDistnce)
+        if (isAttacking)
+        {
+            rigid.velocity = Vector2.zero;
+        }
+        else if (playerDistance < detectDistnce)
         {
             Chasing();
         }
@@ -33,19 +38,22 @@ public class CloseAttackMonster : Monster
 
             lastAttackTime = Time.time;
 
+            isAttacking = true;
             animator.SetTrigger("Attack");
-            //TODO: 플레이어 대미지 계산
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void onDamage()
     {
-        if(collision.gameObject.layer == gameObject.layer)
+        if (playerDistance < attackDistance)
         {
-            TakeDamage(damage);
-
-            Debug.Log($"체력이 {damage}만큼 달았습니다.");
+            //TODO: 플레이어 대미지 계산
+            Debug.Log($"hit {damage} to player");
         }
-        
+    }
+
+    public void AttackEnd()
+    {
+        isAttacking = false;
     }
 }

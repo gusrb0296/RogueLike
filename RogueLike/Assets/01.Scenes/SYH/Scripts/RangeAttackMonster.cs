@@ -9,7 +9,6 @@ public class RangeAttackMonster : Monster
     public GameObject projectile;
     public float projectileSpeed;
     public Transform muzzle;
-    private bool isShooting = false;
 
     private new void Awake()
     {
@@ -19,7 +18,7 @@ public class RangeAttackMonster : Monster
     private void Update()
     {
         playerDistance = Vector2.Distance(transform.position, player.transform.position);
-        if (isShooting)
+        if (isAttacking)
         {
             rigid.velocity = Vector2.zero;
         }
@@ -47,7 +46,7 @@ public class RangeAttackMonster : Monster
             animator.SetTrigger("RangeAttack");
             StartCoroutine(nameof(Fire));
             animator.SetBool("isMove", false);
-            isShooting = true;
+            isAttacking = true;
         }
     }
 
@@ -64,7 +63,7 @@ public class RangeAttackMonster : Monster
         {
             tile.GetComponent<Rigidbody2D>().velocity = fireDirection;
         }
-        isShooting = false;
+        isAttacking = false;
     }
 
 }

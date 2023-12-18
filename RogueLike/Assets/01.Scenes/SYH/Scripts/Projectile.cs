@@ -10,6 +10,7 @@ public class Projectile : MonoBehaviour
     public LayerMask map;
     private Animator animator;
     private float Lifetime;
+    private float damage = 10;
 
     private void Awake()
     {
@@ -29,8 +30,9 @@ public class Projectile : MonoBehaviour
     {
         if (target.value == (target.value | (1 << collision.gameObject.layer)))
         {
-            //TODO: 나중에 Player 컴포넌트로 바꿔줘야 함
-            //collision.gameObject.GetComponent<CloseAttackMonster>().TakeDamage(10);
+
+            //TODO 플레이어 대미지 입히기
+            Debug.Log($"hit {damage} to player");
             animator.SetTrigger("Destroy");
             gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         }
