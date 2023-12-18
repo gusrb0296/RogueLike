@@ -83,7 +83,11 @@ public class PlayerController : MonoBehaviour
     {
         if (context.phase == InputActionPhase.Started)
         {
-            _animator.SetTrigger("Shoot");
+            _animator.SetBool("IsShoot", true);
+        }
+        else if (context.phase == InputActionPhase.Canceled)
+        {
+            _animator.SetBool("IsShoot", false);
         }
     }
 
