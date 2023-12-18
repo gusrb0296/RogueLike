@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 4566364190328893155}
   - component: {fileID: 616710901659693672}
   - component: {fileID: 6799156967838673459}
-  - component: {fileID: 1514812540917107927}
   - component: {fileID: -590416531068435081}
   - component: {fileID: 3536401427147407553}
+  - component: {fileID: 3560451044572879020}
   m_Layer: 0
   m_Name: Bolt
   m_TagString: Untagged
@@ -109,19 +109,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1514812540917107927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4737643081147909885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a121dd43066fe804da5411512b81a4bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SkillData: {fileID: 11400000, guid: 7b257c49209ccb341a658c3741054919, type: 2}
 --- !u!50 &-590416531068435081
 Rigidbody2D:
   serializedVersion: 4
@@ -194,3 +181,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.96065474, y: 0.41748267}
   m_EdgeRadius: 0
+--- !u!114 &3560451044572879020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4737643081147909885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 051862df33e8f3a46b40f21d0e89a702, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SkillData: {fileID: 11400000, guid: 7b257c49209ccb341a658c3741054919, type: 2}

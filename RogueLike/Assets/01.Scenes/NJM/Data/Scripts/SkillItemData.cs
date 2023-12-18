@@ -18,6 +18,5 @@ public class SkillItemData : ItemData
     public Sprite SkillIcon;
 
     [Header("ETC")]
-    public Vector3 SkillEffectPosition;
-
+    public Vector3 SkillPosition;
 }

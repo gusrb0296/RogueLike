@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 5088129111893409721}
   - component: {fileID: 844264624643627975}
   - component: {fileID: 1509638091837139358}
-  - component: {fileID: 920965443612460707}
   - component: {fileID: 1617623467952257339}
   - component: {fileID: 8819535016565509292}
+  - component: {fileID: 2636760249822268831}
   m_Layer: 0
   m_Name: CrossedWave
   m_TagString: Untagged
@@ -34,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &844264624643627975
 SpriteRenderer:
@@ -109,19 +109,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &920965443612460707
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 964303024030738498}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a121dd43066fe804da5411512b81a4bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SkillData: {fileID: 11400000, guid: d07621ec782600342a73a8eccb61494c, type: 2}
 --- !u!50 &1617623467952257339
 Rigidbody2D:
   serializedVersion: 4
@@ -194,3 +181,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.32, y: 0.32}
   m_EdgeRadius: 0
+--- !u!114 &2636760249822268831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964303024030738498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 051862df33e8f3a46b40f21d0e89a702, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SkillData: {fileID: 11400000, guid: d07621ec782600342a73a8eccb61494c, type: 2}
