@@ -8,9 +8,4 @@ public class UIManager : MonoBehaviour
     {
         
     }
-
-    void Update()
-    {
-        
-    }
 }

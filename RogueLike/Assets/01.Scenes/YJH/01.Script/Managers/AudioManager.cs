@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
+    // 필요한 효과음이 있다면 주석으로 적어놔 주세요. 보고 추가해두겠습니다.
 
-    void Update()
+    private AudioSource _backgroundMusic;
+    private AudioSource _soundEffects;
+
+    public void Initalize()
     {
-        
+        if (_backgroundMusic == null && _soundEffects == null)
+        {
+            _backgroundMusic = GetComponent<AudioSource>();
+            _soundEffects = GetComponent<AudioSource>();
+        }
     }
 }
