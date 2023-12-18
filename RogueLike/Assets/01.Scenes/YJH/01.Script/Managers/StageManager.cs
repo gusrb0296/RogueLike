@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class StageManager : MonoBehaviour
 {
-    // 각 맵의 정보들을 이곳에 저장.
-    // 맵이 랜덤으로 생성될 때, 이곳에 데이터를 복사해 가서 생성
+    // 게임의 스테이지를 관리
 
-    void Start()
-    {
-        
-    }
+    // 스테이지의 초기화(생성), 종료, 이동 등을 처리
+
+    // 스테이지에 필요한 리로스를 로드/ 해제
+
 }
