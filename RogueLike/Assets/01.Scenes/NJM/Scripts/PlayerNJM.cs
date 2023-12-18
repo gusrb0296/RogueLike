@@ -5,10 +5,11 @@ using UnityEngine;
 public class PlayerNJM : MonoBehaviour
 {
     [HideInInspector] public Rigidbody2D Rigidbody;
-    public SkillItemData SkillData;
-    public bool IsSkill = false;
+    [HideInInspector ]public SkillItemData SkillData;
+    private bool _isSkill;
+    private bool _isCoolTime;
 
-    public GameObject _skillPosition;
+    [SerializeField] private Transform _skillPositionTransform;
 
     private void Awake()
     {
@@ -17,7 +18,8 @@ public class PlayerNJM : MonoBehaviour
 
     void Start()
     {
-        
+        _isSkill = false;
+        _isCoolTime = false;
     }
 
     
@@ -34,14 +36,31 @@ public class PlayerNJM : MonoBehaviour
 
         else if (Input.GetKeyDown(KeyCode.Z))
         {
-            if(IsSkill) Skill(SkillData);
+            if (_isSkill && _isCoolTime == false) Skill(SkillData);
         }
     }
 
     void Skill(SkillItemData data)
     {
-        Instantiate(data.SkillEffect, _skillPosition.transform.position, Quaternion.identity);
+        Instantiate(data.SkillPrefab, _skillPositionTransform.position, Quaternion.identity);
+        _isCoolTime = true;
+        StartCoroutine(SkillCoolTime());
+    }
+
+    IEnumerator SkillCoolTime()
+    {
+        yield return new WaitForSeconds(SkillData.CoolTime);
+        _isCoolTime = false;
     }
 
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // SkillItem ÀÏ °æ¿ì
+        if(collision.gameObject.GetComponent<SkillItem>() && collision.gameObject.GetComponent<SkillItem>().SkillData.Type == ItemType.Skiil)
+        {
+            _isSkill = true;
+            SkillData = collision.gameObject.GetComponent<SkillItem>().SkillData;
+        }
+    }
 }

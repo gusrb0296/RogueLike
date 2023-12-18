@@ -22,9 +22,16 @@ public class Skill : MonoBehaviour
         // 적에 맞으면 데미지
         if (collision.tag == "Enemy")
         {
+            Destroy(gameObject);
             Debug.Log("적 Hp " + SkillData.Atk + " 감소");
+            Instantiate(SkillData.SkillEffect, gameObject.transform.position + SkillData.SkillEffectPosition, Quaternion.identity);
         }
-    }
+        else if(collision.tag == "Obstacle")
+        {
+            Destroy(gameObject);
+            Instantiate(SkillData.SkillMissEffect, gameObject.transform.position + SkillData.SkillEffectPosition, Quaternion.identity);
+        }
 
+    }
 
 }
