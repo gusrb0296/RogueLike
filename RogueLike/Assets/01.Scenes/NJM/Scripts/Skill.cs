@@ -46,12 +46,7 @@ public class Skill : MonoBehaviour
 
     public void SkillShoot(Vector2 direction)
     {
-        if (direction.x < 0)
-        {
-            if (_spriteRenderer.flipX == true) _spriteRenderer.flipX = false;
-            else _spriteRenderer.flipX = true;
-        }
-
+        if (direction.x < 0) _spriteRenderer.flipX = _spriteRenderer.flipX ? false : true;
         _rigidbody.velocity = direction * SkillData.SkillSpeed;
     }
 }
