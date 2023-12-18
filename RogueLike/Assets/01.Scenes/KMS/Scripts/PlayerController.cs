@@ -6,8 +6,9 @@ using UnityEngine.U2D;
 
 public class PlayerController : MonoBehaviour
 {
+    #region Field
     [Header("Movement")]
-    public float speed;
+    //public float speed;
     private Vector2 _movementInput;
 
     [Header("Animation")]
@@ -16,23 +17,57 @@ public class PlayerController : MonoBehaviour
     [Header("Jump")]
     public float jumpForce;
     public LayerMask groundLayerMask;
-    private Vector2 boxCastSize = new Vector2(0.4f, 0.05f);
-    private float boxCastMaxDistance = 0.7f;
+    private Vector2 _boxCastSize = new Vector2(0.4f, 0.05f);
+    private float _boxCastMaxDistance = 0.7f;
 
+    private PlayerCollision _skill;
     private Rigidbody2D _rigidbody;
     private SpriteRenderer _spriteRenderer;
+    private CharacterStatsHandler _stats;
+
+    private bool _isJump;
+    private bool _isAttack;
+    private bool _isSkill;
+    private float _AttackDealyTime = float.MaxValue;
+    #endregion
 
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         _animator = GetComponentInChildren<Animator>();
+        _stats = GetComponent<CharacterStatsHandler>();
+        _skill = GetComponent<PlayerCollision>();
     }
 
     private void FixedUpdate()
     {
         Move();
+        HandleJumpAnimation();
+        HandleAttackSpeed();
+    }
 
+    private void HandleAttackSpeed()
+    {
+        if(_AttackDealyTime <= _stats.CurrentStats.attackSO.attackSpeed)
+        {
+            _AttackDealyTime += Time.deltaTime;
+        }
+        else if(_isAttack && !_isJump)
+        {
+            Vector2 direction = (_spriteRenderer.flipX) ? Vector2.left : Vector2.right;
+            BulletManager.instance.ShootBullet(gameObject.transform.position, direction);
+            _AttackDealyTime = 0f;
+        }
+
+        if(_isSkill && !_isJump)
+        {
+            Vector2 direction = (_spriteRenderer.flipX) ? Vector2.left : Vector2.right;
+            BulletManager.instance.ShootSkill(_skill.SkillData, gameObject.transform.position, direction);
+        }
+    }
+    private void HandleJumpAnimation()
+    {
         if (_rigidbody.velocity.y < 0)
         {
             _animator.SetBool("Jump", false);
@@ -40,14 +75,19 @@ public class PlayerController : MonoBehaviour
             if (OnGround())
             {
                 _animator.SetBool("Fall", false);
+                _isJump = false;
             }
         }
     }
-
+    private bool OnGround()
+    {
+        RaycastHit2D raycastHit = Physics2D.BoxCast(transform.position, _boxCastSize, 0f, Vector2.down, _boxCastMaxDistance, groundLayerMask);
+        return (raycastHit.collider != null);
+    }
     private void Move()
     {
         Vector2 dir = _movementInput;
-        dir *= speed;
+        dir *= _stats.CurrentStats.speed;
         dir.y = _rigidbody.velocity.y;
 
         if (dir.x > 0) _spriteRenderer.flipX = false;
@@ -55,6 +95,8 @@ public class PlayerController : MonoBehaviour
 
         _rigidbody.velocity = dir;
     }
+
+    #region InputSystem
 
     public void OnMoveInput(InputAction.CallbackContext context)
     {
@@ -76,6 +118,7 @@ public class PlayerController : MonoBehaviour
         {
             _rigidbody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             _animator.SetTrigger("Jump");
+            _isJump = true;
         }
     }
 
@@ -84,16 +127,28 @@ public class PlayerController : MonoBehaviour
         if (context.phase == InputActionPhase.Started)
         {
             _animator.SetBool("IsShoot", true);
+            _isAttack = true;
         }
         else if (context.phase == InputActionPhase.Canceled)
         {
-            _animator.SetBool("IsShoot", false);
+            if(!_isSkill) _animator.SetBool("IsShoot", false);
+            _isAttack = false;
         }
     }
 
-    private bool OnGround()
+    public void OnSkillInput(InputAction.CallbackContext context)
     {
-        RaycastHit2D raycastHit = Physics2D.BoxCast(transform.position, boxCastSize, 0f, Vector2.down, boxCastMaxDistance, groundLayerMask);
-        return (raycastHit.collider != null);
+        if (context.phase == InputActionPhase.Started)
+        {
+            if (_skill.SkillData == null) return;
+            _animator.SetBool("IsShoot", true);
+            _isSkill = true;
+        }
+        else if (context.phase == InputActionPhase.Canceled)
+        {
+            if(!_isAttack) _animator.SetBool("IsShoot", false);
+            _isSkill = false;
+        }
     }
+    #endregion
 }

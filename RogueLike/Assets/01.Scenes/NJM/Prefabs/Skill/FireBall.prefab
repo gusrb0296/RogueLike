@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 4460938723874155848}
   - component: {fileID: 8797772222419626995}
   - component: {fileID: 684419400190610304}
-  - component: {fileID: 1857206391108609700}
   - component: {fileID: 2145833574938471792}
   - component: {fileID: 4009170837768251045}
+  - component: {fileID: 5444527104562001795}
   m_Layer: 0
   m_Name: FireBall
   m_TagString: Untagged
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 4d79ef79b5a264cfd9b4195c5a9760d9, type: 3}
   m_Color: {r: 1, g: 0.272347, b: 0, a: 1}
   m_FlipX: 0
@@ -109,19 +109,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1857206391108609700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6371152401660906179}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a121dd43066fe804da5411512b81a4bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SkillData: {fileID: 11400000, guid: 6283282b72943144cbffe208543bebd3, type: 2}
 --- !u!50 &2145833574938471792
 Rigidbody2D:
   serializedVersion: 4
@@ -194,3 +181,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.2101998, y: 0.5907993}
   m_EdgeRadius: 0
+--- !u!114 &5444527104562001795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6371152401660906179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 051862df33e8f3a46b40f21d0e89a702, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SkillData: {fileID: 11400000, guid: 6283282b72943144cbffe208543bebd3, type: 2}

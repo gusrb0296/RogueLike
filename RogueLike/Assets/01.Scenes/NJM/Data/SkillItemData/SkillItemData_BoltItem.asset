@@ -23,4 +23,4 @@ MonoBehaviour:
   SkillEffect: {fileID: 7777065167491399128, guid: f7f8566007bd30e449a4f13b2fee7515, type: 3}
   SkillMissEffect: {fileID: 1194187358893946921, guid: f8ecc8d1261859649b97395a492606d6, type: 3}
   SkillIcon: {fileID: 21300000, guid: dfc562e0755d3c64d950823ae11ad237, type: 3}
-  SkillEffectPosition: {x: 0.4, y: 0.05, z: 0}
+  SkillPosition: {x: 0.25, y: 0, z: 0}
