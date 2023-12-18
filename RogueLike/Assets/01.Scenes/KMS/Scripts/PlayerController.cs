@@ -17,10 +17,8 @@ public class PlayerController : MonoBehaviour
     [Header("Jump")]
     public float jumpForce;
     public LayerMask groundLayerMask;
-    private Vector2 boxCastSize = new Vector2(0.4f, 0.05f);
-    private float boxCastMaxDistance = 0.7f;
-
-     public SkillItemData SkillData;
+    private Vector2 _boxCastSize = new Vector2(0.4f, 0.05f);
+    private float _boxCastMaxDistance = 0.7f;
 
     private PlayerCollision _skill;
     private Rigidbody2D _rigidbody;
@@ -29,6 +27,7 @@ public class PlayerController : MonoBehaviour
 
     private bool _isJump;
     private bool _isAttack;
+    private bool _isSkill;
     private float _AttackDealyTime = float.MaxValue;
     #endregion
 
@@ -60,6 +59,12 @@ public class PlayerController : MonoBehaviour
             BulletManager.instance.ShootBullet(gameObject.transform.position, direction);
             _AttackDealyTime = 0f;
         }
+
+        if(_isSkill && !_isJump)
+        {
+            Vector2 direction = (_spriteRenderer.flipX) ? Vector2.left : Vector2.right;
+            BulletManager.instance.ShootSkill(_skill.SkillData, gameObject.transform.position, direction);
+        }
     }
     private void HandleJumpAnimation()
     {
@@ -76,7 +81,7 @@ public class PlayerController : MonoBehaviour
     }
     private bool OnGround()
     {
-        RaycastHit2D raycastHit = Physics2D.BoxCast(transform.position, boxCastSize, 0f, Vector2.down, boxCastMaxDistance, groundLayerMask);
+        RaycastHit2D raycastHit = Physics2D.BoxCast(transform.position, _boxCastSize, 0f, Vector2.down, _boxCastMaxDistance, groundLayerMask);
         return (raycastHit.collider != null);
     }
     private void Move()
@@ -126,7 +131,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (context.phase == InputActionPhase.Canceled)
         {
-            _animator.SetBool("IsShoot", false);
+            if(!_isSkill) _animator.SetBool("IsShoot", false);
             _isAttack = false;
         }
     }
@@ -137,12 +142,12 @@ public class PlayerController : MonoBehaviour
         {
             if (_skill.SkillData == null) return;
             _animator.SetBool("IsShoot", true);
-            Vector2 direction = (_spriteRenderer.flipX) ? Vector2.left : Vector2.right;
-            BulletManager.instance.ShootSkill(_skill.SkillData, gameObject.transform.position, direction);
+            _isSkill = true;
         }
         else if (context.phase == InputActionPhase.Canceled)
         {
-            _animator.SetBool("IsShoot", false);
+            if(!_isAttack) _animator.SetBool("IsShoot", false);
+            _isSkill = false;
         }
     }
     #endregion

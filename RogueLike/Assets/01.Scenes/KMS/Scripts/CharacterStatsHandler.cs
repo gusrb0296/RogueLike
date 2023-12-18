@@ -23,5 +23,6 @@ public class CharacterStatsHandler : MonoBehaviour
         CurrentStats.maxHealth = baseStats.maxHealth;
         CurrentStats.speed = baseStats.speed;
         CurrentStats.maxStamina = baseStats.maxStamina;
+        CurrentStats.invincibilityTime = baseStats.invincibilityTime;
     }
 }
