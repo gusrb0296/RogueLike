@@ -9,6 +9,7 @@ public class CharacterStats
     [Range(0, 100)] public int maxHealth;
     [Range(0, 100)] public int maxStamina;
     [Range(1f, 10f)] public float speed;
+    public float invincibilityTime;
 
     public AttackSO attackSO;
 }
