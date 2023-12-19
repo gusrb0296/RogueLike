@@ -26,20 +26,23 @@ public class BattleRoom : Room
 
     private void CreateEnemy()
     {
-        List<Transform> spawnPositions = new List<Transform>();
+        List<Vector2> spawnPositions = new List<Vector2>();
         for (int i = 0; i < tiles.Count; i++)
         {
             foreach(Transform t in tiles[i].transform)
             {
                 if (t.gameObject.name == "SpawnPositions")
                 {
-                    spawnPositions.Add(t);
+
+                    Vector2 pos = new Vector2(t.position.x + transform.position.x, t.position.y + transform.position.y);
+                    spawnPositions.Add(pos);
                     _EnemyCount++;
                 }
             }
         }
 
         //TODO 몬스터 생성
+        GameManager.instance.StageManager.GetComponent<SpawnMonsters>().Spawn(spawnPositions, this);
     }
 
     public void EnemyDie()

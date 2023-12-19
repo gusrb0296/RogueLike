@@ -6,6 +6,7 @@ using Random = UnityEngine.Random;
 
 public class Monster : MonoBehaviour, IDamagable
 {
+    public BattleRoom room;
     //Stat SO 만들어지면 대체하려고 함.
     #region Factors
     [Header("Stats")]
@@ -178,6 +179,7 @@ public class Monster : MonoBehaviour, IDamagable
         animator.SetTrigger("Die");
         canReceiveInput = false;
         yield return new WaitForSecondsRealtime(1f);
+        room.EnemyDie();
         Destroy(gameObject);
     }
     #endregion

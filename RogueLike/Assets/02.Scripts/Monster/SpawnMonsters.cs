@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class SpawnMonsters : MonoBehaviour
 {
-    private List<GameObject> monsters = new();
+    public List<GameObject> monsters = new();
     private List<GameObject> spawnPositionObjects = new();
 
     private void Awake()
     {
-        monsters = Resources.LoadAll<GameObject>("Prefabs\\Monsters").ToList();
+        //monsters = Resources.LoadAll<GameObject>("Prefabs\\Monsters").ToList();
     }
 
     private void Start()
@@ -23,17 +23,17 @@ public class SpawnMonsters : MonoBehaviour
         spawnPositionObjects = GameObject.FindGameObjectsWithTag("Spawn").ToList();
     }
 
-    public void Spawn(GameObject[] spawnpositions)
+    public void Spawn(List<Vector2> spawnpositions, BattleRoom room)
     {
         if(spawnpositions != null)
         {
-            foreach (GameObject pos in spawnpositions)
+            foreach (Vector2 pos in spawnpositions)
             {
                 int idx = Random.Range(0, monsters.Count);
                 GameObject monster = Instantiate(monsters[idx]);
-                monster.transform.position = pos.transform.position;
+                monster.transform.position = pos;
+                monster.GetComponent<Monster>().room = room;
             }
         }
-        
     }
 }

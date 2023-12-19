@@ -228,7 +228,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbecb236dc5e80c469abd644e324288d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Center: {x: 0, y: 0}
   maxPosX: 14
   maxPosY: 9
 --- !u!1 &2005772795
@@ -314,6 +313,10 @@ PrefabInstance:
     - target: {fileID: 7437251077639022734, guid: 6c902baacc27e744393cf6bbea8ac7f0, type: 3}
       propertyPath: m_Name
       value: UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 7437251077639022734, guid: 6c902baacc27e744393cf6bbea8ac7f0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9118017076988107839, guid: 6c902baacc27e744393cf6bbea8ac7f0, type: 3}
       propertyPath: m_Pivot.x

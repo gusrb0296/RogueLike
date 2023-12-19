@@ -1187,23 +1187,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1551920062 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 807277208613528906, guid: 3053bcd4078a86a4989b3021fa7450fd, type: 3}
-  m_PrefabInstance: {fileID: 1636590024}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1551920064
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1551920062}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0367fbc81fd4ed848a53ab201bdcf783, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1636590024
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1216,6 +1199,30 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2522174150858352617, guid: 3053bcd4078a86a4989b3021fa7450fd, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522174150858352617, guid: 3053bcd4078a86a4989b3021fa7450fd, type: 3}
+      propertyPath: monsters.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522174150858352617, guid: 3053bcd4078a86a4989b3021fa7450fd, type: 3}
+      propertyPath: monsters.Array.data[0]
+      value: 
+      objectReference: {fileID: 2134512974337509516, guid: 2266a8161e37cb14a9f8befa1cfc7b85, type: 3}
+    - target: {fileID: 2522174150858352617, guid: 3053bcd4078a86a4989b3021fa7450fd, type: 3}
+      propertyPath: monsters.Array.data[1]
+      value: 
+      objectReference: {fileID: 251235101381677826, guid: ba5c8ec96c8df7a47bd28e7a6d36d24a, type: 3}
+    - target: {fileID: 2522174150858352617, guid: 3053bcd4078a86a4989b3021fa7450fd, type: 3}
+      propertyPath: monsters.Array.data[2]
+      value: 
+      objectReference: {fileID: 8647252846967125829, guid: 37cd0cc683936674eb3136e1ff9fe09d, type: 3}
+    - target: {fileID: 2522174150858352617, guid: 3053bcd4078a86a4989b3021fa7450fd, type: 3}
+      propertyPath: monsters.Array.data[3]
+      value: 
+      objectReference: {fileID: 4684487991050142955, guid: 45684874c5edb6f4d8bb142c5040ed9f, type: 3}
     - target: {fileID: 2735043665463424554, guid: 3053bcd4078a86a4989b3021fa7450fd, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -1292,13 +1299,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8083527753257141312, guid: 3053bcd4078a86a4989b3021fa7450fd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 807277208613528906, guid: 3053bcd4078a86a4989b3021fa7450fd, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1551920064}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3053bcd4078a86a4989b3021fa7450fd, type: 3}
 --- !u!114 &1636590025 stripped
 MonoBehaviour:
