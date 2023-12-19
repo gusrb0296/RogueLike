@@ -186,7 +186,7 @@ MonoBehaviour:
   roomPrefab: {fileID: 9079919207558547547, guid: 2ed35120606ee234ea59c258c4d1de2d, type: 3}
   bossRoomPrefab: {fileID: 9079919207558547547, guid: 90aca35a8fe956542a9931af9d2f9446, type: 3}
   treasureRoomPrefab: {fileID: 9079919207558547547, guid: da54040952de46443b557b7786cb210f, type: 3}
-  playerPrefab: {fileID: 5057007993330844531, guid: 7691df97ad3c97646bcd00d897feb01a, type: 3}
+  playerPrefab: {fileID: 4288792700850253447, guid: 7691df97ad3c97646bcd00d897feb01a, type: 3}
 --- !u!1 &1134662135
 GameObject:
   m_ObjectHideFlags: 0
