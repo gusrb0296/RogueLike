@@ -18,10 +18,6 @@ public class BulletController : MonoBehaviour
         _animator = GetComponentInChildren<Animator>();
     }
 
-    private void Start()
-    {
-    }
-
     public void Shoot(Vector2 direction, float range)
     {
         if(direction.x < 0) _spriteRenderer.flipX = true;
@@ -50,9 +46,10 @@ public class BulletController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
+            collision.gameObject.GetComponent<CloseAttackMonster>().TakeDamage(GameManager.instance.DataManager.playerStats.attackSO.power);
             _rigidbody.velocity = Vector2.zero;
             _animator.SetTrigger("Hit");
-            AutoDestroy(0.1f);
+            AutoDestroy(0.4f);
         }
     }
 }

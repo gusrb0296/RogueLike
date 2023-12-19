@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     private PlayerCollision _skill;
     private Rigidbody2D _rigidbody;
     private SpriteRenderer _spriteRenderer;
-    private CharacterStatsHandler _stats;
+    private CharacterStats _stats;
 
     private bool _isJump;
     private bool _isAttack;
@@ -36,8 +36,13 @@ public class PlayerController : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         _animator = GetComponentInChildren<Animator>();
-        _stats = GetComponent<CharacterStatsHandler>();
+        //_stats = GameManager.instance.DataManager.playerStats;
         _skill = GetComponent<PlayerCollision>();
+    }
+
+    private void Start()
+    {
+        _stats = GameManager.instance.DataManager.playerStats;
     }
 
     private void FixedUpdate()
@@ -49,14 +54,14 @@ public class PlayerController : MonoBehaviour
 
     private void HandleAttackSpeed()
     {
-        if(_AttackDealyTime <= _stats.CurrentStats.attackSO.attackSpeed)
+        if(_AttackDealyTime <= _stats.attackSO.attackSpeed)
         {
             _AttackDealyTime += Time.deltaTime;
         }
         else if(_isAttack && !_isJump)
         {
             Vector2 direction = (_spriteRenderer.flipX) ? Vector2.left : Vector2.right;
-            BulletManager.instance.ShootBullet(gameObject.transform.position, direction, _stats.CurrentStats.attackSO.range);
+            BulletManager.instance.ShootBullet(gameObject.transform.position, direction, _stats.attackSO.range);
             _AttackDealyTime = 0f;
         }
 
@@ -87,7 +92,7 @@ public class PlayerController : MonoBehaviour
     private void Move()
     {
         Vector2 dir = _movementInput;
-        dir *= _stats.CurrentStats.speed;
+        dir *= _stats.speed;
         dir.y = _rigidbody.velocity.y;
 
         if (dir.x > 0) _spriteRenderer.flipX = false;
