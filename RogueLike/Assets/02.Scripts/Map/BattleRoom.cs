@@ -2,17 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BattleRoom : MonoBehaviour
+public class BattleRoom : Room
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void RoomAction()
     {
-        
+        if (!IsClear)
+        {
+
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void RoomClear()
     {
-        
+        base.RoomClear();
+    }
+
+    public override void AddTiles()
+    {
+        base.AddTiles();
     }
 }

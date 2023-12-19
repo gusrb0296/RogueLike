@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8804778963173304447}
   - component: {fileID: 8642512444960209411}
   m_Layer: 7
-  m_Name: Up
+  m_Name: UpTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

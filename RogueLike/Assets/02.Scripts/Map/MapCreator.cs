@@ -2,6 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum ERoomType
+{
+    Start,
+    Battle,
+    Reward,
+    Boss,
+    Clear
+}
+
 public class MapCreator : MonoBehaviour
 {
     [SerializeField] private int width = 10;
@@ -17,11 +26,13 @@ public class MapCreator : MonoBehaviour
     private RoomInfo[,] _map;
     private List<RoomInfo> _endRooms = new List<RoomInfo>();
 
-    public Vector2 MapSize { get; } = new Vector2(28f, 18f);
+    public Vector3Int MapSize { get; } = new Vector3Int(28, 18);
 
     private void Start()
     {
+        GameManager.instance.StageManager.SetStageInfo(this, width, height);
         CreateNewMap();
+        StartStage();
     }
 
     public void CreateNewMap()
@@ -29,11 +40,13 @@ public class MapCreator : MonoBehaviour
         RemoveRooms();
         CreateMapLayout();
         PlaceRooms();
-
-        //TEST
+        AddTiles();
         CreatePlayer();
+    }
 
-        //CreateDoor();
+    private void StartStage()
+    {
+        GameManager.instance.StageManager.Transition(GameManager.instance.StageManager.CurPlyerPos);
     }
 
     //TEST
@@ -182,14 +195,24 @@ public class MapCreator : MonoBehaviour
         PlaceNormalRooms();
     }
 
-    private GameObject InstantiateRoom(GameObject roomPrefab, RoomInfo roomInfo)
+    private GameObject InstantiateRoom(GameObject roomPrefab, RoomInfo roomInfo, ERoomType type = ERoomType.Battle)
     {
         Vector3 roomPosition = new Vector3(roomInfo.Position.x * MapSize.x, roomInfo.Position.y * MapSize.y);
         GameObject room = Instantiate(roomPrefab, roomPosition, Quaternion.identity, transform);
-        
-        Room roomScrip = room.AddComponent<Room>();
+
+        Room roomScrip = null;
+
+        if(roomInfo == _map[width / 2, height / 2])
+            roomScrip = room.AddComponent<Room>();
+        else if (type == ERoomType.Battle)
+            roomScrip = room.AddComponent<BattleRoom>();
+        else if (type == ERoomType.Boss)
+            roomScrip = room.AddComponent<BossRoom>();
+        else if (type == ERoomType.Reward)
+            roomScrip = room.AddComponent<TreasureRoom>();
+
         roomScrip.RoomInfo = roomInfo;
-        roomScrip.MapCreator = this;
+        roomScrip.RoomInfo.Owner = roomScrip;
 
         return room;
     }
@@ -198,7 +221,7 @@ public class MapCreator : MonoBehaviour
     private void PlaceBossRoom()
     {
         RoomInfo room = _endRooms[_endRooms.Count - 1];
-        InstantiateRoom(bossRoomPrefab, room);
+        InstantiateRoom(bossRoomPrefab, room, ERoomType.Boss);
     }
 
     private void PlaceTreasureRooms()
@@ -209,7 +232,7 @@ public class MapCreator : MonoBehaviour
             bool hasTreasure = treasureChance > 0.7f;
             if (hasTreasure)
             {
-                InstantiateRoom(treasureRoomPrefab, _endRooms[i]);
+                InstantiateRoom(treasureRoomPrefab, _endRooms[i], ERoomType.Reward);
             }
             else
             {
@@ -256,7 +279,17 @@ public class MapCreator : MonoBehaviour
         return _map[position.x, position.y];
     }
 
-    // TEST
+    public Transform GetRoomTramsform(Vector3Int position)
+    {
+        RoomInfo roomInfo = _map[position.x, position.y];
+        foreach (Transform child in transform)
+        {
+            if (child.GetComponent<Room>().RoomInfo == roomInfo)
+                return child;
+        }
+        return null;
+    }
+
     private void CreatePlayer()
     {
         Transform startPos = GetStartPos();
@@ -264,15 +297,15 @@ public class MapCreator : MonoBehaviour
             Camera.main.GetComponent<FollowCamera>().Player = 
                 Instantiate(playerPrefab, startPos.position, Quaternion.identity);
 
-        Camera.main.GetComponent<FollowCamera>().Center.Set(startPos.position.x, startPos.position.y);
+        Camera.main.GetComponent<FollowCamera>()
+            .SetCameraBoundaryCenter(new Vector2(startPos.position.x, startPos.position.y));
     }
 
-    // TEST
-    private void CreateDoor()
+    private void AddTiles()
     {
         foreach (Transform child in transform)
         {
-            child.GetComponent<Room>().BreakWall();
+            child.GetComponent<Room>().AddTiles();
         }
     }
 }

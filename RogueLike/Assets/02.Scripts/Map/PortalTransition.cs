@@ -4,15 +4,42 @@ using UnityEngine;
 
 public class PortalTransition : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private GameObject BtnUi;
+    public Vector2 TransitionPosition { get; set; }
+    public Vector3Int TransitionLayouyPosition {  get; set; }
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if(collision.transform.tag == "Player")
+        {
+            BtnUi.SetActive(true);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        
+        if (collision.transform.tag == "Player")
+        {
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                Transform roomtransform = GameManager.instance.StageManager.GetRoomTramsform(TransitionLayouyPosition);
+                Vector3 position = roomtransform.position;
+
+                FollowCamera cam = Camera.main.GetComponent<FollowCamera>();
+                cam.SetCameraBoundaryCenter(position);
+
+                cam.Player.transform.position = TransitionPosition;
+
+                GameManager.instance.StageManager.Transition(TransitionLayouyPosition);
+            }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.transform.tag == "Player")
+        {
+            BtnUi.SetActive(false);
+        }
     }
 }

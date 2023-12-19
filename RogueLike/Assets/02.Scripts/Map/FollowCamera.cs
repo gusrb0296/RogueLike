@@ -4,15 +4,15 @@ using static UnityEngine.InputSystem.Controls.AxisControl;
 public class FollowCamera : MonoBehaviour
 {
     public GameObject Player { get; set; }
-    public Vector2 Center = Vector2.zero;
     public bool RangeRock { get; set; } = true;
 
     [SerializeField] private float maxPosX;
     [SerializeField] private float maxPosY;
+    private Vector2 Center = Vector2.zero;
 
     private Vector3 cameraPos = Vector3.zero;
 
-    private void LateUpdate()
+    private void FixedUpdate()
     {
         if (Player == null)
             return;
@@ -33,7 +33,18 @@ public class FollowCamera : MonoBehaviour
 
             cameraPos.Set(clampX, clampY, transform.position.z);
         }
+        transform.position = Vector3.Lerp(transform.position, cameraPos, 0.2f);
+        //transform.position = cameraPos;
+    }
 
-        transform.position = cameraPos;
+    public void SetCameraBoundary(float maxX, float maxY)
+    {
+        maxPosX = maxX;
+        maxPosY = maxY;
+    }
+
+    public void SetCameraBoundaryCenter(Vector2 center)
+    {
+        Center = center;
     }
 }
