@@ -10,7 +10,7 @@ public class CloseAttackMonster : Monster
         base.Awake();
     }
 
-    private void FixedUpdate()
+    private new void FixedUpdate()
     {
         base.FixedUpdate();
     }
@@ -30,7 +30,7 @@ public class CloseAttackMonster : Monster
         }
     }
 
-    public void onDamage()
+    public void OnDamage()
     {
         if (playerDistance < attackDistance)
         {

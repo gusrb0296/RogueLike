@@ -1,32 +1,40 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class SpawnMonsters : MonoBehaviour
 {
-    public List<GameObject> monsters = new List<GameObject>();
-    public Transform spawnPositionRoot;
-    private List<Transform> spawnPositions = new List<Transform>();
-
-    public GameObject player;
+    private List<GameObject> monsters = new();
+    private List<GameObject> spawnPositionObjects = new();
 
     private void Awake()
     {
-        for(int i = 0; i<spawnPositionRoot.childCount; i++)
-        {
-            spawnPositions.Add(spawnPositionRoot.GetChild(i));
-        }
+        monsters = Resources.LoadAll<GameObject>("Prefabs\\Monsters").ToList();
     }
 
     private void Start()
     {
-        GameObject p = Instantiate(player);
-        foreach (Transform pos in spawnPositions)
-        {
-            int idx = Random.Range(0, monsters.Count);
-            GameObject monster = Instantiate(monsters[idx]);
-            monster.transform.position = pos.position;
-        }
+        GameManager.instance.StageManager.OnStageScene += Init;
+        GameManager.instance.StageManager.OnStageScene += Spawn;
+    }
 
+    private void Init()
+    {
+        spawnPositionObjects = GameObject.FindGameObjectsWithTag("Spawn").ToList();
+    }
+
+    private void Spawn()
+    {
+        if(spawnPositionObjects!= null)
+        {
+            foreach (GameObject pos in spawnPositionObjects)
+            {
+                int idx = Random.Range(0, monsters.Count);
+                GameObject monster = Instantiate(monsters[idx]);
+                monster.transform.position = pos.transform.position;
+            }
+        }
+        
     }
 }
