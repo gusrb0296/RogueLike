@@ -6,21 +6,19 @@ using UnityEngine;
 public class SpawnMonsters : MonoBehaviour
 {
     public List<GameObject> monsters = new();
-    private List<GameObject> spawnPositionObjects = new();
-
+    private int monsterCount = 4;
     private void Awake()
     {
-        //monsters = Resources.LoadAll<GameObject>("Prefabs\\Monsters").ToList();
+        //for(int i = 0; i < monsterCount; i++)
+        //{
+        //    monsters.Add(Resources.Load<GameObject>("Prefabs\\Monsters\\Slayer"));
+        //}
+        monsters = Resources.LoadAll<GameObject>("Prefabs\\Monsters").ToList();
     }
 
     private void Start()
     {
         
-    }
-
-    private void Init()
-    {
-        spawnPositionObjects = GameObject.FindGameObjectsWithTag("Spawn").ToList();
     }
 
     public void Spawn(List<Vector2> spawnpositions, BattleRoom room)

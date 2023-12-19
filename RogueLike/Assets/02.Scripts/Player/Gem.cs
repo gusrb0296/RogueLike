@@ -5,7 +5,7 @@ using UnityEngine;
 public class Gem : MonoBehaviour
 {
     public float DestroyTime;
-
+    public int Gold;
     private void Start()
     {
         StartCoroutine(AutoDestroy(DestroyTime));

@@ -180,6 +180,13 @@ public class Monster : MonoBehaviour, IDamagable
         canReceiveInput = false;
         yield return new WaitForSecondsRealtime(1f);
         room.EnemyDie();
+        if (Random.Range(0, 3) == 0)
+        {
+            GameObject gem = Resources.Load<GameObject>("Prefabs\\Items\\Gem");
+            gem.GetComponent<Gem>().Gold = Random.Range(10, 20);
+            Instantiate(gem).transform.position = transform.position;
+
+        }
         Destroy(gameObject);
     }
     #endregion

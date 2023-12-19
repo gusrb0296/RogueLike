@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DefaultAttackData
   m_EditorClassIdentifier: 
   attackSpeed: 0.5
-  power: 5
+  power: 50
   range: 5
   target:
     serializedVersion: 2

@@ -7,6 +7,7 @@ public class BossMonster : MonoBehaviour, IDamagable
     #region Factors
     [Header("Stats")]
     public float health;
+    private float currentHealth;
     public float speed;
 
     [Header("Reward")]
@@ -43,6 +44,7 @@ public class BossMonster : MonoBehaviour, IDamagable
         rigid = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         player = GameObject.FindWithTag("Player");
+        currentHealth = health;
     }
 
     private void Update()
@@ -137,9 +139,18 @@ public class BossMonster : MonoBehaviour, IDamagable
     {
         animator.SetTrigger("Hit");
 
-        health = health - damage > 0 ? health - damage : 0;
+        if(currentHealth >= health/2 && currentHealth - damage <= health/2)
+        {
+            spriteRenderer.color = new Color(1f, .5f, .5f);
+            
+            this.damage += 5;
+            this.attackRate -= 0.2f;
+            this.speed += 1;
+        }
+
+        currentHealth = currentHealth - damage > 0 ? currentHealth - damage : 0;
         Debug.Log($"체력이 {damage}만큼 달았습니다.");
-        if (health == 0) StartCoroutine("Die");
+        if (currentHealth == 0) StartCoroutine(nameof(Die));
 
         isAttacking = false;
     }
@@ -156,6 +167,10 @@ public class BossMonster : MonoBehaviour, IDamagable
     public void AttackEnd()
     {
         isAttacking = false;
+    }
+    public float GetHpRate()
+    {
+        return currentHealth / health;
     }
 
     IEnumerator Die()
