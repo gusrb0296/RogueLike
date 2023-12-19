@@ -1286,9 +1286,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0367fbc81fd4ed848a53ab201bdcf783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsters: []
-  spawnPositionRoot: {fileID: 5781202027367704253, guid: 3bf38965f5e0e1d4c908d505955caf15, type: 3}
-  player: {fileID: 0}
 --- !u!1001 &1636590024
 PrefabInstance:
   m_ObjectHideFlags: 0

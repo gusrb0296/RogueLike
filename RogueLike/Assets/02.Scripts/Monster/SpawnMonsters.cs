@@ -15,8 +15,7 @@ public class SpawnMonsters : MonoBehaviour
 
     private void Start()
     {
-        GameManager.instance.StageManager.OnStageScene += Init;
-        GameManager.instance.StageManager.OnStageScene += Spawn;
+        
     }
 
     private void Init()
@@ -24,11 +23,11 @@ public class SpawnMonsters : MonoBehaviour
         spawnPositionObjects = GameObject.FindGameObjectsWithTag("Spawn").ToList();
     }
 
-    private void Spawn()
+    public void Spawn(GameObject[] spawnpositions)
     {
-        if(spawnPositionObjects!= null)
+        if(spawnpositions != null)
         {
-            foreach (GameObject pos in spawnPositionObjects)
+            foreach (GameObject pos in spawnpositions)
             {
                 int idx = Random.Range(0, monsters.Count);
                 GameObject monster = Instantiate(monsters[idx]);

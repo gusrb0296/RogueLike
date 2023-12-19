@@ -64,17 +64,15 @@ public class Monster : MonoBehaviour, IDamagable
             TakeDamage(10);
         }
         playerDistance = Vector2.Distance(transform.position, player.transform.position);
-
+        spriteRenderer.flipX = playerDirection.x <= 0;
         if (canReceiveInput)
         {
             if (isAttacking)
             {
                 rigid.velocity = Vector2.zero;
-                spriteRenderer.flipX = playerDirection.x <= 0;
             }
             else
             {
-                spriteRenderer.flipX = rigid.velocity.x <= 0;
                 if (playerDistance < detectDistnce)
                 {
                     Chasing();
@@ -178,6 +176,7 @@ public class Monster : MonoBehaviour, IDamagable
     IEnumerator Die()
     {
         animator.SetTrigger("Die");
+        canReceiveInput = false;
         yield return new WaitForSecondsRealtime(1f);
         Destroy(gameObject);
     }
