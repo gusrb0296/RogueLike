@@ -10,10 +10,56 @@ public class DataManager : MonoBehaviour
 
     // 데이터의 변경 및 업데이트가 필요한 경우 이벤트 시스템을 활용(구독)
 
-    #region Player Data
-    public void UpdatePlayerData()
+
+    #region Player Global Variable
+    // baseStats.AttackSO (attackSpeed, power, range, target)
+    [SerializeField] public CharacterStats PlayerBaseStats { get; private set; }
+
+    // CharacterStats.PlayerCurrentStats (maxHealth, maxStamina, speed, invincibilityTime)
+    public CharacterStats PlayerCurrentStats { get; private set; }
+    #endregion
+
+    private void Start()
     {
-        // 플레이어 정보 업데이트 로직 작성 (위 파라미터 추가 필요)
+        // if (PlayerBaseStats == null) PlayerBaseStats = Resources.Load("Prefabs/DefaultAttackData", typeof(ScriptableObject)) as CharacterStats;
+    }
+
+    #region Player Data
+    public void InitializePlayerData()
+    {
+        AttackSO attackSO = null;
+        if (PlayerBaseStats != null)
+            attackSO = Instantiate(PlayerBaseStats.attackSO);
+
+        PlayerCurrentStats = new CharacterStats { attackSO = attackSO };
+        PlayerCurrentStats.maxHealth = PlayerBaseStats.maxHealth;
+        PlayerCurrentStats.speed = PlayerBaseStats.speed;
+        PlayerCurrentStats.maxStamina = PlayerBaseStats.maxStamina;
+        PlayerCurrentStats.invincibilityTime = PlayerBaseStats.invincibilityTime;
+    }
+
+    // 1번 방법 (AttackSO를 통째로 넘겨줘서 교체)
+    public void UpdatePlayerAttackSOData(AttackSO attackSO)
+    {
+        CharacterStats PlayerChangeStats = new CharacterStats { attackSO = attackSO };
+
+        PlayerCurrentStats.attackSO.attackSpeed += PlayerChangeStats.attackSO.attackSpeed;
+        PlayerCurrentStats.attackSO.power += PlayerChangeStats.attackSO.power;
+        PlayerCurrentStats.attackSO.range += PlayerChangeStats.attackSO.range;
+    }
+
+    // 2번 방법 (각 값을 받아서 교체)
+    public void UpdatePlayerAttckSOData(float atkSpeed, float power, float range)
+    {
+        PlayerCurrentStats.attackSO.attackSpeed += atkSpeed;
+        PlayerCurrentStats.attackSO.power += power;
+        PlayerCurrentStats.attackSO.range += range;
+    }
+
+    public void UpdatePlayerStatsData(int health, int speed)
+    {
+        PlayerCurrentStats.maxHealth += health;
+        PlayerCurrentStats.speed += speed;
     }
     #endregion
 
