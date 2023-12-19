@@ -16,7 +16,7 @@ public class PlayerCollision : MonoBehaviour, IDamagable
     private void Awake()
     {
         _animator = GetComponentInChildren<Animator>();
-        _stats = GameManager.instance.DataManager.playerStats;
+        _stats = GameManager.instance.DataManager.PlayerCurrentStats;
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 

@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        _stats = GameManager.instance.DataManager.playerStats;
+        _stats = GameManager.instance.DataManager.PlayerCurrentStats;
     }
 
     private void FixedUpdate()
