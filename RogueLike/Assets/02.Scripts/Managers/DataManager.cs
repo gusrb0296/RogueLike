@@ -10,10 +10,13 @@ public class DataManager : MonoBehaviour
 
     // 데이터의 변경 및 업데이트가 필요한 경우 이벤트 시스템을 활용(구독)
 
+    public CharacterStats playerStats;
+
     #region Player Data
-    public void UpdatePlayerData()
+    public void UpdatePlayerData(CharacterStats stats)
     {
         // 플레이어 정보 업데이트 로직 작성 (위 파라미터 추가 필요)
+        playerStats = stats;
     }
     #endregion
 

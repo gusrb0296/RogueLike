@@ -11,7 +11,7 @@ public class PlayerCollision : MonoBehaviour
     private CharacterStatsHandler _stats;
     private SpriteRenderer _spriteRenderer;
 
-    private int _invincibleEffectCycle = 5;
+    //private int _invincibleEffectCycle = 5;
 
     private void Awake()
     {

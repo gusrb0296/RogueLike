@@ -78,9 +78,9 @@ public class GameManager : MonoBehaviour
     #endregion
 
     #region Data
-    public void PlayerDataUpdate()
+    public void PlayerDataUpdate(CharacterStats stats)
     {
-        DataManager.UpdatePlayerData(); // 파라미터 PlayerData 필요
+        DataManager.UpdatePlayerData(stats); // 파라미터 PlayerData 필요
     }
     #endregion
 

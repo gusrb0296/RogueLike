@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
         else if(_isAttack && !_isJump)
         {
             Vector2 direction = (_spriteRenderer.flipX) ? Vector2.left : Vector2.right;
-            BulletManager.instance.ShootBullet(gameObject.transform.position, direction);
+            BulletManager.instance.ShootBullet(gameObject.transform.position, direction, _stats.CurrentStats.attackSO.range);
             _AttackDealyTime = 0f;
         }
 
