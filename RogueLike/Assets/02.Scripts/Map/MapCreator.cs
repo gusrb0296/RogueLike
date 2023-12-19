@@ -260,9 +260,12 @@ public class MapCreator : MonoBehaviour
     private void CreatePlayer()
     {
         Transform startPos = GetStartPos();
-        if( startPos != null )
-            Camera.main.GetComponent<FollowCamera>().Player = 
+        if (startPos != null)
+        {
+            Camera.main.GetComponent<FollowCamera>().Player =
                 Instantiate(playerPrefab, startPos.position, Quaternion.identity);
+            GameManager.instance.DataManager.Player = Camera.main.GetComponent<FollowCamera>().Player;
+        }
 
         Camera.main.GetComponent<FollowCamera>().Center.Set(startPos.position.x, startPos.position.y);
     }

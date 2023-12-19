@@ -2,21 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerCollision : MonoBehaviour
+public class PlayerCollision : MonoBehaviour, IDamagable
 {
     [HideInInspector] public SkillItemData SkillData;
     private bool _isInvincibility;
 
     private Animator _animator;
-    private CharacterStatsHandler _stats;
+    private CharacterStats _stats;
     private SpriteRenderer _spriteRenderer;
 
-    private int _invincibleEffectCycle = 5;
+    private int _invincibleEffectCycle = 10;
 
     private void Awake()
     {
         _animator = GetComponentInChildren<Animator>();
-        _stats = GetComponent<CharacterStatsHandler>();
+        _stats = GameManager.instance.DataManager.PlayerCurrentStats;
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
@@ -37,28 +37,32 @@ public class PlayerCollision : MonoBehaviour
 
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void ReceiveDamage(float damage)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            if (_isInvincibility) return;
-            _animator.SetTrigger("Hurt");
-            _isInvincibility = true;
-            Debug.Log("적에게 피격 당함");
-            StartCoroutine(HandleInvincibilityTime());
-        }
+        if (_isInvincibility) return;
+
+        GameManager.instance.DataManager.ChangeHealth(damage);
+
+        _animator.SetTrigger("Hurt");
+        _isInvincibility = true;
+        Debug.Log("적에게 피격 당함");
+        StartCoroutine(HandleInvincibilityTime());
     }
 
     IEnumerator HandleInvincibilityTime()
     {
-        //for (int i = 0; i < _invincibleEffectCycle; i++)
-        //{
-        //    _spriteRenderer.color = new Color32(255,255,255,90);
-        //    yield return new WaitForSeconds(_stats.CurrentStats.invincibilityTime / (_invincibleEffectCycle * 2));
-        //    _spriteRenderer.color = new Color32(255,255,255,180);
-        //    yield return new WaitForSeconds(_stats.CurrentStats.invincibilityTime / (_invincibleEffectCycle * 2));
-        //}
-        yield return new WaitForSeconds(_stats.CurrentStats.invincibilityTime);
+        for (int i = 0; i < _invincibleEffectCycle; i++)
+        {
+            _spriteRenderer.color = new Color32(150, 150, 150, 255);
+            yield return new WaitForSeconds(_stats.invincibilityTime / (_invincibleEffectCycle * 2));
+            _spriteRenderer.color = new Color32(255, 255, 255, 255);
+            yield return new WaitForSeconds(_stats.invincibilityTime / (_invincibleEffectCycle * 2));
+        }
         _isInvincibility = false;
+    }
+
+    public void TakeDamage(float damage)
+    {
+        ReceiveDamage(damage);
     }
 }
