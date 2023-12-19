@@ -4,48 +4,45 @@ using UnityEngine;
 
 public class CloseAttackMonster : Monster
 {
+    
     private new void Awake()
     {
         base.Awake();
     }
 
-    private void Update()
+    private new void FixedUpdate()
     {
-        playerDistance = Vector2.Distance(transform.position, player.transform.position);
-        if (playerDistance < detectDistnce)
-        {
-            Chasing();
-        }
-        else
-        {
-            if (isMove) Moving();
-            else Waiting();
-        }
+        base.FixedUpdate();
     }
 
     protected override void Attack()
     {
         if (Time.time - lastAttackTime > attackRate)
         {
-            rigid.velocity = Vector3.zero;
+            rigid.velocity = Vector2.zero;
             isMove = false;
             animator.SetBool("isMove", false);
 
             lastAttackTime = Time.time;
 
+            isAttacking = true;
             animator.SetTrigger("Attack");
-            //TODO: 플레이어 대미지 계산
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void OnDamage()
     {
-        if(collision.gameObject.layer == gameObject.layer)
+        if (playerDistance < attackDistance)
         {
-            TakeDamage(damage);
-
-            Debug.Log($"체력이 {damage}만큼 달았습니다.");
+            //TODO: 플레이어 대미지 계산
+            Debug.Log($"hit {damage} to player");
         }
-        
     }
+
+    public void AttackEnd()
+    {
+        isAttacking = false;
+    }
+
+    
 }

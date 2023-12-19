@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:RogueLike/Assets/03.Prefabs/Player Variant.prefab.meta
+guid: 7b56d713733afdc4e9f0b45489f1e3ea
+========
 guid: 3bf38965f5e0e1d4c908d505955caf15
+>>>>>>>> Develop:RogueLike/Assets/03.Prefabs/SpawnPositions.prefab.meta
 PrefabImporter:
   externalObjects: {}
   userData: 
