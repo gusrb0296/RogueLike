@@ -46,7 +46,7 @@ public class BulletController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            collision.gameObject.GetComponent<CloseAttackMonster>().TakeDamage(GameManager.instance.DataManager.PlayerCurrentStats.attackSO.power);
+            collision.gameObject.GetComponent<IDamagable>().TakeDamage(GameManager.instance.DataManager.PlayerCurrentStats.attackSO.power);
             _rigidbody.velocity = Vector2.zero;
             _animator.SetTrigger("Hit");
             AutoDestroy(0.4f);
