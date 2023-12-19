@@ -5,9 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class StartSceneManager : MonoBehaviour
 {
+
+    public GameObject UI;
+    
     public void ToMainScene()
     {
         SceneManager.LoadScene("MainScene_KHK");
+        UI.SetActive(true);
     }
 
     public void QuitGame()
