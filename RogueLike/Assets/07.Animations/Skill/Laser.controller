@@ -1,13 +1,13 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1102 &-9058073110342181368
+--- !u!1102 &-1995748455169998015
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Spark Animation
+  m_Name: Laser_idle
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -32,7 +32,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: spark-preview1 (1)
+  m_Name: Laser
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:
@@ -58,8 +58,8 @@ AnimatorStateMachine:
   m_Name: Base Layer
   m_ChildStates:
   - serializedVersion: 1
-    m_State: {fileID: -9058073110342181368}
-    m_Position: {x: 200, y: 0, z: 0}
+    m_State: {fileID: -1995748455169998015}
+    m_Position: {x: 416.5, y: 157, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -69,4 +69,4 @@ AnimatorStateMachine:
   m_EntryPosition: {x: 50, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: -9058073110342181368}
+  m_DefaultState: {fileID: -1995748455169998015}
