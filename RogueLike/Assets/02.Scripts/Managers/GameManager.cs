@@ -90,13 +90,13 @@ public class GameManager : MonoBehaviour
         DataManager.UpdatePlayerAttackSOData(attackSO);
     }
 
-    public void UpdatePlayerAttckSODatas(float atkSpeed, float power, float range)
+    public void UpdatePlayerAttackSODatas(float atkSpeed, float power, float range)
     {
         DataManager.UpdatePlayerAttckSOData(atkSpeed, power, range);
     }
-    public void UpdatePlayerStatsDatas(int health, int speed)
+    public void UpdatePlayerStatsDatas(int maxHealth,int health, int speed)
     {
-        DataManager.UpdatePlayerStatsData(health, speed);
+        DataManager.UpdatePlayerStatsData(maxHealth ,health, speed);
     }
     #endregion
 
