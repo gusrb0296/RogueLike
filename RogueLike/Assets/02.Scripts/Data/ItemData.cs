@@ -5,7 +5,7 @@ using UnityEngine;
 public enum ItemType
 {
     None,
-    Effect,
+    Potion,
     Skiil,
 }
 
@@ -13,7 +13,9 @@ public enum ItemType
 [CreateAssetMenu(fileName = "ItemData_", menuName = "Data/ItemData", order = 0)]
 public class ItemData : ScriptableObject
 {
+    [Header("Commons")]
     public ItemType Type;
     public string Name;
     public string Disription;
+    public AudioClip ItemSound;
 }

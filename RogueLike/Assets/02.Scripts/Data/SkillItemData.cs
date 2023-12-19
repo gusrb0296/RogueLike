@@ -7,7 +7,6 @@ public class SkillItemData : ItemData
 {
     [Header("Stats")]
     public float Atk;
-    public float Stamina;
     public float CoolTime;
     public float SkillSpeed;
 
@@ -15,7 +14,11 @@ public class SkillItemData : ItemData
     public GameObject SkillPrefab;
     public GameObject SkillEffect;
     public GameObject SkillMissEffect;
+
+    [Header("Resources")]
     public Sprite SkillIcon;
+    public AudioClip SkillSound;
+    public AudioClip SkillDamagedSound;
 
     [Header("ETC")]
     public Vector3 SkillPosition;

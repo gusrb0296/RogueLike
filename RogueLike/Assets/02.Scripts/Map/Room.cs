@@ -1,103 +1,202 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public enum ERoomType
+public enum EMoveType
 {
-    Battle,
-    Reward,
-    Boss,
-    Clear
+    Right = 1 << 0,
+    Left = 1 << 1,
+    Up = 1 << 2,
+    Down = 1 << 3,
 }
 
 public class Room : MonoBehaviour
 {
-    public ERoomType RoomType { get; set; }
-    public RoomInfo RoomInfo {  get; set; }
-    public MapCreator MapCreator { get; set; }
-    public bool IsClear { get; set; }
+    private static readonly Vector2 LEFTPOS = new Vector2(-11.5f, 0.5f);
+    private static readonly Vector2 RIGHTPOS = new Vector2(11.5f, -1.5f);
+    private static readonly Vector2 DOWNPOS = new Vector2(0.5f, -6.5f);
+    private static readonly Vector2 UPPOS = new Vector2(-0.5f, 5.5f);
 
-    public void BreakWall()
+    public RoomInfo RoomInfo {  get; set; }
+    public bool IsClear { get; set; }
+    public byte moveType { get; protected set; } = 0;
+
+    protected List<GameObject> tiles = new List<GameObject>();
+
+    protected void SetMoveType()
     {
         // 오른쪽, 왼쪽, 위, 아래
         int[] dx = { 1, -1, 0, 0 };
         int[] dy = { 0, 0, 1, -1 };
 
-        for(int i = 0; i < 4; ++i)
+        for (int i = 0; i < 4; ++i)
         {
             Vector3Int pos = new Vector3Int(RoomInfo.Position.x + dx[i], RoomInfo.Position.y + dy[i], RoomInfo.Position.z);
-            RoomInfo Neighbor = MapCreator.GetRoomInfo(pos);
-            if(Neighbor != null)
+            MapCreator creator = GameManager.instance.StageManager.MapCreator;
+            RoomInfo Neighbor = creator.GetRoomInfo(pos);
+            if (Neighbor != null)
             {
                 if (Neighbor.IsSelected)
                 {
                     switch (i)
                     {
                         case 0:
-                            RightWallBreak();
+                            moveType |= (int)EMoveType.Right;
                             break;
                         case 1:
-                            LeftWallBreak();
+                            moveType |= (int)EMoveType.Left;
                             break;
                         case 2:
-                            UpWallBreak();
+                            moveType |= (int)EMoveType.Up;
                             break;
                         case 3:
-                            DownWallBreak();
+                            moveType |= (int)EMoveType.Down;
                             break;
                     }
                 }
             }
+
         }
     }
 
-    private void RightWallBreak()
+    public virtual void RoomAction()
     {
-        Transform _wall = transform.Find("Walls");
-        Tilemap map = _wall.GetComponent<Tilemap>();
-        Vector2 mapSize = MapCreator.MapSize;
-
-        map.SetTile(new Vector3Int((int)mapSize.x / 2 - 1, -1, 0), null);
-        map.SetTile(new Vector3Int((int)mapSize.x / 2 - 1, 0, 0), null);
-        map.SetTile(new Vector3Int((int)mapSize.x / 2 - 2, -1, 0), null);
-        map.SetTile(new Vector3Int((int)mapSize.x / 2 - 2, 0, 0), null);
+        RoomClear();
     }
 
-    private void LeftWallBreak()
+    public virtual void RoomClear()
     {
-        Transform _wall = transform.Find("Walls");
-        Tilemap map = _wall.GetComponent<Tilemap>();
-        Vector2 mapSize = MapCreator.MapSize;
-
-        map.SetTile(new Vector3Int(-(int)mapSize.x / 2, -1, 0), null);
-        map.SetTile(new Vector3Int(-(int)mapSize.x / 2, 0, 0), null);
-        map.SetTile(new Vector3Int(-(int)mapSize.x / 2 + 1, -1, 0), null);
-        map.SetTile(new Vector3Int(-(int)mapSize.x / 2 + 1, 0, 0), null);
+        IsClear = true;
+        CreatePortal();
     }
 
-    private void UpWallBreak()
+    public virtual void AddTiles()
     {
-        Transform _ground = transform.Find("Grounds");
-        Tilemap map = _ground.GetComponent<Tilemap>();
-        Vector2 mapSize = MapCreator.MapSize;
+        SetMoveType();
 
-        map.SetTile(new Vector3Int(-1, (int)mapSize.y / 2 - 1, 0), null);
-        map.SetTile(new Vector3Int(0, (int)mapSize.y / 2 - 1, 0), null);
-        map.SetTile(new Vector3Int(-1, (int)mapSize.y / 2 - 2, 0), null);
-        map.SetTile(new Vector3Int(0, (int)mapSize.y / 2 - 2, 0), null);
+        if (RightRoomCheck()) 
+        {
+            GameObject go = Resources.Load<GameObject>("Prefabs/Map/RightTile");
+            Instantiate(go, transform);
+            tiles.Add(go);
+        }
+
+        if (LeftRoomCheck())
+        {
+            GameObject go = Resources.Load<GameObject>("Prefabs/Map/LeftTile");
+            Instantiate(go, transform);
+            tiles.Add(go);
+        }
+
+        if (UpRoomCheck())
+        {
+            GameObject go = Resources.Load<GameObject>("Prefabs/Map/UpTile");
+            Instantiate(go, transform);
+            tiles.Add(go);
+        }
+
+        //test
+        //CreatePortal();
     }
 
-    private void DownWallBreak()
+    private void CreatePortal()
     {
-        Transform _ground = transform.Find("Grounds");
-        Tilemap map = _ground.GetComponent<Tilemap>();
-        Vector2 mapSize = MapCreator.MapSize;
+        GameObject go = Resources.Load<GameObject>("Prefabs/Map/PortalObj");
 
-        map.SetTile(new Vector3Int(-1, -(int)mapSize.y / 2, 0), null);
-        map.SetTile(new Vector3Int(0, -(int)mapSize.y / 2, 0), null);
-        map.SetTile(new Vector3Int(-1, -(int)mapSize.y / 2 + 1, 0), null);
-        map.SetTile(new Vector3Int(0, -(int)mapSize.y / 2 + 1, 0), null);
+        if (RightRoomCheck())
+        {
+            CreateRightPortal(go);
+        }
+
+        if (LeftRoomCheck())
+        {
+            CreateLeftPortal(go);
+        }
+
+        if (UpRoomCheck())
+        {
+            CreateUpPortal(go);
+        }
+
+        if (DownRoomCheck())
+        {
+            CreateDownPortal(go);
+        }
+    }
+
+    private void CreateRightPortal(GameObject portalFrefab)
+    {
+        GameObject portal = Instantiate(portalFrefab, transform);
+        portal.transform.localPosition = RIGHTPOS;
+
+        PortalTransition Transition = portal.GetComponent<PortalTransition>();
+        Vector3Int nextPos = new Vector3Int(RoomInfo.Position.x + 1, RoomInfo.Position.y + 0, RoomInfo.Position.z);
+        Transition.TransitionLayouyPosition = nextPos;
+
+        Transform nextRoomPos = GameManager.instance.StageManager.GetRoomTramsform(nextPos);
+        Transition.TransitionPosition = new Vector2(nextRoomPos.position.x + LEFTPOS.x, nextRoomPos.position.y + LEFTPOS.y);
+    }
+
+    private void CreateLeftPortal(GameObject portalFrefab)
+    {
+        GameObject portal = Instantiate(portalFrefab, transform);
+        portal.transform.localPosition = LEFTPOS;
+        portal.GetComponent<SpriteRenderer>().flipX = true;
+
+        PortalTransition Transition = portal.GetComponent<PortalTransition>();
+        Vector3Int nextPos = new Vector3Int(RoomInfo.Position.x - 1, RoomInfo.Position.y + 0, RoomInfo.Position.z);
+        Transition.TransitionLayouyPosition = nextPos;
+
+        Transform nextRoomPos = GameManager.instance.StageManager.GetRoomTramsform(nextPos);
+        Transition.TransitionPosition = new Vector2(nextRoomPos.position.x + RIGHTPOS.x, nextRoomPos.position.y + RIGHTPOS.y);
+    }
+
+    private void CreateUpPortal(GameObject portalFrefab)
+    {
+        GameObject portal = Instantiate(portalFrefab, transform);
+        portal.transform.localPosition = UPPOS;
+
+        PortalTransition Transition = portal.GetComponent<PortalTransition>();
+        Vector3Int nextPos = new Vector3Int(RoomInfo.Position.x, RoomInfo.Position.y + 1, RoomInfo.Position.z);
+        Transition.TransitionLayouyPosition = nextPos;
+
+        Transform nextRoomPos = GameManager.instance.StageManager.GetRoomTramsform(nextPos);
+        Transition.TransitionPosition = new Vector2(nextRoomPos.position.x + DOWNPOS.x, nextRoomPos.position.y + DOWNPOS.y);
+    }
+
+    private void CreateDownPortal(GameObject portalFrefab)
+    {
+        GameObject portal = Instantiate(portalFrefab, transform);
+        portal.transform.localPosition = DOWNPOS;
+
+        PortalTransition Transition = portal.GetComponent<PortalTransition>();
+        Vector3Int nextPos = new Vector3Int(RoomInfo.Position.x, RoomInfo.Position.y - 1, RoomInfo.Position.z);
+        Transition.TransitionLayouyPosition = nextPos;
+
+        Transform nextRoomPos = GameManager.instance.StageManager.GetRoomTramsform(nextPos);
+        Transition.TransitionPosition = new Vector2(nextRoomPos.position.x + UPPOS.x, nextRoomPos.position.y + UPPOS.y);
+    }
+
+    public bool RightRoomCheck()
+    {
+        return (int)EMoveType.Right == (moveType & (int)EMoveType.Right);
+    }
+
+    public bool LeftRoomCheck()
+    {
+        return (int)EMoveType.Left == (moveType & (int)EMoveType.Left);
+    }
+
+    public bool UpRoomCheck()
+    {
+        return (int)EMoveType.Up == (moveType & (int)EMoveType.Up);
+    }
+
+    public bool DownRoomCheck()
+    {
+        return (int)EMoveType.Down == (moveType & (int)EMoveType.Down);
     }
 }

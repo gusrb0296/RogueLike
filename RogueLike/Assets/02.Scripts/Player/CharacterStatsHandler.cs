@@ -25,7 +25,5 @@ public class CharacterStatsHandler : MonoBehaviour
         CurrentStats.speed = baseStats.speed;
         CurrentStats.maxStamina = baseStats.maxStamina;
         CurrentStats.invincibilityTime = baseStats.invincibilityTime;
-
-        GameManager.instance.PlayerDataUpdate(CurrentStats);
     }
 }
