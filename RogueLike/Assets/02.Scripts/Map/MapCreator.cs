@@ -54,12 +54,12 @@ public class MapCreator : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.V))
         {
-            if(Camera.main.GetComponent<FollowCamera>().Player != null)
+            if (Camera.main.GetComponent<FollowCamera>().Player != null)
             {
                 Destroy(Camera.main.GetComponent<FollowCamera>().Player);
                 Camera.main.GetComponent<FollowCamera>().Player = null;
             }
-            CreateNewMap();
+            Start();
         }
     }
 

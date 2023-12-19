@@ -24,6 +24,8 @@ public class Room : MonoBehaviour
     public bool IsClear { get; set; }
     public byte moveType { get; protected set; } = 0;
 
+    protected List<GameObject> tiles = new List<GameObject>();
+
     protected void SetMoveType()
     {
         // 오른쪽, 왼쪽, 위, 아래
@@ -79,18 +81,21 @@ public class Room : MonoBehaviour
         {
             GameObject go = Resources.Load<GameObject>("Prefabs/Map/RightTile");
             Instantiate(go, transform);
+            tiles.Add(go);
         }
 
         if (LeftRoomCheck())
         {
             GameObject go = Resources.Load<GameObject>("Prefabs/Map/LeftTile");
             Instantiate(go, transform);
+            tiles.Add(go);
         }
 
         if (UpRoomCheck())
         {
             GameObject go = Resources.Load<GameObject>("Prefabs/Map/UpTile");
             Instantiate(go, transform);
+            tiles.Add(go);
         }
 
         //test
