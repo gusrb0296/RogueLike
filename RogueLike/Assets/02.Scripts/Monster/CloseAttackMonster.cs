@@ -34,7 +34,7 @@ public class CloseAttackMonster : Monster
     {
         if (playerDistance < attackDistance)
         {
-            //TODO: 플레이어 대미지 계산
+            GameManager.instance.DataManager.Player.GetComponent<PlayerCollision>().TakeDamage(damage);
             Debug.Log($"hit {damage} to player");
         }
     }
