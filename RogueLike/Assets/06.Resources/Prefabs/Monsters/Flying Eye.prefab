@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6146055500582875819}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: muzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 6034489907599560656}
   - component: {fileID: 8863251752982014508}
   - component: {fileID: 8190088923426463632}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: Flying Eye
   m_TagString: Enemy
   m_Icon: {fileID: 0}
