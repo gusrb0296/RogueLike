@@ -284,8 +284,12 @@ public class MapCreator : MonoBehaviour
         RoomInfo roomInfo = _map[position.x, position.y];
         foreach (Transform child in transform)
         {
-            if (child.GetComponent<Room>().RoomInfo == roomInfo)
+            if (child.GetComponent<Room>().RoomInfo.Position == roomInfo.Position)
+            {
+                if (roomInfo.Owner == null)
+                    roomInfo.Owner = child.GetComponent<Room>();
                 return child;
+            }
         }
         return null;
     }
