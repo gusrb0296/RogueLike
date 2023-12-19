@@ -116,12 +116,13 @@ GameObject:
   m_Component:
   - component: {fileID: 4164238476468158423}
   - component: {fileID: 8684883342219125233}
+  - component: {fileID: -2088220770806677745}
   - component: {fileID: 3940256597556302294}
   - component: {fileID: 9183790527360388764}
   - component: {fileID: 2740635518952083991}
   - component: {fileID: 702649253230701417}
   - component: {fileID: 139985876192636601}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -174,7 +175,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.112425685}
   m_SpriteTilingProperty:
@@ -189,6 +190,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4, y: 0.85118175}
   m_EdgeRadius: 0
+--- !u!251 &-2088220770806677745
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4288792700850253447}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 0
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!50 &3940256597556302294
 Rigidbody2D:
   serializedVersion: 4
@@ -353,6 +373,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseStats:
     maxHealth: 100
+    currentHealth: 0
     maxStamina: 100
     speed: 5
     invincibilityTime: 2

@@ -20,13 +20,13 @@ public class BulletManager : MonoBehaviour
         _isCoolTime = false;
     }
 
-    public void ShootBullet(Vector2 startPos, Vector2 direction)
+    public void ShootBullet(Vector2 startPos, Vector2 direction, float range)
     {
         GameObject bulletObj = Instantiate(bullet);
         bulletObj.transform.position = startPos;
         BulletController bulletController = bulletObj.GetComponent<BulletController>();
 
-        bulletController.Shoot(direction);
+        bulletController.Shoot(direction, range);
     }
 
     public void ShootSkill(SkillItemData data, Vector2 startPos, Vector2 direction)

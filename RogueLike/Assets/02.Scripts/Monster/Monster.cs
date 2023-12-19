@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Monster : MonoBehaviour, IDamagable
 {
@@ -22,20 +23,25 @@ public class Monster : MonoBehaviour, IDamagable
     protected float lastAttackTime;
     public float detectDistnce;
     public float attackDistance;
+    protected bool isAttacking = false;
 
     [Header("Wandering")]
     public float wanderWaitTime;
     public float wanderMaxTime;
+    public LayerMask groundLayer;
     protected float wanderingTime = 0;
     protected float waitingTime = 0;
-    protected bool isLeft, isMove;
+    protected bool isMove;
+    Vector2 randomDirection;
 
     protected float playerDistance;
+    protected Vector2 playerDirection;
+    protected Vector2 moveDirection;
 
     protected Animator animator;
     protected Rigidbody2D rigid;
     protected SpriteRenderer spriteRenderer;
-
+    protected bool canReceiveInput = true;
     //임시로 사용할 예정
     protected GameObject player;
     #endregion
@@ -49,9 +55,37 @@ public class Monster : MonoBehaviour, IDamagable
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    private void Update()
+    protected void FixedUpdate()
     {
+        playerDirection = player.transform.position - transform.position;
+        moveDirection = playerDirection.x > 0 ? Vector2.right : Vector2.left;
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            TakeDamage(10);
+        }
+        playerDistance = Vector2.Distance(transform.position, player.transform.position);
 
+        if (canReceiveInput)
+        {
+            if (isAttacking)
+            {
+                rigid.velocity = Vector2.zero;
+                spriteRenderer.flipX = playerDirection.x <= 0;
+            }
+            else
+            {
+                spriteRenderer.flipX = rigid.velocity.x <= 0;
+                if (playerDistance < detectDistnce)
+                {
+                    Chasing();
+                }
+                else
+                {
+                    if (isMove) Moving();
+                    else Waiting();
+                }
+            }
+        }
     }
     #endregion
 
@@ -73,22 +107,9 @@ public class Monster : MonoBehaviour, IDamagable
 
     protected void Run()
     {
-        Vector2 playerDirection = player.transform.position - transform.position;
         isMove = true;
         animator.SetBool("isMove", true);
-
-        if (playerDirection.x < 0)   //왼쪽에 있음
-        {
-            spriteRenderer.flipX = true;
-            rigid.velocity = Vector2.left * runSpeed;
-
-
-        }
-        else //오른쪽
-        {
-            spriteRenderer.flipX = false;
-            rigid.velocity = Vector2.right * runSpeed;
-        }
+        rigid.velocity = moveDirection * runSpeed;
     }
 
     protected void Waiting()
@@ -107,41 +128,25 @@ public class Monster : MonoBehaviour, IDamagable
 
     protected void Moving()
     {
-        if (isLeft)
+        if (wanderingTime > wanderMaxTime)
         {
-            if (wanderingTime > wanderMaxTime)
-            {
-                wanderingTime = 0;
-                isLeft = false;
-                spriteRenderer.flipX = false;
-
-                isMove = false;
-                animator.SetBool("isMove", false);
-                rigid.velocity = Vector2.zero;
-            }
-            else
-            {
-                wanderingTime += Time.deltaTime;
-                rigid.velocity = Vector2.left * walkspeed;
-            }
-
+            wanderingTime = 0;
+            int randomDir = Random.Range(0, 2);
+            randomDirection = randomDir == 0 ? Vector2.right : Vector2.left;
+            isMove = false;
+            animator.SetBool("isMove", false);
+            rigid.velocity = Vector2.zero;
         }
         else
         {
-            if (wanderingTime > wanderMaxTime)
+            wanderingTime += Time.deltaTime;
+            Vector2 startPos = (Vector2)transform.position + Vector2.up * 2;
+            Vector2 rayDirection = new Vector2(randomDirection.x, -Mathf.Abs(randomDirection.x) * 3);
+            RaycastHit2D hit = Physics2D.Raycast(startPos, rayDirection, 5, groundLayer);
+            Debug.DrawRay(startPos, hit.point, Color.yellow);
+            if(hit.collider != null)
             {
-                wanderingTime = 0;
-                isLeft = true;
-                spriteRenderer.flipX = true;
-
-                isMove = false;
-                animator.SetBool("isMove", false);
-                rigid.velocity = Vector2.zero;
-            }
-            else
-            {
-                wanderingTime += Time.deltaTime;
-                rigid.velocity = Vector2.right * walkspeed;
+                rigid.velocity = randomDirection * walkspeed;
             }
         }
 
@@ -149,10 +154,25 @@ public class Monster : MonoBehaviour, IDamagable
 
     public void TakeDamage(float damage)
     {
-        //넉백효과
+        Vector2 knockback = -moveDirection * 10 + Vector2.up * 10;
+        rigid.AddForce(knockback, ForceMode2D.Impulse);
+        StartCoroutine(BlockInputForTime(.5f));
+        animator.SetTrigger("Hit");
+
         health = health - damage > 0 ? health - damage : 0;
         Debug.Log($"체력이 {damage}만큼 달았습니다.");
         if (health == 0) StartCoroutine("Die");
+
+        isAttacking = false;
+    }
+
+    IEnumerator BlockInputForTime(float blockTime)
+    {
+        canReceiveInput = false;
+
+        yield return new WaitForSeconds(blockTime);
+
+        canReceiveInput = true;
     }
 
     IEnumerator Die()

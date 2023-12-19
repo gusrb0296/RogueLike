@@ -15,12 +15,14 @@ MonoBehaviour:
   Type: 2
   Name: CrossedWaveItem
   Disription: "\uAD50\uCC28\uC5D0\uB108\uC9C0\uD30C\uB97C \uBC1C\uC0AC\uD569\uB2C8\uB2E4."
+  ItemSound: {fileID: 8300000, guid: c893b41a8fb01f54d86ec9f6b3a4a27f, type: 3}
   Atk: 10
-  Stamina: 10
   CoolTime: 0.5
   SkillSpeed: 10
   SkillPrefab: {fileID: 964303024030738498, guid: 83c19f7789a3d81499d495206b420fa6, type: 3}
   SkillEffect: {fileID: 3583850376912494759, guid: c15b389655c10de45960cdc381715144, type: 3}
   SkillMissEffect: {fileID: 1194187358893946921, guid: f8ecc8d1261859649b97395a492606d6, type: 3}
   SkillIcon: {fileID: 21300000, guid: cce82a675ef52ef44bc329a74aec2ed7, type: 3}
+  SkillSound: {fileID: 8300000, guid: 019e3b7d7c61f144f9d4b85d5260fa57, type: 3}
+  SkillDamagedSound: {fileID: 8300000, guid: 4be87245d4d26a04583967911d1c73ae, type: 3}
   SkillPosition: {x: 0.2, y: 0, z: 0}

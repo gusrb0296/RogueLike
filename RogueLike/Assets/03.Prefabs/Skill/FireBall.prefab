@@ -194,3 +194,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SkillData: {fileID: 11400000, guid: 6283282b72943144cbffe208543bebd3, type: 2}
+  _skillDamageText: {fileID: 5761190681624421161, guid: 528c16ecab2375c43a0c5d940d4d9373, type: 3}

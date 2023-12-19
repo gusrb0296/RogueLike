@@ -58,6 +58,8 @@ public class GameManager : MonoBehaviour
     private void InitializeData()
     {
         // 데이터 초기화
+        // 플레이어 데이터 초기화
+        PlayerDataInitialiez();
     }
 
     private void InitializeStage()
@@ -78,9 +80,23 @@ public class GameManager : MonoBehaviour
     #endregion
 
     #region Data
-    public void PlayerDataUpdate()
+    public void PlayerDataInitialiez()
     {
-        DataManager.UpdatePlayerData(); // 파라미터 PlayerData 필요
+        DataManager.InitializePlayerData();
+    }
+
+    public void UpdatePlayerAttackSODatas(AttackSO attackSO)
+    {
+        DataManager.UpdatePlayerAttackSOData(attackSO);
+    }
+
+    public void UpdatePlayerAttckSODatas(float atkSpeed, float power, float range)
+    {
+        DataManager.UpdatePlayerAttckSOData(atkSpeed, power, range);
+    }
+    public void UpdatePlayerStatsDatas(int health, int speed)
+    {
+        DataManager.UpdatePlayerStatsData(health, speed);
     }
     #endregion
 
