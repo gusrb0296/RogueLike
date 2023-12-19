@@ -189,3 +189,4 @@ MonoBehaviour:
   map:
     serializedVersion: 2
     m_Bits: 128
+  damage: 5

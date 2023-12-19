@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4244217489876858381
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6146055500582875819}
+  m_Layer: 11
+  m_Name: muzzle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6146055500582875819
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4244217489876858381}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.3, y: 0.1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4181765364542885568}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4684487991050142955
 GameObject:
   m_ObjectHideFlags: 0
@@ -13,9 +44,9 @@ GameObject:
   - component: {fileID: 5867988316350016762}
   - component: {fileID: 6034489907599560656}
   - component: {fileID: 8863251752982014508}
-  - component: {fileID: 5631664210928028968}
-  m_Layer: 8
-  m_Name: Slayer
+  - component: {fileID: 8190088923426463632}
+  m_Layer: 11
+  m_Name: Flying Eye
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,9 +61,10 @@ Transform:
   m_GameObject: {fileID: 4684487991050142955}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3, y: -1.91, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 6146055500582875819}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -77,7 +109,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 1996226108, guid: 09d978aa8f3a4d740becd06adfbbca78, type: 3}
+  m_Sprite: {fileID: 1593963148, guid: bd889e068006bd549a58ee7616f53465, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -120,11 +152,11 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.515625}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 1.03125, y: 1.03125}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.28125, y: 0.96875}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -148,7 +180,7 @@ Rigidbody2D:
   m_Mass: 5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -170,7 +202,7 @@ Animator:
   m_GameObject: {fileID: 4684487991050142955}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 65f1e696e7966a9438ddb3a5d62e457e, type: 2}
+  m_Controller: {fileID: 9100000, guid: a211227097bd8eb4c90d4cf9ed51cf3e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -181,7 +213,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &5631664210928028968
+--- !u!114 &8190088923426463632
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -190,20 +222,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 4684487991050142955}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 674bb675df1f8bb40acda97973346815, type: 3}
+  m_Script: {fileID: 11500000, guid: f8adb90f3c6022d4b907ba82059a4134, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
-  walkspeed: 1.5
-  runSpeed: 3
-  gold: 100
-  exp: 10
-  damage: 5
-  attackRate: 1.2
-  detectDistnce: 3
-  attackDistance: 1.3
-  wanderWaitTime: 2
-  wanderMaxTime: 3
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 128
+  health: 500
+  speed: 4
+  gold: 1000
+  exp: 100
+  damage: 10
+  attackDistance: 2
+  rangedAttackDistance: 10
+  attackRate: 1
+  projectile: {fileID: 6559028859675254803, guid: 3a6a7f68f8723744eaeac9e296cb23eb, type: 3}
+  projectileSpeed: 10
+  muzzle: {fileID: 6146055500582875819}
