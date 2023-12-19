@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class DestroyPrefabs : MonoBehaviour
 {
+    [SerializeField] private float _destroyTime;
     void Start()
     {
-        Destroy(gameObject, 3f);
+        Destroy(gameObject, _destroyTime);
     }
 
     

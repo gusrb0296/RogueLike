@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05735f86932b23742a7146240affe7bb, type: 3}
-  m_Name: EffectItemData_StaminaItem
+  m_Name: PotionItemData_HpItem
   m_EditorClassIdentifier: 
   Type: 1
-  Name: StaminaItem
-  Disription: "\uC2A4\uD14C\uBBF8\uB098\uB97C \uD68C\uBCF5\uD569\uB2C8\uB2E4."
-  Hp: 0
-  Stamina: 10
+  Name: HpItem
+  Disription: "\uCCB4\uB825\uC744 \uD68C\uBCF5\uD569\uB2C8\uB2E4."
+  ItemSound: {fileID: 8300000, guid: 495274025df608c47b828fb860a6c737, type: 3}
+  potionType: 1
+  Hp: 10

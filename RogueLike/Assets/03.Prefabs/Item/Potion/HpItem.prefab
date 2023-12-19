@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2966433436998446448
 SpriteRenderer:
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 553039b1c624f9e4cbf895c0a5b68cb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EffectData: {fileID: 11400000, guid: 8a92ef335c41ec5418e41b3cbf4d2f22, type: 2}
+  PotionData: {fileID: 11400000, guid: 8a92ef335c41ec5418e41b3cbf4d2f22, type: 2}
 --- !u!95 &593069997974566038
 Animator:
   serializedVersion: 5
