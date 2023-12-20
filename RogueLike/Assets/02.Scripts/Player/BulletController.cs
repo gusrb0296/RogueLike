@@ -11,6 +11,8 @@ public class BulletController : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
     private Animator _animator;
 
+    [SerializeField] DamageText _damageText;
+
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -46,6 +48,7 @@ public class BulletController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
+            _damageText.CreateNormalAttackText(gameObject.transform, _rigidbody.velocity.x);
             collision.gameObject.GetComponent<CloseAttackMonster>().TakeDamage(GameManager.instance.DataManager.PlayerCurrentStats.attackSO.power);
             _rigidbody.velocity = Vector2.zero;
             _animator.SetTrigger("Hit");

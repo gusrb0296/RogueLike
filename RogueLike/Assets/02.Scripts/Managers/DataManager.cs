@@ -15,6 +15,9 @@ public class DataManager : MonoBehaviour
     #region Player Global Variable
     private GameObject player;
 
+    public List<SkillItemData> SkillDataList = new List<SkillItemData>();
+
+
     public GameObject Player
     {
         get { return player; }
@@ -85,6 +88,32 @@ public class DataManager : MonoBehaviour
     #endregion
 
     #region Item Data
+    public void InitializeSkillData()
+    {
+        // Bolt
+        SkillDataList[0].Atk = 10f;
+        SkillDataList[0].CoolTime = 0.5f;
+        SkillDataList[0].SkillSpeed = 10f;
 
+        // CrossedWave
+        SkillDataList[1].Atk = 10f;
+        SkillDataList[1].CoolTime = 0.5f;
+        SkillDataList[1].SkillSpeed = 10f;
+
+        // FastSlash
+        SkillDataList[2].Atk = 10f;
+        SkillDataList[2].CoolTime = 0.5f;
+        SkillDataList[2].SkillSpeed = 10f;
+
+        // FireBall
+        SkillDataList[3].Atk = 10f;
+        SkillDataList[3].CoolTime = 0.5f;
+        SkillDataList[3].SkillSpeed = 10f;
+
+        // Laser
+        SkillDataList[4].Atk = 10f;
+        SkillDataList[4].CoolTime = 0.5f;
+        SkillDataList[4].SkillSpeed = 10f;
+    }
     #endregion
 }

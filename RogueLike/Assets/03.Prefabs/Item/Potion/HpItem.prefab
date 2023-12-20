@@ -135,6 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PotionData: {fileID: 11400000, guid: 8a92ef335c41ec5418e41b3cbf4d2f22, type: 2}
+  _skillItemDataList: {fileID: 0}
 --- !u!95 &593069997974566038
 Animator:
   serializedVersion: 5
