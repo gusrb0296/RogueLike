@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -77,6 +78,15 @@ public class DataManager : MonoBehaviour
         PlayerCurrentStats.currentHealth = Mathf.Clamp(PlayerCurrentStats.currentHealth - (int)value, 0, PlayerCurrentStats.maxHealth);
         Debug.Log("데미지를 입었습니다 " + PlayerCurrentStats.currentHealth);
         Debug.Log("현재체력  " + PlayerCurrentStats.currentHealth);
+        if(PlayerCurrentStats.currentHealth == 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        Player.GetComponentInChildren<Animator>().SetBool("IsDie", true);
     }
     #endregion
 
