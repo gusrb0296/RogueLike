@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class CloseAttackMonster : Monster
@@ -32,19 +33,7 @@ public class CloseAttackMonster : Monster
 
     public void OnDamage()
     {
-        if(gameObject.name.Contains("Minotaur"))
-        {
-            GameManager.instance.AudioManager.SFX("monsterAxeATK");
-        }
-        else if (gameObject.name.Contains("Slayer"))
-        {
-            GameManager.instance.AudioManager.SFX("monsterUpperATK");
-        }
-        else if (gameObject.name.Contains("Skeleton"))
-        {
-            GameManager.instance.AudioManager.SFX("monsterSwordATK");
-        }
-        
+        playAttackSFX();
         if (playerDistance < attackDistance)
         {
             GameManager.instance.DataManager.Player.GetComponent<PlayerCollision>().TakeDamage(damage);
@@ -57,5 +46,4 @@ public class CloseAttackMonster : Monster
         isAttacking = false;
     }
 
-    
 }
