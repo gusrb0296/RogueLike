@@ -96,6 +96,7 @@ public class DataManager : MonoBehaviour
     private void Die()
     {
         Player.GetComponentInChildren<Animator>().SetBool("IsDie", true);
+        GameManager.instance.UiManager.GameOverAnim();
     }
     #endregion
 

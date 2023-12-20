@@ -18,10 +18,13 @@ public class UIManager : MonoBehaviour
 
     public float num;
 
-    [Header("UI Interface")]
+    [Header("UI")]
     public TextMeshProUGUI HP_txt;
     public Image HP_Bar;
     public TextMeshProUGUI CurrentGem_txt;
+    public GameObject GameOverText;
+    public Animator GameOverAnimation;
+    public Image SkillIcon;
     private float currentHealth;
     private int currentGem;
     private int needLvUpGem;
@@ -93,6 +96,8 @@ public class UIManager : MonoBehaviour
                 Pause();
             }
         }
+        //Update에서 획득시로 수정 필요함.
+        CurrentGem_txt.text = dataManager.PlayerCurrentGold.ToString();
     }
 
     public void Resume()
@@ -105,6 +110,7 @@ public class UIManager : MonoBehaviour
 
     private void Pause()
     {
+        GameOverAnim();
         UIOpen(PauseMenuPanel);
         Time.timeScale = 0f;
         Debug.Log("게임 정지");
@@ -126,4 +132,19 @@ public class UIManager : MonoBehaviour
         HP_Bar.fillAmount = (float)dataManager.PlayerCurrentStats.currentHealth / (float)dataManager.PlayerCurrentStats.maxHealth;
         HP_txt.text = dataManager.PlayerCurrentStats.currentHealth + " / " + maxHealth;
     }
+
+    public void GameOverAnim()
+    {
+        UIOpen(GameOverText);
+        GameOverAnimation.SetTrigger("GameOver");
+
+        Invoke("TimeScaleZero", 1.5f);
+    }
+
+    private void TimeScaleZero()
+    {
+        Time.timeScale = 0f;
+    }
+
+    
 }
