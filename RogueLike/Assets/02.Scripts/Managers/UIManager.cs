@@ -3,16 +3,15 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    // ê²Œì„ ë‚´ UI ê´€ë¦¬
+    // °ÔÀÓ ³» UI °ü¸®
 
-    // í™”ë©´ì— í‘œì‹œë˜ëŠ” UIì˜ ì´ˆê¸°í™”, ê° ì‹ , ìˆ¨ê¹€ ë“±ì„ ì²˜ë¦¬
+    // È­¸é¿¡ Ç¥½ÃµÇ´Â UIÀÇ ÃÊ±âÈ­, °µ½Å, ¼û±è µîÀ» Ã³¸®
 
-    // ì‚¬ìš©ì ì…ë ¥ì— ë”°ë¥¸ ì´ë²¤íŠ¸ ì²˜ë¦¬ ë‹´ë‹¹
+    // »ç¿ëÀÚ ÀÔ·Â¿¡ µû¸¥ ÀÌº¥Æ® Ã³¸® ´ã´ç
 
     public bool GameIsPaused = false;
     public GameObject PauseMenuPanel;
@@ -53,8 +52,7 @@ public class UIManager : MonoBehaviour
     private int maxHealth;
 
     DataManager dataManager;
-    private bool IsGameOver;
-    public GameObject MainUI;
+
 
     private void Start()
     {
@@ -63,24 +61,26 @@ public class UIManager : MonoBehaviour
         maxHealth = dataManager.PlayerCurrentStats.maxHealth;
         power = dataManager.PlayerCurrentStats.attackSO.power;
         attackSpeed = dataManager.PlayerCurrentStats.attackSO.attackSpeed;
-        mobility = dataManager.PlayerCurrentStats.speed;
+        //mobility = dataManager.PlayerCurrentStats.speed;
         currentHealth = dataManager.PlayerCurrentStats.currentHealth;
 
 
 
-        //ê¸°ë³¸ UIì— ê°’ë“¤ì´ ë³´ì´ê²Œ ì´ˆê¸°í™”, Setting to can see UI Stats
-        //HP_txt.text = currentHealth + " / " + maxHealth;
+        //±âº» UI¿¡ °ªµéÀÌ º¸ÀÌ°Ô ÃÊ±âÈ­, Setting to can see UI Stats
+        HP_txt.text = currentHealth + " / " + maxHealth;
 
 
-        //Stats ì„¤ì •ì— ê°’ë“¤ì´ ë³´ì´ê²Œ ì„¤ì •
+        //Stats ¼³Á¤¿¡ °ªµéÀÌ º¸ÀÌ°Ô ¼³Á¤
         Level_stats.text = Level.ToString();
         HP_stats.text = maxHealth.ToString();
         power_stats.text = power.ToString();
-        mobility_stats.text = mobility.ToString();
+        //mobility_stats.text = mobility.ToString();
         attackSpeed_stats.text = attackSpeed.ToString();
 
         HP_Bar.type = Image.Type.Filled;
+
     }
+
 
     private void Update()
     {
@@ -97,33 +97,24 @@ public class UIManager : MonoBehaviour
                 Pause();
             }
         }
-
-        //GameOVer ì´í›„ ì—”í„° ì…ë ¥ ì‹œ ê²Œì„ ì¢…ë£Œ
-        if (Input.GetKeyDown(KeyCode.Return) && IsGameOver == true)
-        {
-            ReturnToStartScene();
-        }
-
-        //Gem íšë“ì‹œ UIì ìš©. Updateì—ì„œ íšë“ì‹œë¡œ ìˆ˜ì • í•„ìš”í•¨.
+        //Update¿¡¼­ È¹µæ½Ã·Î ¼öÁ¤ ÇÊ¿äÇÔ.
         CurrentGem_txt.text = dataManager.PlayerCurrentGold.ToString();
-
-        //HPë°” ê²Œì´ì§€ ë³€ë™
-        ChangeDisplayHealth();
     }
 
     public void Resume()
     {
         UIClose(PauseMenuPanel);
         Time.timeScale = 1f;
-        Debug.Log("ê²Œì„ ì¬ê°œ");
+        Debug.Log("°ÔÀÓ Àç°³");
         GameIsPaused = false;
     }
 
     private void Pause()
     {
+        GameOverAnim();
         UIOpen(PauseMenuPanel);
         Time.timeScale = 0f;
-        Debug.Log("ê²Œì„ ì •ì§€");
+        Debug.Log("°ÔÀÓ Á¤Áö");
         GameIsPaused = true;
     }
 
@@ -148,32 +139,18 @@ public class UIManager : MonoBehaviour
         UIOpen(GameOverText);
         GameOverAnimation.SetTrigger("GameOver");
 
-        Invoke("GameOVer", 1.5f);
+        Invoke("TimeScaleZero", 1.5f);
     }
 
     public void GameClearAnim()
     {
         UIOpen(GameClearPanel);
     }
+
+    private void TimeScaleZero()
+    {
+        Time.timeScale = 0f;
+    }
+
     
-    private void GameOVer()
-    {
-        //Time.timeScale = 0f;
-        IsGameOver = true;
-    }
-
-    public void ReturnToStartScene()
-    {
-        //Time.timeScale = 1f;
-        IsGameOver = false;
-        //Scene currentScene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene("StartScene", LoadSceneMode.Single);
-        UIClose(MainUI);
-        UIClose(GameOverText);
-    }
-
-    public void MainUIActive()
-    {
-        UIOpen(MainUI);
-    }
 }

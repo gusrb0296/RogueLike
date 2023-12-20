@@ -87,6 +87,7 @@ public class DataManager : MonoBehaviour
         PlayerCurrentStats.currentHealth = Mathf.Clamp(PlayerCurrentStats.currentHealth - (int)value, 0, PlayerCurrentStats.maxHealth);
         Debug.Log("데미지를 입었습니다 " + value);
         Debug.Log("현재체력  " + PlayerCurrentStats.currentHealth);
+        GameManager.instance.UiManager.ChangeDisplayHealth();
 
         if (PlayerCurrentStats.currentHealth == 0)
         {
