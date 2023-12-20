@@ -17,6 +17,8 @@ public class SkillItem : MonoBehaviour
     void UseItem()
     {
         GameManager.instance.UiManager.SkillIcon.sprite = SkillData.SkillIcon;
+        GameManager.instance.AudioManager.SFX(SkillData.ItemSound);
+
         Destroy(gameObject);
     }
 
