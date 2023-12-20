@@ -15,7 +15,9 @@ public class SkillItem : MonoBehaviour
     }
 
     void UseItem()
-    {       
+    {
+        GameManager.instance.AudioManager.SFX(SkillData.ItemSound);
+
         Destroy(gameObject);
     }
 

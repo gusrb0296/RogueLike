@@ -57,6 +57,11 @@ public class AudioManager : MonoBehaviour
         _soundEffects.PlayOneShot(sfx[name]);
     }
 
+    public void SFX(AudioClip filp)
+    {
+        _soundEffects.PlayOneShot(filp);
+    }
+
     public void BGM(string name)
     {
         _backgroundMusic.Stop();
