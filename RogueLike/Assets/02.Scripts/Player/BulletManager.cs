@@ -9,6 +9,7 @@ public class BulletManager : MonoBehaviour
     [SerializeField] private GameObject bullet;
 
     private bool _isCoolTime;
+    private float coolTime = 0;
 
     private void Awake()
     {
@@ -41,7 +42,18 @@ public class BulletManager : MonoBehaviour
 
     IEnumerator SkillCoolTime(SkillItemData data)
     {
-        yield return new WaitForSeconds(data.CoolTime);
+        coolTime = data.CoolTime;
+        while (coolTime > 0.0f)
+        {
+            coolTime -= Time.deltaTime;
+
+            GameManager.instance.UiManager.disable.fillAmount = coolTime / data.CoolTime;
+            Debug.Log("fillAmount : " + GameManager.instance.UiManager.disable.fillAmount);
+
+            yield return new WaitForFixedUpdate();
+        }
+
+        //yield return new WaitForSeconds(data.CoolTime);
         _isCoolTime = false;
     }
 }

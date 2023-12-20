@@ -56,6 +56,7 @@ public class UIManager : MonoBehaviour
     private bool IsGameOver;
     public GameObject MainUI;
     private Sprite basicSkillIcon;
+    public Image disable;
 
     private void Start()
     {
@@ -170,6 +171,7 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene("StartScene");
         UIClose(MainUI);
         UIClose(GameOverText);
+        Resume();
         SkillIcon.sprite = basicSkillIcon;
     }
 
