@@ -1185,6 +1185,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1636261040 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7097643551043442538, guid: 3053bcd4078a86a4989b3021fa7450fd, type: 3}
+  m_PrefabInstance: {fileID: 1636590024}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1636590024
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1193,6 +1198,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 983985489663792936, guid: 3053bcd4078a86a4989b3021fa7450fd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2606508856321751827, guid: 3053bcd4078a86a4989b3021fa7450fd, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -1200,6 +1209,10 @@ PrefabInstance:
     - target: {fileID: 2735043665463424554, guid: 3053bcd4078a86a4989b3021fa7450fd, type: 3}
       propertyPath: m_Name
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5253323783139037052, guid: 3053bcd4078a86a4989b3021fa7450fd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5492180391732701070, guid: 3053bcd4078a86a4989b3021fa7450fd, type: 3}
       propertyPath: SkillDataList.Array.size
@@ -1269,6 +1282,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6171446753176860929, guid: 3053bcd4078a86a4989b3021fa7450fd, type: 3}
+      propertyPath: GameClearPanel
+      value: 
+      objectReference: {fileID: 1636261040}
     m_RemovedComponents:
     - {fileID: 2522174150858352617, guid: 3053bcd4078a86a4989b3021fa7450fd, type: 3}
     m_RemovedGameObjects: []

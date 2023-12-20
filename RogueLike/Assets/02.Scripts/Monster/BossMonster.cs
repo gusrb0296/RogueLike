@@ -186,6 +186,7 @@ public class BossMonster : MonoBehaviour, IDamagable
         animator.SetTrigger("Die");
         isDie = true;
         yield return new WaitForSecondsRealtime(.7f);
+        GameManager.instance.UiManager.GameClearAnim();
         Destroy(gameObject);
     }
 }

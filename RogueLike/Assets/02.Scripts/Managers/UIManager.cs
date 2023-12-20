@@ -23,6 +23,7 @@ public class UIManager : MonoBehaviour
     public Image HP_Bar;
     public TextMeshProUGUI CurrentGem_txt;
     public GameObject GameOverText;
+    public GameObject GameClearPanel;
     public Animator GameOverAnimation;
     public Image SkillIcon;
     private float currentHealth;
@@ -139,6 +140,11 @@ public class UIManager : MonoBehaviour
         GameOverAnimation.SetTrigger("GameOver");
 
         Invoke("TimeScaleZero", 1.5f);
+    }
+
+    public void GameClearAnim()
+    {
+        UIOpen(GameClearPanel);
     }
 
     private void TimeScaleZero()
