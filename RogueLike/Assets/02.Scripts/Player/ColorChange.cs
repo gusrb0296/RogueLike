@@ -5,12 +5,11 @@ using UnityEngine;
 public class ColorChange : MonoBehaviour
 {
     private SpriteRenderer _spriteRenderer;
-    private Color _originColor;
+    private Color _originColor = new Color(255/255f, 255/255f, 255/255f, 255/255f);
     private Color _changeColor;
     [SerializeField] private float _repeatTime;
     [SerializeField] private float _finishTime;
     private IEnumerator _coroutine;
-    private float time = 0;
 
 
     private void Awake()
@@ -18,29 +17,19 @@ public class ColorChange : MonoBehaviour
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
-    private void Update()
-    {
-        time += Time.deltaTime; 
-        if(time > _finishTime)
-        {
-            StopAllCoroutines();
-            _spriteRenderer.color = _originColor;
-        }
-    }
-
 
     public void PlayerColorChange(Color changeColor)
     {
-        time = 0;
         _coroutine = ColorInOut();
-        _originColor = _spriteRenderer.color;
         _changeColor = changeColor;
         StartCoroutine(_coroutine);
+        StartCoroutine(Stop());
     }
 
 
     private IEnumerator ColorInOut()
     {
+
         while (true)
         {
             yield return StartCoroutine(ColorChanges(_originColor, _changeColor));
@@ -62,5 +51,12 @@ public class ColorChange : MonoBehaviour
 
             yield return null;
         }
+    }
+
+    IEnumerator Stop()
+    {
+        yield return new WaitForSeconds(_finishTime);
+        StopCoroutine(_coroutine);
+        _spriteRenderer.color = _originColor;
     }
 }
