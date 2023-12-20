@@ -7,6 +7,7 @@ public class BossRoom : Room
     public override void RoomAction()
     {
         IsVisited = true;
+        GameManager.instance.AudioManager.BGM("bossRoomBGM");
     }
 
     public override void RoomClear()

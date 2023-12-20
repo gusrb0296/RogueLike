@@ -5,11 +5,22 @@ using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
+public enum MonsterType
+{
+    Minotaur,
+    Mushroom,
+    Skeleton,
+    Slayer
+}
+
 public class Monster : MonoBehaviour, IDamagable
 {
     public BattleRoom room;
     //Stat SO 만들어지면 대체하려고 함.
     #region Factors
+    [Header("Type")]
+    public MonsterType monsterType;
+
     [Header("Stats")]
     public float health;
     public float walkspeed;
@@ -177,6 +188,7 @@ public class Monster : MonoBehaviour, IDamagable
             animator.SetTrigger("Hit");
 
             health = health - damage > 0 ? health - damage : 0;
+            GameManager.instance.AudioManager.SFX("monsterHit");
             Debug.Log($"체력이 {damage}만큼 달았습니다.");
             if (health == 0)
             {
@@ -230,4 +242,21 @@ public class Monster : MonoBehaviour, IDamagable
         Destroy(gameObject);
     }
     #endregion
+
+    public void playAttackSFX()
+    {
+        switch (monsterType)
+        {
+            case MonsterType.Minotaur:
+                GameManager.instance.AudioManager.SFX("monsterAxeATK");
+                break;
+            case MonsterType.Skeleton:
+                GameManager.instance.AudioManager.SFX("monsterSwordATK");
+                break;
+            case MonsterType.Slayer:
+                GameManager.instance.AudioManager.SFX("monsterUpperATK");
+                break;
+
+        }
+    }
 }

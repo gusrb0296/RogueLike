@@ -44,7 +44,9 @@ public class RangeAttackMonster : Monster
         Vector2 direction = player.transform.position - muzzle.transform.position;
         Vector2 fireDirection = direction * projectileSpeed;
 
+
         yield return new WaitForSecondsRealtime(1f);
+        GameManager.instance.AudioManager.SFX("monsterFireATK");
 
         GameManager.instance.AudioManager.SFX("monsterFireATK");
         if (tile != null)

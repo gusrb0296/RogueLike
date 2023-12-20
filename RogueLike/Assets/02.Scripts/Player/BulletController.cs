@@ -20,6 +20,11 @@ public class BulletController : MonoBehaviour
         _animator = GetComponentInChildren<Animator>();
     }
 
+    private void Start()
+    {
+        GameManager.instance.AudioManager.SFX("playerNormalATK");
+    }
+
     public void Shoot(Vector2 direction, float range)
     {
         if(direction.x < 0) _spriteRenderer.flipX = true;
