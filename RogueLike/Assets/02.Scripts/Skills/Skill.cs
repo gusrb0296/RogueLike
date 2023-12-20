@@ -17,12 +17,18 @@ public class Skill : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
     }
 
+    private void Start()
+    {
+        GameManager.instance.AudioManager.SFX(SkillData.SkillSound);
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Enemy")
         {
-            int dir = (_rigidbody.velocity.x > 0) ? 1 : -1;
+            GameManager.instance.AudioManager.SFX(SkillData.SkillDamagedSound);
 
+            int dir = (_rigidbody.velocity.x > 0) ? 1 : -1;
             Instantiate(SkillData.SkillEffect, gameObject.transform.position + new Vector3(SkillData.SkillPosition.x * dir, SkillData.SkillPosition.y, SkillData.SkillPosition.z), Quaternion.identity);
             _damageText.CreateSkillText(SkillData, gameObject.transform, _rigidbody.velocity.x);
 

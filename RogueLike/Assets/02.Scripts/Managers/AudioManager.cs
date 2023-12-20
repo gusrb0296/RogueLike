@@ -57,11 +57,26 @@ public class AudioManager : MonoBehaviour
         _soundEffects.PlayOneShot(sfx[name]);
     }
 
+    public void SFX(AudioClip filp)
+    {
+        _soundEffects.PlayOneShot(filp);
+    }
+
     public void BGM(string name)
     {
         _backgroundMusic.Stop();
         _backgroundMusic.clip = bgm[name];
         _backgroundMusic.Play();
+    }
+
+    public float GetVolume()
+    {
+        return _backgroundMusic.volume;
+    }
+
+    public void SetVolume(float volume)
+    {
+        _backgroundMusic.volume = volume;
     }
 
 }

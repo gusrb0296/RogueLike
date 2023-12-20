@@ -7,6 +7,7 @@ public class TreasureRoom : Room
     public override void RoomAction()
     {
         base.RoomAction();
+        GameManager.instance.AudioManager.BGM("shopRoomBGM");
     }
 
     public override void RoomClear()

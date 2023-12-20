@@ -16,8 +16,8 @@ MonoBehaviour:
   Name: BoltItem
   Disription: "\uC804\uAE30\uD68C\uC624\uB9AC\uB97C \uBC1C\uC0AC\uD569\uB2C8\uB2E4."
   ItemSound: {fileID: 8300000, guid: c893b41a8fb01f54d86ec9f6b3a4a27f, type: 3}
-  Atk: 10
-  CoolTime: 0.5
+  Atk: 200
+  CoolTime: 4
   SkillSpeed: 10
   SkillPrefab: {fileID: 4737643081147909885, guid: f17a606e76f05e04db0fb92c89537407, type: 3}
   SkillEffect: {fileID: 7777065167491399128, guid: f7f8566007bd30e449a4f13b2fee7515, type: 3}

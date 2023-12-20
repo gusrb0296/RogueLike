@@ -16,8 +16,8 @@ MonoBehaviour:
   Name: CrossedWaveItem
   Disription: "\uAD50\uCC28\uC5D0\uB108\uC9C0\uD30C\uB97C \uBC1C\uC0AC\uD569\uB2C8\uB2E4."
   ItemSound: {fileID: 8300000, guid: c893b41a8fb01f54d86ec9f6b3a4a27f, type: 3}
-  Atk: 10
-  CoolTime: 0.5
+  Atk: 150
+  CoolTime: 3
   SkillSpeed: 10
   SkillPrefab: {fileID: 964303024030738498, guid: 83c19f7789a3d81499d495206b420fa6, type: 3}
   SkillEffect: {fileID: 3583850376912494759, guid: c15b389655c10de45960cdc381715144, type: 3}
