@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: -1357875391, guid: 9aad82fe9e83d88478eff2f9257e9a90, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -177,7 +177,6 @@ MonoBehaviour:
   walkspeed: 1
   runSpeed: 2
   gold: 100
-  exp: 10
   damage: 10
   attackRate: 2
   detectDistnce: 3
