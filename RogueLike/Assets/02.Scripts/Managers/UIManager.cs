@@ -14,16 +14,75 @@ public class UIManager : MonoBehaviour
     // 사용자 입력에 따른 이벤트 처리 담당
 
     public bool GameIsPaused = false;
-    public GameObject PuaseMenuPanel;  
+    public GameObject PauseMenuPanel;
 
-    private void Awake()
-    {        
+    public float num;
+
+    [Header("UI Interface")]
+    public TextMeshProUGUI HP_txt;
+    public Image HP_Bar;
+    public TextMeshProUGUI CurrentGem_txt;
+    private float currentHealth;
+    private int currentGem;
+    private int needLvUpGem;
+
+    [Header("Stats InterFace")]
+    public TextMeshProUGUI Level_stats;
+    public TextMeshProUGUI HP_stats;
+    public TextMeshProUGUI power_stats;
+    public TextMeshProUGUI mobility_stats;
+    public TextMeshProUGUI attackSpeed_stats;
+
+    [Header("Stats Modifier")]
+    public TextMeshProUGUI Gem_modifier;
+    public TextMeshProUGUI HP_modifier;
+    public TextMeshProUGUI power_modifier;
+    public TextMeshProUGUI mobility_modifier;
+    public TextMeshProUGUI attackSpeed_modifier;
+
+    [HideInInspector]
+    private float power;
+    private float mobility = 0.5f;
+    private float attackSpeed;
+    private int Level = 1;
+    private int maxHealth;
+
+    DataManager dataManager;
+
+
+    private void Start()
+    {
+        dataManager = GameManager.instance.DataManager;
+
+        maxHealth = dataManager.PlayerCurrentStats.maxHealth;
+        power = dataManager.PlayerCurrentStats.attackSO.power;
+        attackSpeed = dataManager.PlayerCurrentStats.attackSO.attackSpeed;
+        //mobility = dataManager.PlayerCurrentStats.speed;
+        currentHealth = dataManager.PlayerCurrentStats.currentHealth;
+
+
+
+        //기본 UI에 값들이 보이게 초기화, Setting to can see UI Stats
+        HP_txt.text = currentHealth + " / " + maxHealth;
+
+
+        //Stats 설정에 값들이 보이게 설정
+        Level_stats.text = Level.ToString();
+        HP_stats.text = maxHealth.ToString();
+        power_stats.text = power.ToString();
+        //mobility_stats.text = mobility.ToString();
+        attackSpeed_stats.text = attackSpeed.ToString();
+
+        HP_Bar.type = Image.Type.Filled;
+
     }
+
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (PuaseMenuPanel == null) return;
+            if (PauseMenuPanel == null) return;
 
             if (GameIsPaused)
             {
@@ -36,9 +95,9 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    private void Resume()
+    public void Resume()
     {
-        UIClose(PuaseMenuPanel);
+        UIClose(PauseMenuPanel);
         Time.timeScale = 1f;
         Debug.Log("게임 재개");
         GameIsPaused = false;
@@ -46,7 +105,7 @@ public class UIManager : MonoBehaviour
 
     private void Pause()
     {
-        UIOpen(PuaseMenuPanel);
+        UIOpen(PauseMenuPanel);
         Time.timeScale = 0f;
         Debug.Log("게임 정지");
         GameIsPaused = true;
@@ -60,5 +119,11 @@ public class UIManager : MonoBehaviour
     private void UIClose(GameObject wantToCloaseUI)
     {
         wantToCloaseUI.SetActive(false);
+    }
+
+    public void ChangeDisplayHealth()
+    {
+        HP_Bar.fillAmount = (float)dataManager.PlayerCurrentStats.currentHealth / (float)dataManager.PlayerCurrentStats.maxHealth;
+        HP_txt.text = dataManager.PlayerCurrentStats.currentHealth + " / " + maxHealth;
     }
 }
