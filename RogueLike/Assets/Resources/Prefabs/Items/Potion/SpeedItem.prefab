@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7043690359354134306}
   - component: {fileID: 7541536653272571790}
   - component: {fileID: 7376639206930444476}
+  - component: {fileID: -1353093341623352546}
   m_Layer: 0
   m_Name: SpeedItem
   m_TagString: Item
@@ -156,3 +157,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.2886718}
   serializedVersion: 2
   m_Radius: 0.2886718
+--- !u!114 &-1353093341623352546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2532125767097420598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2138bd094ef234e449d4e66dd7f1e0b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _repeatTime: 0.2
+  _finishTime: 5

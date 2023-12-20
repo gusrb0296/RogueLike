@@ -12,9 +12,9 @@ public class ColorChange : MonoBehaviour
     private IEnumerator _coroutine;
 
 
-    private void Awake()
+    private void Start()
     {
-        _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        _spriteRenderer = GameManager.instance.DataManager.Player.GetComponentInChildren<SpriteRenderer>();
     }
 
 
