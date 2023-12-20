@@ -12,13 +12,22 @@ public interface IInteractable
 
 public class InteractionManager : MonoBehaviour
 {
-    public float maxCheckDistance;
     private IInteractable curInteractable;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Interactable"))
         {
+            if (curInteractable != null) return;
+            curInteractable = collision.GetComponent<IInteractable>();
+            curInteractable.SetText(true);
+        }
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Interactable"))
+        {
+            if (curInteractable != null) return;
             curInteractable = collision.GetComponent<IInteractable>();
             curInteractable.SetText(true);
         }
