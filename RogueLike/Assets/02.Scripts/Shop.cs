@@ -9,7 +9,6 @@ public class Shop : MonoBehaviour, IInteractable
     public GameObject testShop;
     public void OnInteract(bool active)
     {
-        if (testShop == null) return;
         //TODO: 상점 열기
         testShop.SetActive(active);
     }

@@ -21,8 +21,7 @@ public class Room : MonoBehaviour
     private static readonly Vector2 UPPOS = new Vector2(-0.5f, 5.5f);
 
     public RoomInfo RoomInfo {  get; set; }
-    public bool IsClear { get; set; } = false;
-    public bool IsVisited { get; set; } = false;
+    public bool IsClear { get; set; }
     public byte moveType { get; protected set; } = 0;
 
     protected List<GameObject> tiles = new List<GameObject>();
@@ -65,11 +64,7 @@ public class Room : MonoBehaviour
 
     public virtual void RoomAction()
     {
-        IsVisited = true;
-        if (!IsClear)
-        {
-            RoomClear();
-        }
+        RoomClear();
     }
 
     public virtual void RoomClear()
@@ -80,8 +75,6 @@ public class Room : MonoBehaviour
 
     public virtual void AddTiles()
     {
-        bool IsTileEmpty = true;
-
         SetMoveType();
 
         if (RightRoomCheck()) 
@@ -89,7 +82,6 @@ public class Room : MonoBehaviour
             GameObject go = Resources.Load<GameObject>("Prefabs/Map/RightTile");
             Instantiate(go, transform);
             tiles.Add(go);
-            IsTileEmpty = false;
         }
 
         if (LeftRoomCheck())
@@ -97,7 +89,6 @@ public class Room : MonoBehaviour
             GameObject go = Resources.Load<GameObject>("Prefabs/Map/LeftTile");
             Instantiate(go, transform);
             tiles.Add(go);
-            IsTileEmpty = false;
         }
 
         if (UpRoomCheck())
@@ -105,15 +96,10 @@ public class Room : MonoBehaviour
             GameObject go = Resources.Load<GameObject>("Prefabs/Map/UpTile");
             Instantiate(go, transform);
             tiles.Add(go);
-            IsTileEmpty = false;
         }
 
-        if (IsTileEmpty)
-        {
-            GameObject go = Resources.Load<GameObject>("Prefabs/Map/TileSet");
-            Instantiate(go, transform);
-            tiles.Add(go);
-        }
+        //test
+        //CreatePortal();
     }
 
     private void CreatePortal()

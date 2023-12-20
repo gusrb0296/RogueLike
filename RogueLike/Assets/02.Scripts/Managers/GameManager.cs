@@ -36,7 +36,6 @@ public class GameManager : MonoBehaviour
 
 
         InitializSetting();
-        AudioManager.BGM("startSceneBGM");
     }
 
     #region Initialize
@@ -48,7 +47,6 @@ public class GameManager : MonoBehaviour
         InitializeUI();
         InitializeAudio();
         DataManager.InitializeSkillData();
-        DataManager.LoadSkillPrefab();
     }
     private void InitializeManager()
     {

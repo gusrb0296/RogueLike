@@ -5,6 +5,7 @@ using UnityEngine;
 public class PotionItem : MonoBehaviour
 {
     public PotionItemData PotionData;
+    //[SerializeField] private SkillManager _skillItemDataList;
     
     private SpriteRenderer _spriteRenderer;
     private CircleCollider2D _circleCollider;
@@ -31,8 +32,6 @@ public class PotionItem : MonoBehaviour
 
     public void UseItem()
     {
-        GameManager.instance.AudioManager.SFX(PotionData.ItemSound);
-
         switch(PotionData.potionType)
         {
             case PotionType.Hp:
@@ -58,28 +57,28 @@ public class PotionItem : MonoBehaviour
 
     #region Item
     
-    // Hp È¸º¹
+    // Hp È¸ï¿½ï¿½
     public void HpItem()
     {
-        // ÇÃ·¹ÀÌ¾î Ã¼·Â Áõ°¡
+        // ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         GameManager.instance.UpdatePlayerStatsDatas(0, (int)PotionData.Hp, 0);
         Debug.Log(GameManager.instance.DataManager.PlayerCurrentStats.currentHealth);
 
         Destroy(gameObject);
     }
 
-    // 5ÃÊ µ¿¾È, ±âº»°ø°Ý, ½ºÅ³ µ¥¹ÌÁö µÎ¹è
+    // 5ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½, ï¿½âº»ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½Å³ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î¹ï¿½
     public void PowerItem()
     {
         _spriteRenderer.color = new Color(255, 255, 255, 0);
         _circleCollider.enabled = false;
         _colorChange.PlayerColorChange(new Color(255 / 255f, 104 / 255f, 76 / 255f, 255 / 255f));
 
-        // ±âº» °ø°Ý
+        // ï¿½âº» ï¿½ï¿½ï¿½ï¿½
         _originAtk = GameManager.instance.DataManager.PlayerCurrentStats.attackSO.power;
         GameManager.instance.UpdatePlayerAttackSODatas(0, _originAtk, 0);
 
-        // ½ºÅ³ °ø°Ý
+        // ï¿½ï¿½Å³ ï¿½ï¿½ï¿½ï¿½
         foreach (SkillItemData skill in GameManager.instance.DataManager.SkillDataList)
         {
             skill.Atk *= 2;
@@ -88,15 +87,15 @@ public class PotionItem : MonoBehaviour
         StartCoroutine(RestorePower());
     }
 
-    // µ¥¹ÌÁö º¹±¸
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     IEnumerator RestorePower()
     {
         yield return new WaitForSeconds(5f);
 
-        // ±âº» °ø°Ý
+        // ï¿½âº» ï¿½ï¿½ï¿½ï¿½
         GameManager.instance.UpdatePlayerAttackSODatas(0, -_originAtk, 0);
 
-        // ½ºÅ³
+        // ï¿½ï¿½Å³
         foreach (SkillItemData skill in GameManager.instance.DataManager.SkillDataList)
         {
             skill.Atk /= 2;
@@ -105,7 +104,7 @@ public class PotionItem : MonoBehaviour
         Destroy(gameObject);
     }
     
-    // 5ÃÊ µ¿¾È, ½ºÇÇµå µÎ¹è
+    // 5ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½Çµï¿½ ï¿½Î¹ï¿½
     public void SpeedItem()
     {
         _spriteRenderer.color = new Color(255, 255, 255, 0);
@@ -118,7 +117,7 @@ public class PotionItem : MonoBehaviour
         StartCoroutine(RestoreSpeed());
     }
 
-    // ½ºÇÇµå º¹±¸
+    // ï¿½ï¿½ï¿½Çµï¿½ ï¿½ï¿½ï¿½ï¿½
     IEnumerator RestoreSpeed()
     {
         yield return new WaitForSeconds(5f);
@@ -128,19 +127,19 @@ public class PotionItem : MonoBehaviour
         Destroy(gameObject);
     }
 
-    // 5ÃÊ µ¿¾È, ±âº»°ø°Ý, ½ºÅ³ ¼Óµµ µÎ¹è
+    // 5ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½, ï¿½âº»ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½Å³ ï¿½Óµï¿½ ï¿½Î¹ï¿½
     public void AttackSpeedItem()
     {
         _spriteRenderer.color = new Color(255, 255, 255, 0);
         _circleCollider.enabled = false;
         _colorChange.PlayerColorChange(new Color(118 / 255f, 255 / 255f, 98 / 255f, 255 / 255f));
 
-        // ±âº» °ø°Ý
+        // ï¿½âº» ï¿½ï¿½ï¿½ï¿½
         _originAttackSpeed = GameManager.instance.DataManager.PlayerCurrentStats.attackSO.attackSpeed;
         _changeAttackSpeed = _originAttackSpeed / 2;
         GameManager.instance.UpdatePlayerAttackSODatas(-_changeAttackSpeed, 0, 0);
 
-        // ½ºÅ³
+        // ï¿½ï¿½Å³
         foreach (SkillItemData skill in GameManager.instance.DataManager.SkillDataList)
         {
             skill.CoolTime /= 2;
@@ -150,15 +149,15 @@ public class PotionItem : MonoBehaviour
 
     }
 
-    // °ø°Ý ¼Óµµ º¹±¸
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½Óµï¿½ ï¿½ï¿½ï¿½ï¿½
     IEnumerator RestoreAttackSpeed()
     {
         yield return new WaitForSeconds(5f);
 
-        // ±âº» °ø°Ý ¼Óµµ º¹±¸
+        // ï¿½âº» ï¿½ï¿½ï¿½ï¿½ ï¿½Óµï¿½ ï¿½ï¿½ï¿½ï¿½
         GameManager.instance.UpdatePlayerAttackSODatas(_changeAttackSpeed, 0, 0);
 
-        // ½ºÅ³ ¼Óµµ º¹±¸
+        // ï¿½ï¿½Å³ ï¿½Óµï¿½ ï¿½ï¿½ï¿½ï¿½
         foreach (SkillItemData skill in GameManager.instance.DataManager.SkillDataList)
         {
             skill.CoolTime *= 2;

@@ -16,9 +16,9 @@ MonoBehaviour:
   Name: FastSlash
   Disription: "\uBE60\uB974\uAC8C \uC5F0\uC18D\uC73C\uB85C \uBCB1\uB2C8\uB2E4."
   ItemSound: {fileID: 8300000, guid: c893b41a8fb01f54d86ec9f6b3a4a27f, type: 3}
-  Atk: 75
-  CoolTime: 1.5
-  SkillSpeed: 20
+  Atk: 10
+  CoolTime: 0.5
+  SkillSpeed: 15
   SkillPrefab: {fileID: 4387575414649677046, guid: a0254f85fedfc4f4883ebf1b42b22342, type: 3}
   SkillEffect: {fileID: 3227409838551679653, guid: b3df62128e4c9da4badbe71430fe5112, type: 3}
   SkillMissEffect: {fileID: 1194187358893946921, guid: f8ecc8d1261859649b97395a492606d6, type: 3}
