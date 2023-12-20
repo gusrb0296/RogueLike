@@ -76,7 +76,7 @@ public class DataManager : MonoBehaviour
         PlayerCurrentStats.attackSO.range += range;
     }
 
-    public void UpdatePlayerStatsData(int maxHealth ,int health, int speed)
+    public void UpdatePlayerStatsData(int maxHealth ,int health, float speed)
     {
         PlayerCurrentStats.maxHealth += maxHealth;
         PlayerCurrentStats.currentHealth += health;
