@@ -16,8 +16,8 @@ MonoBehaviour:
   Name: LaserItem
   Disription: "\uB808\uC774\uC800\uB97C \uBC1C\uC0AC\uD569\uB2C8\uB2E4."
   ItemSound: {fileID: 8300000, guid: c893b41a8fb01f54d86ec9f6b3a4a27f, type: 3}
-  Atk: 10
-  CoolTime: 0.5
+  Atk: 100
+  CoolTime: 1.5
   SkillSpeed: 15
   SkillPrefab: {fileID: 666218269960732934, guid: c76e35438c185cc4cb218554a4bd9cb2, type: 3}
   SkillEffect: {fileID: 1228632209290135423, guid: 5420a5406b7eed4428525e175a298eb7, type: 3}
