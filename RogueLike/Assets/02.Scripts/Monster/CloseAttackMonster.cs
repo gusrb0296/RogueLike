@@ -32,6 +32,19 @@ public class CloseAttackMonster : Monster
 
     public void OnDamage()
     {
+        if(gameObject.name.Contains("Minotaur"))
+        {
+            GameManager.instance.AudioManager.SFX("monsterAxeATK");
+        }
+        else if (gameObject.name.Contains("Slayer"))
+        {
+            GameManager.instance.AudioManager.SFX("monsterUpperATK");
+        }
+        else if (gameObject.name.Contains("Skeleton"))
+        {
+            GameManager.instance.AudioManager.SFX("monsterSwordATK");
+        }
+        
         if (playerDistance < attackDistance)
         {
             GameManager.instance.DataManager.Player.GetComponent<PlayerCollision>().TakeDamage(damage);

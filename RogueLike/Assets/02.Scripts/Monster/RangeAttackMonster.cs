@@ -46,6 +46,7 @@ public class RangeAttackMonster : Monster
 
         yield return new WaitForSecondsRealtime(1f);
 
+        GameManager.instance.AudioManager.SFX("monsterFireATK");
         if (tile != null)
         {
             tile.GetComponent<Rigidbody2D>().velocity = fireDirection;

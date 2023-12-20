@@ -5,6 +5,8 @@ using UnityEngine;
 public class BossMonster : MonoBehaviour, IDamagable
 {
     #region Factors
+    public BattleRoom room;
+
     [Header("Stats")]
     public float health;
     private float currentHealth;
@@ -12,7 +14,6 @@ public class BossMonster : MonoBehaviour, IDamagable
 
     [Header("Reward")]
     public int gold;
-    public int exp;
 
     [Header("Combat")]
     public float damage;
@@ -21,6 +22,7 @@ public class BossMonster : MonoBehaviour, IDamagable
     public float attackRate;
     private float lastAttackTime;
     private bool isAttacking = false;
+    private bool isDie = false;
 
     [Header("Projectile")]
     public GameObject projectile;
@@ -52,6 +54,7 @@ public class BossMonster : MonoBehaviour, IDamagable
         playerDistance = Vector2.Distance(transform.position, player.transform.position);
         playerDirection = (player.transform.position - transform.position).normalized;
         spriteRenderer.flipX = playerDirection.x < 0;
+
         if (canReceiveInput)
         {
             if (isAttacking)
@@ -74,8 +77,7 @@ public class BossMonster : MonoBehaviour, IDamagable
             if (Time.time - lastAttackTime > attackRate)
             {
                 lastAttackTime = Time.time;
-                int attackIdx = Random.Range(0, 3);
-                switch (attackIdx)
+                switch (Random.Range(0, 3))
                 {
                     case 0:
                         Attack();
@@ -119,12 +121,12 @@ public class BossMonster : MonoBehaviour, IDamagable
     }
 
     private IEnumerator Fire()
-    {
+    {   
         GameObject tile = Instantiate(projectile);
         tile.transform.position = muzzle.transform.position;
-       
+        
         yield return new WaitForSeconds(0.5f);
-
+        GameManager.instance.AudioManager.SFX("bossLongATK");
         Vector2 direction = (player.transform.position - muzzle.transform.position).normalized;
         Vector2 fireDirection = direction * projectileSpeed;
         if (tile != null)
@@ -137,26 +139,31 @@ public class BossMonster : MonoBehaviour, IDamagable
 
     public void TakeDamage(float damage)
     {
-        animator.SetTrigger("Hit");
-
-        if(currentHealth >= health/2 && currentHealth - damage <= health/2)
+        if(!isDie)
         {
-            spriteRenderer.color = new Color(1f, .5f, .5f);
-            
-            this.damage += 5;
-            this.attackRate -= 0.2f;
-            this.speed += 1;
+            animator.SetTrigger("Hit");
+            GameManager.instance.AudioManager.SFX("monsterHit");
+
+            //광폭화
+            if (currentHealth >= health / 2 && currentHealth - damage <= health / 2)
+            {
+                spriteRenderer.color = new Color(1f, .5f, .5f);
+                this.damage += 5;
+                attackRate -= 0.2f;
+                speed += 1;
+            }
+
+            currentHealth = currentHealth - damage > 0 ? currentHealth - damage : 0;
+            Debug.Log($"체력이 {damage}만큼 달았습니다.");
+            if (currentHealth == 0) StartCoroutine(nameof(Die));
+
+            isAttacking = false;
         }
-
-        currentHealth = currentHealth - damage > 0 ? currentHealth - damage : 0;
-        Debug.Log($"체력이 {damage}만큼 달았습니다.");
-        if (currentHealth == 0) StartCoroutine(nameof(Die));
-
-        isAttacking = false;
     }
 
     public void OnDamage()
     {
+        GameManager.instance.AudioManager.SFX("bossShortATK");
         if (playerDistance < attackDistance)
         {
             GameManager.instance.DataManager.Player.GetComponent<PlayerCollision>().TakeDamage(damage);
@@ -168,6 +175,7 @@ public class BossMonster : MonoBehaviour, IDamagable
     {
         isAttacking = false;
     }
+
     public float GetHpRate()
     {
         return currentHealth / health;
@@ -176,7 +184,8 @@ public class BossMonster : MonoBehaviour, IDamagable
     IEnumerator Die()
     {
         animator.SetTrigger("Die");
-        yield return new WaitForSecondsRealtime(1f);
+        isDie = true;
+        yield return new WaitForSecondsRealtime(.7f);
         Destroy(gameObject);
     }
 }

@@ -17,7 +17,6 @@ public class Monster : MonoBehaviour, IDamagable
 
     [Header("Reward")]
     public int gold;
-    public int exp;
 
     [Header("Combat")]
     public float damage;
@@ -169,7 +168,8 @@ public class Monster : MonoBehaviour, IDamagable
 
     public void TakeDamage(float damage)
     {
-        if(!isDie)
+        GameManager.instance.AudioManager.SFX("monsterHit");
+        if (!isDie)
         {
             Vector2 knockback = -moveDirection * 5 + Vector2.up * 5;
             rigid.AddForce(knockback, ForceMode2D.Impulse);

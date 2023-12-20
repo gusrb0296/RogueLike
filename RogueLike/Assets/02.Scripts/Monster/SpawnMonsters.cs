@@ -5,21 +5,18 @@ using UnityEngine;
 
 public class SpawnMonsters : MonoBehaviour
 {
-    public List<GameObject> monsters = new();
-    private int monsterCount = 4;
+    private List<GameObject> monsters = new();
+    private GameObject boss; 
+
     private void Awake()
     {
         monsters = Resources.LoadAll<GameObject>("Prefabs\\Monsters").ToList();
-    }
-
-    private void Start()
-    {
-        
+        boss = Resources.Load<GameObject>("Prefabs\\Boss\\Flying Eye");
     }
 
     public void Spawn(List<Vector2> spawnpositions, BattleRoom room)
     {
-        if(spawnpositions != null)
+        if (spawnpositions != null)
         {
             foreach (Vector2 pos in spawnpositions)
             {
@@ -28,6 +25,16 @@ public class SpawnMonsters : MonoBehaviour
                 monster.transform.position = pos;
                 monster.GetComponent<Monster>().room = room;
             }
+        }
+    }
+    public void SpawnBoss(Vector2 spawnpositions, BattleRoom room)
+    {
+        if (spawnpositions != null)
+        {
+            GameObject monster = Instantiate(boss);
+            monster.transform.position = spawnpositions;
+            monster.GetComponent<BossMonster>().room = room;
+
         }
     }
 }

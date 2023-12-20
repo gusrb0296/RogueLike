@@ -54,5 +54,11 @@ public class BulletController : MonoBehaviour
             _animator.SetTrigger("Hit");
             AutoDestroy(0.4f);
         }
+        else if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            _rigidbody.velocity = Vector2.zero;
+            _animator.SetTrigger("Hit");
+            AutoDestroy(0.4f);
+        }
     }
 }
