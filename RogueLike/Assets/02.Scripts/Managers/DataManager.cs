@@ -27,6 +27,8 @@ public class DataManager : MonoBehaviour
 
     // CharacterStats.PlayerCurrentStats (maxHealth, maxStamina, speed, invincibilityTime)
     public CharacterStats PlayerCurrentStats { get; private set; }
+
+    public int PlayerCurrentGold { get; private set; }
     #endregion
 
     private void Start()
@@ -82,6 +84,11 @@ public class DataManager : MonoBehaviour
         {
             Die();
         }
+    }
+
+    public void UpdatePlayerCurrentGold(int value)
+    {
+        PlayerCurrentGold += value;
     }
 
     private void Die()

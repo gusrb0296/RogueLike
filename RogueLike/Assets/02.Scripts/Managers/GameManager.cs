@@ -98,6 +98,11 @@ public class GameManager : MonoBehaviour
     {
         DataManager.UpdatePlayerStatsData(maxHealth ,health, speed);
     }
+
+    public void UpdatePlayerCurrentGolds(int value)
+    {
+        DataManager.UpdatePlayerCurrentGold(value);
+    }
     #endregion
 
     #region Stage
