@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class DataManager : MonoBehaviour
 {
@@ -99,6 +100,7 @@ public class DataManager : MonoBehaviour
     private void Die()
     {
         Player.GetComponentInChildren<Animator>().SetBool("IsDie", true);
+        Player.GetComponent<PlayerInput>().actions = null;
         GameManager.instance.UiManager.GameOverAnim();
     }
     #endregion
