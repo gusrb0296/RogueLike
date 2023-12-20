@@ -6,7 +6,7 @@ using UnityEngine;
 public class Skill : MonoBehaviour
 {
     public SkillItemData SkillData;
-    [SerializeField] private SkillDamageText _skillDamageText;
+    [SerializeField] private DamageText _damageText;
 
     private SpriteRenderer _spriteRenderer;
     private Rigidbody2D _rigidbody;
@@ -24,10 +24,9 @@ public class Skill : MonoBehaviour
             int dir = (_rigidbody.velocity.x > 0) ? 1 : -1;
 
             Instantiate(SkillData.SkillEffect, gameObject.transform.position + new Vector3(SkillData.SkillPosition.x * dir, SkillData.SkillPosition.y, SkillData.SkillPosition.z), Quaternion.identity);
-            _skillDamageText.CreateText(SkillData, gameObject.transform);
+            _damageText.CreateSkillText(SkillData, gameObject.transform, _rigidbody.velocity.x);
 
-            // TODO
-            Debug.Log("Àû Hp " + SkillData.Atk + " °¨¼Ò");
+            collision.gameObject.GetComponent<IDamagable>().TakeDamage(SkillData.Atk);
 
             Destroy(gameObject);
         }

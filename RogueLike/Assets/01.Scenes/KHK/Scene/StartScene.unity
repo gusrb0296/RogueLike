@@ -1201,6 +1201,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 5492180391732701070, guid: 3053bcd4078a86a4989b3021fa7450fd, type: 3}
+      propertyPath: SkillDataList.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5492180391732701070, guid: 3053bcd4078a86a4989b3021fa7450fd, type: 3}
+      propertyPath: SkillDataList.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7b257c49209ccb341a658c3741054919, type: 2}
+    - target: {fileID: 5492180391732701070, guid: 3053bcd4078a86a4989b3021fa7450fd, type: 3}
+      propertyPath: SkillDataList.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: d07621ec782600342a73a8eccb61494c, type: 2}
+    - target: {fileID: 5492180391732701070, guid: 3053bcd4078a86a4989b3021fa7450fd, type: 3}
+      propertyPath: SkillDataList.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 36a6e597e177f0c43b4a3c8e4452e3f3, type: 2}
+    - target: {fileID: 5492180391732701070, guid: 3053bcd4078a86a4989b3021fa7450fd, type: 3}
+      propertyPath: SkillDataList.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6283282b72943144cbffe208543bebd3, type: 2}
+    - target: {fileID: 5492180391732701070, guid: 3053bcd4078a86a4989b3021fa7450fd, type: 3}
+      propertyPath: SkillDataList.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 00fb2493dc6c73c40b2612d321e241a3, type: 2}
     - target: {fileID: 5548955983469445860, guid: 3053bcd4078a86a4989b3021fa7450fd, type: 3}
       propertyPath: m_RootOrder
       value: 2
