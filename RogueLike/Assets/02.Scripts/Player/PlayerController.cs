@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
     private CharacterStats _stats;
 
-    private bool _isJump;
+    private bool _isMoveInput;
     private bool _isAttack;
     private bool _isSkill;
     private float _AttackDealyTime = float.MaxValue;
@@ -58,29 +58,34 @@ public class PlayerController : MonoBehaviour
         {
             _AttackDealyTime += Time.deltaTime;
         }
-        else if(_isAttack && !_isJump)
+        else if(_isAttack)
         {
+            _animator.SetBool("IsShoot", true);
+            _animator.SetBool("Jump", false);
+            _animator.SetBool("Fall", false);
             Vector2 direction = (_spriteRenderer.flipX) ? Vector2.left : Vector2.right;
             BulletManager.instance.ShootBullet(gameObject.transform.position, direction, _stats.attackSO.range);
             _AttackDealyTime = 0f;
         }
 
-        if(_isSkill && !_isJump)
+        if(_isSkill)
         {
+            _animator.SetBool("IsShoot", true);
+            _animator.SetBool("Jump", false);
+            _animator.SetBool("Fall", false);
             Vector2 direction = (_spriteRenderer.flipX) ? Vector2.left : Vector2.right;
             BulletManager.instance.ShootSkill(_skill.SkillData, gameObject.transform.position, direction);
         }
     }
     private void HandleJumpAnimation()
     {
-        if (_rigidbody.velocity.y < 0)
+        if (_rigidbody.velocity.y < 0 && !_isAttack && !_isSkill)
         {
             _animator.SetBool("Jump", false);
             _animator.SetBool("Fall", true);
             if (OnGround())
             {
                 _animator.SetBool("Fall", false);
-                _isJump = false;
             }
         }
     }
@@ -91,6 +96,8 @@ public class PlayerController : MonoBehaviour
     }
     private void Move()
     {
+        if (OnGround() && _isMoveInput) _animator.SetBool("IsMove", true);
+        if(!OnGround()) _animator.SetBool("IsMove", false);
         Vector2 dir = _movementInput;
         dir *= _stats.speed;
         dir.y = _rigidbody.velocity.y;
@@ -108,11 +115,12 @@ public class PlayerController : MonoBehaviour
         if (context.phase == InputActionPhase.Performed)
         {
             _movementInput = context.ReadValue<Vector2>();
-            _animator.SetBool("IsMove", true);
+            _isMoveInput = true;
         }
         else if (context.phase == InputActionPhase.Canceled)
         {
             _movementInput = Vector2.zero;
+            _isMoveInput = false;
             _animator.SetBool("IsMove", false);
         }
     }
@@ -123,7 +131,6 @@ public class PlayerController : MonoBehaviour
         {
             _rigidbody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             _animator.SetTrigger("Jump");
-            _isJump = true;
         }
     }
 
@@ -131,7 +138,6 @@ public class PlayerController : MonoBehaviour
     {
         if (context.phase == InputActionPhase.Started)
         {
-            _animator.SetBool("IsShoot", true);
             _isAttack = true;
         }
         else if (context.phase == InputActionPhase.Canceled)
@@ -146,7 +152,6 @@ public class PlayerController : MonoBehaviour
         if (context.phase == InputActionPhase.Started)
         {
             if (_skill.SkillData == null) return;
-            _animator.SetBool("IsShoot", true);
             _isSkill = true;
         }
         else if (context.phase == InputActionPhase.Canceled)
