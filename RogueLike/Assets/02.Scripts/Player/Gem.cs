@@ -22,6 +22,7 @@ public class Gem : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             // ΊΈΐ― °ρµε Αυ°΅
+            Debug.Log("°ρµε ΘΉµζ!");
             Destroy(gameObject);
         }
     }
