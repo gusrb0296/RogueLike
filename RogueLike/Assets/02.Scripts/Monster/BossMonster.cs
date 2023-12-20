@@ -97,6 +97,7 @@ public class BossMonster : MonoBehaviour, IDamagable
 
     private void Attack()
     {
+        GameManager.instance.AudioManager.SFX("bossShortATK");
         if (playerDistance < attackDistance)
         {
             isAttacking = true;
@@ -106,6 +107,7 @@ public class BossMonster : MonoBehaviour, IDamagable
 
     private void Attack2()
     {
+        GameManager.instance.AudioManager.SFX("bossShortATK");
         if (playerDistance < attackDistance)
         {
             isAttacking = true;
@@ -124,7 +126,7 @@ public class BossMonster : MonoBehaviour, IDamagable
     {   
         GameObject tile = Instantiate(projectile);
         tile.transform.position = muzzle.transform.position;
-        
+        tile.GetComponent<Projectile>().damage = this.damage;
         yield return new WaitForSeconds(0.5f);
         GameManager.instance.AudioManager.SFX("bossLongATK");
         Vector2 direction = (player.transform.position - muzzle.transform.position).normalized;
@@ -144,17 +146,17 @@ public class BossMonster : MonoBehaviour, IDamagable
             animator.SetTrigger("Hit");
             GameManager.instance.AudioManager.SFX("monsterHit");
 
-            //±¤ÆøÈ­
+            //ï¿½ï¿½ï¿½ï¿½È­
             if (currentHealth >= health / 2 && currentHealth - damage <= health / 2)
             {
                 spriteRenderer.color = new Color(1f, .5f, .5f);
                 this.damage += 5;
-                attackRate -= 0.2f;
-                speed += 1;
+                attackRate -= 0.25f;
+                speed += 2;
             }
 
             currentHealth = currentHealth - damage > 0 ? currentHealth - damage : 0;
-            Debug.Log($"Ã¼·ÂÀÌ {damage}¸¸Å­ ´Þ¾Ò½À´Ï´Ù.");
+            Debug.Log($"Ã¼ï¿½ï¿½ï¿½ï¿½ {damage}ï¿½ï¿½Å­ ï¿½Þ¾Ò½ï¿½ï¿½Ï´ï¿½.");
             if (currentHealth == 0) StartCoroutine(nameof(Die));
 
             isAttacking = false;
@@ -186,6 +188,7 @@ public class BossMonster : MonoBehaviour, IDamagable
         animator.SetTrigger("Die");
         isDie = true;
         yield return new WaitForSecondsRealtime(.7f);
+        GameManager.instance.UiManager.GameClearAnim();
         Destroy(gameObject);
     }
 }

@@ -129,6 +129,7 @@ public class PlayerController : MonoBehaviour
     {
         if (context.phase == InputActionPhase.Started && OnGround())
         {
+            GameManager.instance.AudioManager.SFX("jump");
             _rigidbody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             _animator.SetTrigger("Jump");
         }

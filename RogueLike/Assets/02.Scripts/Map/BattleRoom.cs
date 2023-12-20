@@ -13,6 +13,8 @@ public class BattleRoom : Room
         {
             CreateEnemy();
         }
+        string bgmStr = Random.Range(0, 2) == 0 ? "normalRoomBGM1" : "normalRoomBGM2";
+        GameManager.instance.AudioManager.BGM(bgmStr);
     }
 
     public override void RoomClear()
