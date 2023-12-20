@@ -213,6 +213,7 @@ public class MapCreator : MonoBehaviour
 
         roomScrip.RoomInfo = roomInfo;
         roomScrip.RoomInfo.Owner = roomScrip;
+        roomScrip.RoomInfo.RoomType = type;
 
         return room;
     }
