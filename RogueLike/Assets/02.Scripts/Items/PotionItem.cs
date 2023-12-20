@@ -7,7 +7,7 @@ public class PotionItem : MonoBehaviour
     public PotionItemData PotionData;
     
     private SpriteRenderer _spriteRenderer;
-    private ColorChange _player;
+    private ColorChange _colorChange;
     private CircleCollider2D _circleCollider;
     private float _originAtk;
     private float _originSpeed;
@@ -18,7 +18,7 @@ public class PotionItem : MonoBehaviour
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _circleCollider = GetComponent<CircleCollider2D>();
-        _player = GameManager.instance.DataManager.Player.GetComponent<ColorChange>();
+        _colorChange = GetComponent<ColorChange>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -73,7 +73,7 @@ public class PotionItem : MonoBehaviour
     {
         _spriteRenderer.color = new Color(255, 255, 255, 0);
         _circleCollider.enabled = false;
-        _player.PlayerColorChange(new Color(255 / 255f, 104 / 255f, 76 / 255f, 255 / 255f));
+        _colorChange.PlayerColorChange(new Color(255 / 255f, 104 / 255f, 76 / 255f, 255 / 255f));
 
         // 기본 공격
         _originAtk = GameManager.instance.DataManager.PlayerCurrentStats.attackSO.power;
@@ -110,7 +110,7 @@ public class PotionItem : MonoBehaviour
     {
         _spriteRenderer.color = new Color(255, 255, 255, 0);
         _circleCollider.enabled = false;
-        _player.PlayerColorChange(new Color(86 / 255f, 106 / 255f, 255 / 255f, 255 / 255f));
+        _colorChange.PlayerColorChange(new Color(86 / 255f, 106 / 255f, 255 / 255f, 255 / 255f));
 
         _originSpeed = GameManager.instance.DataManager.PlayerCurrentStats.speed;
         GameManager.instance.UpdatePlayerStatsDatas(0, 0, (int)_originSpeed);
@@ -133,7 +133,7 @@ public class PotionItem : MonoBehaviour
     {
         _spriteRenderer.color = new Color(255, 255, 255, 0);
         _circleCollider.enabled = false;
-        _player.PlayerColorChange(new Color(118 / 255f, 255 / 255f, 98 / 255f, 255 / 255f));
+        _colorChange.PlayerColorChange(new Color(118 / 255f, 255 / 255f, 98 / 255f, 255 / 255f));
 
         // 기본 공격
         _originAttackSpeed = GameManager.instance.DataManager.PlayerCurrentStats.attackSO.attackSpeed;
