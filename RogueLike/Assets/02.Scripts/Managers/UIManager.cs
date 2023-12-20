@@ -67,10 +67,14 @@ public class UIManager : MonoBehaviour
 
         //기본 UI에 값들이 보이게 초기화, Setting to can see UI Stats
 <<<<<<< HEAD
+<<<<<<< HEAD
         HP_txt.text = currentHealth + " / " + maxHealth;
 =======
         //HP_txt.text = currentHealth + " / " + maxHealth;
 >>>>>>> parent of 5477b25 (Merge branch 'Develop' into KHK-UI_Update)
+=======
+        HP_txt.text = currentHealth + " / " + maxHealth;
+>>>>>>> parent of 7c9dcb5 (Merge pull request #12 from gusrb0296/KHK-UI_Update)
 
 
         //Stats 설정에 값들이 보이게 설정
@@ -101,6 +105,7 @@ public class UIManager : MonoBehaviour
             }
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         //Update에서 획득시로 수정 필요함.
         CurrentGem_txt.text = dataManager.PlayerCurrentGold.ToString();
 =======
@@ -117,6 +122,10 @@ public class UIManager : MonoBehaviour
         //HP바 게이지 변동
         ChangeDisplayHealth();
 >>>>>>> parent of 5477b25 (Merge branch 'Develop' into KHK-UI_Update)
+=======
+        //Update에서 획득시로 수정 필요함.
+        CurrentGem_txt.text = dataManager.PlayerCurrentGold.ToString();
+>>>>>>> parent of 7c9dcb5 (Merge pull request #12 from gusrb0296/KHK-UI_Update)
     }
 
     public void Resume()
@@ -172,6 +181,7 @@ public class UIManager : MonoBehaviour
     }
 
     
+<<<<<<< HEAD
 =======
     private void GameOVer()
     {
@@ -194,4 +204,6 @@ public class UIManager : MonoBehaviour
         UIOpen(MainUI);
     }
 >>>>>>> parent of 5477b25 (Merge branch 'Develop' into KHK-UI_Update)
+=======
+>>>>>>> parent of 7c9dcb5 (Merge pull request #12 from gusrb0296/KHK-UI_Update)
 }

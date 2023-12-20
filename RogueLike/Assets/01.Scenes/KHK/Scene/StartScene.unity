@@ -351,6 +351,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 259783166}
   m_PrefabAsset: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 7c9dcb5 (Merge pull request #12 from gusrb0296/KHK-UI_Update)
 --- !u!114 &502436164 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1361710978895742191, guid: 3053bcd4078a86a4989b3021fa7450fd, type: 3}
@@ -1286,6 +1289,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6171446753176860929, guid: 3053bcd4078a86a4989b3021fa7450fd, type: 3}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 7c9dcb5 (Merge pull request #12 from gusrb0296/KHK-UI_Update)
       propertyPath: GameClearPanel
       value: 
       objectReference: {fileID: 1636261040}
@@ -1632,6 +1638,9 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 7c9dcb5 (Merge pull request #12 from gusrb0296/KHK-UI_Update)
       objectReference: {fileID: 139232519}
 =======
       objectReference: {fileID: 1514704760}
