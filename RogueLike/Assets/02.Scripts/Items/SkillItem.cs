@@ -15,7 +15,8 @@ public class SkillItem : MonoBehaviour
     }
 
     void UseItem()
-    {       
+    {
+        GameManager.instance.UiManager.SkillIcon.sprite = SkillData.SkillIcon;
         Destroy(gameObject);
     }
 
