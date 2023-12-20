@@ -69,6 +69,16 @@ public class AudioManager : MonoBehaviour
         _backgroundMusic.Play();
     }
 
+    public float GetVolume()
+    {
+        return _backgroundMusic.volume;
+    }
+
+    public void SetVolume(float volume)
+    {
+        _backgroundMusic.volume = volume;
+    }
+
 }
 
 /*

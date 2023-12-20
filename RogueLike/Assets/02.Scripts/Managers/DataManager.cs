@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class DataManager : MonoBehaviour
 {
@@ -11,6 +13,8 @@ public class DataManager : MonoBehaviour
     // 플레이어 정보, 아이템 데이터, 게임 설정 등의 데이터를 관리
 
     // 데이터의 변경 및 업데이트가 필요한 경우 이벤트 시스템을 활용(구독)
+
+    public List<GameObject> skillItemPrefabs { get; private set; } = new List<GameObject>();
 
 
     #region Player Global Variable
@@ -99,6 +103,7 @@ public class DataManager : MonoBehaviour
     private void Die()
     {
         Player.GetComponentInChildren<Animator>().SetBool("IsDie", true);
+        Player.GetComponent<PlayerInput>().actions = null;
         GameManager.instance.UiManager.GameOverAnim();
     }
     #endregion
@@ -134,6 +139,11 @@ public class DataManager : MonoBehaviour
         SkillDataList[4].Atk = GameManager.instance.DataManager.PlayerCurrentStats.attackSO.power * 2f;
         SkillDataList[4].CoolTime = 1.5f;
         SkillDataList[4].SkillSpeed = 15f;
+    }
+
+    public void LoadSkillPrefab()
+    {
+        skillItemPrefabs = Resources.LoadAll<GameObject>("Prefabs\\SkillItem").ToList();
     }
     #endregion
 }
