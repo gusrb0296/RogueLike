@@ -13,8 +13,8 @@ public enum ERoomType
 
 public class MapCreator : MonoBehaviour
 {
-    [SerializeField] private int width = 10;
-    [SerializeField] private int height = 10;
+    [SerializeField] private int width = 5;
+    [SerializeField] private int height = 5;
     [SerializeField] private int numberOfRooms = 10;
 
     //TEST
@@ -27,6 +27,12 @@ public class MapCreator : MonoBehaviour
     private List<RoomInfo> _endRooms = new List<RoomInfo>();
 
     public Vector3Int MapSize { get; } = new Vector3Int(28, 18);
+
+    private void Awake()
+    {
+        width = 5;
+        height = 5;
+    }
 
     private void Start()
     {
@@ -213,6 +219,7 @@ public class MapCreator : MonoBehaviour
 
         roomScrip.RoomInfo = roomInfo;
         roomScrip.RoomInfo.Owner = roomScrip;
+        roomScrip.RoomInfo.RoomType = type;
 
         return room;
     }

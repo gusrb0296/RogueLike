@@ -6,7 +6,7 @@ public class BossRoom : Room
 {
     public override void RoomAction()
     {
-
+        IsVisited = true;
     }
 
     public override void RoomClear()

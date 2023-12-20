@@ -129,6 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0367fbc81fd4ed848a53ab201bdcf783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monsters: []
 --- !u!114 &2606508856321751827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,6 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0367fbc81fd4ed848a53ab201bdcf783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monsters: []
 --- !u!1 &933094458676375160
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,14 +483,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5548955983469445860}
     m_Modifications:
-    - target: {fileID: 1385962185096903943, guid: 6c902baacc27e744393cf6bbea8ac7f0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3223210806670362208, guid: 6c902baacc27e744393cf6bbea8ac7f0, type: 3}
-      propertyPath: UI
-      value: 
-      objectReference: {fileID: 5253323783139037052}
     - target: {fileID: 7437251077639022734, guid: 6c902baacc27e744393cf6bbea8ac7f0, type: 3}
       propertyPath: m_Name
       value: UIManager
@@ -585,10 +579,5 @@ PrefabInstance:
 --- !u!224 &2690293153350315588 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 9118017076988107839, guid: 6c902baacc27e744393cf6bbea8ac7f0, type: 3}
-  m_PrefabInstance: {fileID: 6619274843723281019}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &5253323783139037052 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1385962185096903943, guid: 6c902baacc27e744393cf6bbea8ac7f0, type: 3}
   m_PrefabInstance: {fileID: 6619274843723281019}
   m_PrefabAsset: {fileID: 0}

@@ -9,6 +9,7 @@ public class RoomInfo
     public Room Owner { get; set; }
     public Vector3Int Position { get; private set; }
     public bool IsSelected { get; set; }
+    public ERoomType RoomType { get; set; }
 
     public RoomInfo(Vector3Int position)
     {

@@ -21,7 +21,8 @@ public class Room : MonoBehaviour
     private static readonly Vector2 UPPOS = new Vector2(-0.5f, 5.5f);
 
     public RoomInfo RoomInfo {  get; set; }
-    public bool IsClear { get; set; }
+    public bool IsClear { get; set; } = false;
+    public bool IsVisited { get; set; } = false;
     public byte moveType { get; protected set; } = 0;
 
     protected List<GameObject> tiles = new List<GameObject>();
@@ -64,6 +65,7 @@ public class Room : MonoBehaviour
 
     public virtual void RoomAction()
     {
+        IsVisited = true;
         RoomClear();
     }
 

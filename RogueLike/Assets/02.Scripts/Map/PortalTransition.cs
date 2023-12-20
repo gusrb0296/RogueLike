@@ -7,6 +7,7 @@ public class PortalTransition : MonoBehaviour
     [SerializeField] private GameObject BtnUi;
     public Vector2 TransitionPosition { get; set; }
     public Vector3Int TransitionLayouyPosition {  get; set; }
+    private bool isFKeyPressed = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -20,8 +21,10 @@ public class PortalTransition : MonoBehaviour
     {
         if (collision.transform.tag == "Player")
         {
-            if (Input.GetKeyDown(KeyCode.F))
+            if (Input.GetKeyDown(KeyCode.F) && !isFKeyPressed)
             {
+                isFKeyPressed = true;
+
                 Transform roomtransform = GameManager.instance.StageManager.GetRoomTramsform(TransitionLayouyPosition);
                 Vector3 position = roomtransform.position;
 
@@ -31,6 +34,11 @@ public class PortalTransition : MonoBehaviour
                 cam.Player.transform.position = TransitionPosition;
 
                 GameManager.instance.StageManager.Transition(TransitionLayouyPosition);
+            }
+
+            if (Input.GetKeyUp(KeyCode.F))
+            {
+                isFKeyPressed = false;
             }
         }
     }

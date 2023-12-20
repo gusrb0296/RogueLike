@@ -8,6 +8,7 @@ public class BattleRoom : Room
 
     public override void RoomAction()
     {
+        IsVisited = true;
         if (!IsClear)
         {
             CreateEnemy();
@@ -40,8 +41,6 @@ public class BattleRoom : Room
                 }
             }
         }
-
-        //TODO 몬스터 생성
         GameManager.instance.StageManager.GetComponent<SpawnMonsters>().Spawn(spawnPositions, this);
     }
 
