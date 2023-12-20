@@ -18,7 +18,7 @@ public class PotionItem : MonoBehaviour
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _circleCollider = GetComponent<CircleCollider2D>();
-        _player = GameObject.Find("Player").GetComponent<ColorChange>();
+        _player = GameManager.instance.DataManager.Player.GetComponent<ColorChange>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
