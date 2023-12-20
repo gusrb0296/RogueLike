@@ -15,35 +15,26 @@ public class StageManager : MonoBehaviour
 
     public MapCreator MapCreator { get; private set; }
     public Vector3Int CurPlyerPos { get; private set; }
-    public Vector3Int MapSize { get; private set; }
-
-    private void Awake()
-    {
-        TransitionAction += SetPlayerPos;
-        TransitionAction += RoomAction;
-    }
 
     public void InitializeStage()
     {
         MapCreator = null;
+        TransitionAction = null;
         CurPlyerPos = Vector3Int.zero;
     }
 
     public void SetStageInfo(MapCreator mapCreator, int width, int height)
     {
         MapCreator = mapCreator;
-        MapSize = new Vector3Int(width, height);
         CurPlyerPos = new Vector3Int(width / 2, height / 2);
+
+        TransitionAction += SetPlayerPos;
+        TransitionAction += RoomAction;
     }
 
     public Transform GetRoomTramsform(Vector3Int position)
     {
         return MapCreator.GetRoomTramsform(position);
-    }
-
-    public RoomInfo GetIsRoomInfo(Vector3Int position)
-    {
-        return MapCreator.GetRoomInfo(position);
     }
 
     public void Transition(Vector3Int pos)

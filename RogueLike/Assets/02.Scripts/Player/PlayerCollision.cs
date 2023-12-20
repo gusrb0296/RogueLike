@@ -46,7 +46,6 @@ public class PlayerCollision : MonoBehaviour, IDamagable
         _animator.SetTrigger("Hurt");
         _isInvincibility = true;
         Debug.Log("적에게 피격 당함");
-        GameManager.instance.AudioManager.SFX("playerHit");
         StartCoroutine(HandleInvincibilityTime());
     }
 

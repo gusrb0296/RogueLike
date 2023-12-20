@@ -13,13 +13,6 @@ public interface IInteractable
 public class InteractionManager : MonoBehaviour
 {
     private IInteractable curInteractable;
-    private float _lastTime = 0f;
-    float _maxDelayTime = 0.5f;
-
-    private void Update()
-    {
-        _lastTime += Time.deltaTime;
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -52,11 +45,9 @@ public class InteractionManager : MonoBehaviour
 
     public void OnInteractInput(InputAction.CallbackContext callbackContext)
     {
-        if (_lastTime < _maxDelayTime) return;
-        if (callbackContext.phase == InputActionPhase.Started && curInteractable != null)
+        if(callbackContext.phase == InputActionPhase.Started && curInteractable != null)
         {
             curInteractable.OnInteract(true);
-            _lastTime = 0f;
         }
     }
 
