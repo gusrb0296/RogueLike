@@ -7,16 +7,14 @@ public class ColorChange : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
     private Color _originColor = new Color(255/255f, 255/255f, 255/255f, 255/255f);
     private Color _changeColor;
+    private IEnumerator _coroutine;
     [SerializeField] private float _repeatTime;
     [SerializeField] private float _finishTime;
-    private IEnumerator _coroutine;
-
 
     private void Start()
     {
         _spriteRenderer = GameManager.instance.DataManager.Player.GetComponentInChildren<SpriteRenderer>();
     }
-
 
     public void PlayerColorChange(Color changeColor)
     {
@@ -25,7 +23,6 @@ public class ColorChange : MonoBehaviour
         StartCoroutine(_coroutine);
         StartCoroutine(Stop());
     }
-
 
     private IEnumerator ColorInOut()
     {
