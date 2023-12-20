@@ -140,7 +140,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0367fbc81fd4ed848a53ab201bdcf783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsters: []
 --- !u!1001 &350255551
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -951,7 +950,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4288792700850253447, guid: 7691df97ad3c97646bcd00d897feb01a, type: 3}
       propertyPath: m_Name
-      value: Player
+      value: Player(Clone)
       objectReference: {fileID: 0}
     - target: {fileID: 7794827324765073233, guid: 7691df97ad3c97646bcd00d897feb01a, type: 3}
       propertyPath: m_Color.b
