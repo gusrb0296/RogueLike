@@ -126,6 +126,7 @@ public class BossMonster : MonoBehaviour, IDamagable
     {   
         GameObject tile = Instantiate(projectile);
         tile.transform.position = muzzle.transform.position;
+        tile.GetComponent<Projectile>().damage = this.damage;
         yield return new WaitForSeconds(0.5f);
         GameManager.instance.AudioManager.SFX("bossLongATK");
         Vector2 direction = (player.transform.position - muzzle.transform.position).normalized;
@@ -150,8 +151,8 @@ public class BossMonster : MonoBehaviour, IDamagable
             {
                 spriteRenderer.color = new Color(1f, .5f, .5f);
                 this.damage += 5;
-                attackRate -= 0.2f;
-                speed += 1;
+                attackRate -= 0.25f;
+                speed += 2;
             }
 
             currentHealth = currentHealth - damage > 0 ? currentHealth - damage : 0;

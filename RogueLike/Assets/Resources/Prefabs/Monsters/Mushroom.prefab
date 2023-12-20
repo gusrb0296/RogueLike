@@ -197,13 +197,12 @@ MonoBehaviour:
   room: {fileID: 0}
   monsterType: 1
   health: 80
-  walkspeed: 1
-  runSpeed: 1.5
+  walkspeed: 1.5
+  runSpeed: 3
   gold: 100
-  exp: 10
   damage: 10
   attackRate: 2
-  detectDistnce: 5
+  detectDistnce: 7
   attackDistance: 3
   wanderWaitTime: 1
   wanderMaxTime: 3

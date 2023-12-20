@@ -214,6 +214,7 @@ public class Monster : MonoBehaviour, IDamagable
     {
         rigid.velocity = Vector2.down;
         animator.SetTrigger("Die");
+        canReceiveInput = false;
         yield return new WaitForSecondsRealtime(.7f);
         animator.enabled = false;
         room.EnemyDie();
