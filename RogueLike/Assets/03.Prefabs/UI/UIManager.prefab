@@ -6961,8 +6961,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25a15f5e79bb72047a217c1ae4aba42e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UI: {fileID: 1385962185096903943}
-  speed: {fileID: 2986944420640573229}
 --- !u!114 &1042866410928606074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6982,18 +6980,20 @@ MonoBehaviour:
   HP_Bar: {fileID: 6118060910630063890}
   CurrentGem_txt: {fileID: 3305800378002782473}
   GameOverText: {fileID: 6231771255494845779}
+  GameClearPanel: {fileID: 4153310968254260497}
   GameOverAnimation: {fileID: 652982145947006629}
   SkillIcon: {fileID: 5398054907245170554}
   Level_stats: {fileID: 8539143840552497938}
   HP_stats: {fileID: 4946386290623115245}
   power_stats: {fileID: 2857657633397156484}
-  mobility_stats: {fileID: 0}
+  mobility_stats: {fileID: 2986944420640573229}
   attackSpeed_stats: {fileID: 1879098961629477819}
   Gem_modifier: {fileID: 6124453445605848419}
   HP_modifier: {fileID: 5647291476360568648}
   power_modifier: {fileID: 1737066514755987358}
   mobility_modifier: {fileID: 8477309376994661578}
   attackSpeed_modifier: {fileID: 4382981275230636721}
+  MainUI: {fileID: 1385962185096903943}
 --- !u!1 &7463487406808968135
 GameObject:
   m_ObjectHideFlags: 0
@@ -7539,7 +7539,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: E
+  m_text: A
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
