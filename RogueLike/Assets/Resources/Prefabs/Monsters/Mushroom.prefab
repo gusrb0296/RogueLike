@@ -194,6 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d210821747cb0c45a42e18eacca31a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  room: {fileID: 0}
   health: 80
   walkspeed: 1
   runSpeed: 1.5
@@ -203,7 +204,7 @@ MonoBehaviour:
   attackRate: 2
   detectDistnce: 5
   attackDistance: 3
-  wanderWaitTime: 2
+  wanderWaitTime: 1
   wanderMaxTime: 3
   groundLayer:
     serializedVersion: 2
