@@ -55,6 +55,7 @@ public class UIManager : MonoBehaviour
     DataManager dataManager;
     private bool IsGameOver;
     public GameObject MainUI;
+    private Sprite basicSkillIcon;
 
     private void Start()
     {
@@ -80,7 +81,7 @@ public class UIManager : MonoBehaviour
         attackSpeed_stats.text = attackSpeed.ToString();
 
         HP_Bar.type = Image.Type.Filled;
-
+        basicSkillIcon = SkillIcon.sprite;
     }
 
 
@@ -169,6 +170,7 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene("StartScene");
         UIClose(MainUI);
         UIClose(GameOverText);
+        SkillIcon.sprite = basicSkillIcon;
     }
 
     public void MainUIActive()
