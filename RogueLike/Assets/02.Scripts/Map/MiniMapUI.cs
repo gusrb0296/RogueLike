@@ -50,7 +50,7 @@ public class MiniMapUI : MonoBehaviour
 
                 GameObject go = null;
 
-                if (!info.Owner.IsClear)
+                if (!info.Owner.IsVisited)
                 {
                     go = Instantiate(MapUI_Question, transform);
                 }
