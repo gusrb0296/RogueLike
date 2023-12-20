@@ -5,7 +5,7 @@ using UnityEngine;
 public class BossMonster : MonoBehaviour, IDamagable
 {
     #region Factors
-    public BattleRoom room;
+    public Room room;
 
     [Header("Stats")]
     public float health;
@@ -190,5 +190,6 @@ public class BossMonster : MonoBehaviour, IDamagable
         yield return new WaitForSecondsRealtime(.7f);
         GameManager.instance.UiManager.GameClearAnim();
         Destroy(gameObject);
+        room.RoomClear();
     }
 }
