@@ -159,13 +159,11 @@ public class UIManager : MonoBehaviour
 
     private void GameOver()
     {
-        Time.timeScale = 0f;
         IsGameOver = true;
     }
 
     public void ReturnToStartScene()
     {
-        Time.timeScale = 1f;
         IsGameOver = false;
         //Scene currentScene = SceneManager.GetActiveScene();
         SceneManager.LoadScene("StartScene");
