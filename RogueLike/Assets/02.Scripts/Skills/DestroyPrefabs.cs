@@ -10,6 +10,4 @@ public class DestroyPrefabs : MonoBehaviour
         Destroy(gameObject, _destroyTime);
     }
 
-    
-
 }

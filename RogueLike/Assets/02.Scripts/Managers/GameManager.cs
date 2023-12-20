@@ -46,6 +46,7 @@ public class GameManager : MonoBehaviour
         InitializeStage();
         InitializeUI();
         InitializeAudio();
+        DataManager.InitializeSkillData();
     }
     private void InitializeManager()
     {

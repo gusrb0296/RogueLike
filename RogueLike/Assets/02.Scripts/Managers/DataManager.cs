@@ -16,6 +16,9 @@ public class DataManager : MonoBehaviour
     #region Player Global Variable
     private GameObject player;
 
+    public List<SkillItemData> SkillDataList = new List<SkillItemData>();
+
+
     public GameObject Player
     {
         get { return player; }
@@ -78,9 +81,11 @@ public class DataManager : MonoBehaviour
     public void ChangeHealth(float value)
     {
         PlayerCurrentStats.currentHealth = Mathf.Clamp(PlayerCurrentStats.currentHealth - (int)value, 0, PlayerCurrentStats.maxHealth);
-        Debug.Log("데미지를 입었습니다 " + PlayerCurrentStats.currentHealth);
+        Debug.Log("데미지를 입었습니다 " + value);
         Debug.Log("현재체력  " + PlayerCurrentStats.currentHealth);
-        if(PlayerCurrentStats.currentHealth == 0)
+        GameManager.instance.UiManager.ChangeDisplayHealth();
+
+        if (PlayerCurrentStats.currentHealth == 0)
         {
             Die();
         }
@@ -94,6 +99,7 @@ public class DataManager : MonoBehaviour
     private void Die()
     {
         Player.GetComponentInChildren<Animator>().SetBool("IsDie", true);
+        GameManager.instance.UiManager.GameOverAnim();
     }
     #endregion
 
@@ -102,6 +108,32 @@ public class DataManager : MonoBehaviour
     #endregion
 
     #region Item Data
+    public void InitializeSkillData()
+    {
+        // Bolt
+        SkillDataList[0].Atk = 10f;
+        SkillDataList[0].CoolTime = 0.5f;
+        SkillDataList[0].SkillSpeed = 10f;
 
+        // CrossedWave
+        SkillDataList[1].Atk = 10f;
+        SkillDataList[1].CoolTime = 0.5f;
+        SkillDataList[1].SkillSpeed = 10f;
+
+        // FastSlash
+        SkillDataList[2].Atk = 10f;
+        SkillDataList[2].CoolTime = 0.5f;
+        SkillDataList[2].SkillSpeed = 10f;
+
+        // FireBall
+        SkillDataList[3].Atk = 10f;
+        SkillDataList[3].CoolTime = 0.5f;
+        SkillDataList[3].SkillSpeed = 10f;
+
+        // Laser
+        SkillDataList[4].Atk = 10f;
+        SkillDataList[4].CoolTime = 0.5f;
+        SkillDataList[4].SkillSpeed = 10f;
+    }
     #endregion
 }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5484783671480657231}
   - component: {fileID: 8959147566731726239}
   - component: {fileID: 410758358021670180}
+  - component: {fileID: -2010224797688916921}
   m_Layer: 0
   m_Name: Effect_FireBall
   m_TagString: Untagged
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: e763d2e7675678c4c9df170ee948c073, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -120,3 +121,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _destroyTime: 3
+--- !u!114 &-2010224797688916921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6848153838122083876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa3a33dd6a175784582e20141fcfac00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shakeAmount: 1
+  _shakeTime: 0.5

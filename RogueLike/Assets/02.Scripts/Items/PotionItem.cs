@@ -5,10 +5,10 @@ using UnityEngine;
 public class PotionItem : MonoBehaviour
 {
     public PotionItemData PotionData;
-    [SerializeField] private SkillManager _skillItemDataList;
+    //[SerializeField] private SkillManager _skillItemDataList;
+    
     private SpriteRenderer _spriteRenderer;
     private CircleCollider2D _circleCollider;
-
     private float _originAtk;
     private float _originSpeed;
     private float _originAttackSpeed;
@@ -54,6 +54,8 @@ public class PotionItem : MonoBehaviour
     }
 
     #region Item
+    
+    // Hp 회복
     public void HpItem()
     {
         // 플레이어 체력 증가
@@ -63,17 +65,18 @@ public class PotionItem : MonoBehaviour
         Destroy(gameObject);
     }
 
+    // 5초 동안, 기본공격, 스킬 데미지 두배
     public void PowerItem()
     {
         _spriteRenderer.color = new Color(255, 255, 255, 0);
         _circleCollider.enabled = false;
 
-        // 플레이어 기본 공격x 2
+        // 기본 공격
         _originAtk = GameManager.instance.DataManager.PlayerCurrentStats.attackSO.power;
         GameManager.instance.UpdatePlayerAttackSODatas(0, _originAtk, 0);
 
-        // 스킬 공격x2
-        foreach (SkillItemData skill in _skillItemDataList.skillDataList)
+        // 스킬 공격
+        foreach (SkillItemData skill in GameManager.instance.DataManager.SkillDataList)
         {
             skill.Atk *= 2;
         }
@@ -81,25 +84,26 @@ public class PotionItem : MonoBehaviour
         StartCoroutine(RestorePower());
     }
 
+    // 데미지 복구
     IEnumerator RestorePower()
     {
         yield return new WaitForSeconds(5f);
 
-        // 기본 공격 복구
+        // 기본 공격
         GameManager.instance.UpdatePlayerAttackSODatas(0, -_originAtk, 0);
 
-        // 스킬 복구
-        foreach (SkillItemData skill in _skillItemDataList.skillDataList)
+        // 스킬
+        foreach (SkillItemData skill in GameManager.instance.DataManager.SkillDataList)
         {
             skill.Atk /= 2;
         }
 
         Destroy(gameObject);
     }
-
+    
+    // 5초 동안, 스피드 두배
     public void SpeedItem()
     {
-        // 플레이어 속도x2
         _spriteRenderer.color = new Color(255, 255, 255, 0);
         _circleCollider.enabled = false;
 
@@ -109,28 +113,29 @@ public class PotionItem : MonoBehaviour
         StartCoroutine(RestoreSpeed());
     }
 
+    // 스피드 복구
     IEnumerator RestoreSpeed()
     {
         yield return new WaitForSeconds(5f);
 
-        // 스피드 복구
         GameManager.instance.UpdatePlayerStatsDatas(0, 0, -(int)_originSpeed);
 
         Destroy(gameObject);
     }
 
+    // 5초 동안, 기본공격, 스킬 속도 두배
     public void AttackSpeedItem()
     {
         _spriteRenderer.color = new Color(255, 255, 255, 0);
         _circleCollider.enabled = false;
 
-        // 플레이어 기본 공격속도 x 2 코드
+        // 기본 공격
         _originAttackSpeed = GameManager.instance.DataManager.PlayerCurrentStats.attackSO.attackSpeed;
         _changeAttackSpeed = _originAttackSpeed / 2;
         GameManager.instance.UpdatePlayerAttackSODatas(-_changeAttackSpeed, 0, 0);
 
-        // 스킬 공격속도x2
-        foreach (SkillItemData skill in _skillItemDataList.skillDataList)
+        // 스킬
+        foreach (SkillItemData skill in GameManager.instance.DataManager.SkillDataList)
         {
             skill.CoolTime /= 2;
         }
@@ -139,6 +144,7 @@ public class PotionItem : MonoBehaviour
 
     }
 
+    // 공격 속도 복구
     IEnumerator RestoreAttackSpeed()
     {
         yield return new WaitForSeconds(5f);
@@ -147,7 +153,7 @@ public class PotionItem : MonoBehaviour
         GameManager.instance.UpdatePlayerAttackSODatas(_changeAttackSpeed, 0, 0);
 
         // 스킬 속도 복구
-        foreach (SkillItemData skill in _skillItemDataList.skillDataList)
+        foreach (SkillItemData skill in GameManager.instance.DataManager.SkillDataList)
         {
             skill.CoolTime *= 2;
         }
