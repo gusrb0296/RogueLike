@@ -9,10 +9,6 @@ public class SpawnMonsters : MonoBehaviour
     private int monsterCount = 4;
     private void Awake()
     {
-        //for(int i = 0; i < monsterCount; i++)
-        //{
-        //    monsters.Add(Resources.Load<GameObject>("Prefabs\\Monsters\\Slayer"));
-        //}
         monsters = Resources.LoadAll<GameObject>("Prefabs\\Monsters").ToList();
     }
 
