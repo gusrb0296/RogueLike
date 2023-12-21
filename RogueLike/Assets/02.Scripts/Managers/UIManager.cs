@@ -181,5 +181,6 @@ public class UIManager : MonoBehaviour
     public void MainUIActive()
     {
         UIOpen(MainUI);
+        UIClose(GameClearPanel);
     }
 }
