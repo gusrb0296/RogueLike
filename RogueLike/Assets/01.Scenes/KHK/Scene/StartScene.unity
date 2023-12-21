@@ -2080,7 +2080,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.05, y: 0.75}
   m_AnchorMax: {x: 0.95, y: 0.95}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 20, y: -67}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2142167811
@@ -2103,7 +2103,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: YOUR GAME
+  m_text: Skull soul 4
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c74b8a5e602f6ae4e805a733c0ad21ed, type: 2}
   m_sharedMaterial: {fileID: -5203204120510181078, guid: c74b8a5e602f6ae4e805a733c0ad21ed, type: 2}
