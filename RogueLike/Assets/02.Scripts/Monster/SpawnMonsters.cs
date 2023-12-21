@@ -27,13 +27,15 @@ public class SpawnMonsters : MonoBehaviour
             }
         }
     }
-    public void SpawnBoss(Vector2 spawnpositions, Room room)
+    public GameObject SpawnBoss(Vector2 spawnpositions, Room room)
     {
+        GameObject monster = null;
         if (spawnpositions != null)
         {
-            GameObject monster = Instantiate(boss);
+            monster = Instantiate(boss);
             monster.transform.position = spawnpositions;
             monster.GetComponent<BossMonster>().room = room;
         }
+        return monster;
     }
 }

@@ -29,7 +29,11 @@ public class BossRoom : Room
 
     public void SpawnBoss()
     {
-        GameManager.instance.StageManager.GetComponent<SpawnMonsters>().
+        GameObject boss = GameManager.instance.StageManager.GetComponent<SpawnMonsters>().
             SpawnBoss(new Vector2(transform.position.x, transform.position.y + 1), this);
+
+        GameObject bossProgressBar = Resources.Load<GameObject>("Prefabs/Map/UI/BossProgressBar");
+        GameObject go = Instantiate(bossProgressBar);
+        go.GetComponent<BossHPUI>().SetTarget(boss);
     }
 }

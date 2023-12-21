@@ -9,7 +9,7 @@ public class BossMonster : MonoBehaviour, IDamagable
 
     [Header("Stats")]
     public float health;
-    private float currentHealth;
+    public float currentHealth;
     public float speed;
 
     [Header("Reward")]
