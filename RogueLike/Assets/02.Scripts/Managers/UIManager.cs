@@ -169,6 +169,8 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene("StartScene");
         UIClose(MainUI);
         UIClose(GameOverText);
+
+        GameManager.instance.AudioManager.BGM("startSceneBGM");
     }
 
     public void MainUIActive()
