@@ -6,6 +6,7 @@ public class PlayerCollision : MonoBehaviour, IDamagable
 {
     [HideInInspector] public SkillItemData SkillData;
     private bool _isInvincibility;
+    private bool _isDie;
 
     private Animator _animator;
     private CharacterStats _stats;
@@ -24,6 +25,7 @@ public class PlayerCollision : MonoBehaviour, IDamagable
     {
         SkillData = null;
         _isInvincibility = false;
+        _isDie = false;
     }
 
 
@@ -40,6 +42,7 @@ public class PlayerCollision : MonoBehaviour, IDamagable
     private void ReceiveDamage(float damage)
     {
         if (_isInvincibility) return;
+        if (_isDie) return;
 
         GameManager.instance.DataManager.ChangeHealth(damage);
 
@@ -65,5 +68,10 @@ public class PlayerCollision : MonoBehaviour, IDamagable
     public void TakeDamage(float damage)
     {
         ReceiveDamage(damage);
+    }
+
+    public void ChangeIsDie(bool active)
+    {
+        _isDie = active;
     }
 }
