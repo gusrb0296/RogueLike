@@ -97,7 +97,7 @@ public class GameManager : MonoBehaviour
     {
         DataManager.UpdatePlayerAttckSOData(atkSpeed, power, range);
     }
-    public void UpdatePlayerStatsDatas(int maxHealth,int health, int speed)
+    public void UpdatePlayerStatsDatas(int maxHealth,int health, float speed)
     {
         DataManager.UpdatePlayerStatsData(maxHealth ,health, speed);
     }

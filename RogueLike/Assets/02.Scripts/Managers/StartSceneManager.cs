@@ -6,15 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class StartSceneManager : MonoBehaviour
 {
-
-    public GameObject UI;
-    public TextMeshProUGUI speed;
-    
     public void ToMainScene()
     {
         SceneManager.LoadScene("MainScene_KHK");
-        UI.SetActive(true);
-        speed.text = GameManager.instance.DataManager.PlayerCurrentStats.speed.ToString();
+        GameManager.instance.UiManager.MainUIActive(); // 씬 넘어갈 때 UI 활성화
+        GameManager.instance.PlayerDataInitialiez(); // 데이터 초기화
+
     }
 
     public void QuitGame()
