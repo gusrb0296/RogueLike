@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - Item
+  - Obstacle
+  - Bullet
+  - Spawn
+  - Interactable
   layers:
   - Default
   - TransparentFX
@@ -11,14 +17,14 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Ground
+  - Monster
+  - Monster_Projectile
+  - Gem
+  - Boss
+  - Interactable
+  - Player_Projectile
   - 
   - 
   - 
