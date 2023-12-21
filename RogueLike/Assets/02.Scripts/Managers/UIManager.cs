@@ -58,6 +58,7 @@ public class UIManager : MonoBehaviour
     private Sprite basicSkillIcon;
     public Image disable;
 
+    public GameObject statsWindow;
     private void Start()
     {
         dataManager = GameManager.instance.DataManager;
@@ -143,7 +144,7 @@ public class UIManager : MonoBehaviour
     public void ChangeDisplayHealth()
     {
         HP_Bar.fillAmount = (float)dataManager.PlayerCurrentStats.currentHealth / (float)dataManager.PlayerCurrentStats.maxHealth;
-        HP_txt.text = dataManager.PlayerCurrentStats.currentHealth + " / " + maxHealth;
+        HP_txt.text = dataManager.PlayerCurrentStats.currentHealth + " / " + dataManager.PlayerCurrentStats.maxHealth;
     }
 
     public void GameOverAnim()

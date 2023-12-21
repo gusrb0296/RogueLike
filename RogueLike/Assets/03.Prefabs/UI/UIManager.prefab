@@ -6846,7 +6846,7 @@ RectTransform:
   - {fileID: 9222618999881973134}
   - {fileID: 1038654958805834173}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -6962,6 +6962,7 @@ MonoBehaviour:
   attackSpeed_modifier: {fileID: 4382981275230636721}
   MainUI: {fileID: 1385962185096903943}
   disable: {fileID: 3304744568390135736}
+  statsWindow: {fileID: 5532507561692139363}
 --- !u!1 &7463487406808968135
 GameObject:
   m_ObjectHideFlags: 0
