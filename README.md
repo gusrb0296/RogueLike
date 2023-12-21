@@ -1,6 +1,24 @@
-# RogueLike
+# 🖥️ Skull Soul4
 
-## 만든 기능들 
+## 📆 Develop Schedule
+* 23.12.14 ~ 23.12.21
+
+## ⚙️ Environment
+- `Unity 2022.3.2`
+- **IDE** : Visual Studio 2019, 2022, MonoDevelop
+- **VCS** : Git (GitHub Desktop)
+- **Envrionment** : PC `only`
+- **Resolution** :	1920 x 1080 `FHD`
+
+## 👤 Collaborator - Team Intro
+- 팀장  `성연호` - 몬스터
+- 팀원1 `김동현` - 맵 자동 생성
+- 팀원2 `고민수` - 플레이어
+- 팀원3 `고현규` - UI
+- 팀원4 `이준호` - GameManager
+- 팀원5 `나재민` - 아이템, 스킬
+
+## 🎮 만든 기능들 
 1. 랜덤 던전 생성
 2. 캐릭터 조작
 3. 아이템 수집
