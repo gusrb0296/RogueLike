@@ -123,7 +123,7 @@ public class StatsWindows : MonoBehaviour
         UpdatePlayerStats();
         UpdateStatsWindow();
         UpdateStatsModifier();
-        GameManager.instance.PlayerSoundEffects("buttonClick");
+        GameManager.instance.AudioManager.SFX("buttonClick");
     }
 
     public void StatsCancelButton()
@@ -132,7 +132,7 @@ public class StatsWindows : MonoBehaviour
         UpdatePlayerStats();
         UpdateStatsWindow();
         UpdateStatsModifier();
-        GameManager.instance.PlayerSoundEffects("buttonClick");
+        GameManager.instance.AudioManager.SFX("buttonClick");
     }
     #endregion
 
@@ -158,7 +158,7 @@ public class StatsWindows : MonoBehaviour
         }
         UpdateStatsModifier();
         UpdateStatsWindow();
-        GameManager.instance.PlayerSoundEffects("buttonClick");
+        GameManager.instance.AudioManager.SFX("buttonClick");
     }
 
     public void ModifierCountDown(int index)
@@ -189,7 +189,7 @@ public class StatsWindows : MonoBehaviour
         }
         UpdateStatsModifier();
         UpdateStatsWindow();
-        GameManager.instance.PlayerSoundEffects("buttonClick");
+        GameManager.instance.AudioManager.SFX("buttonClick");
     }
     #endregion
 }
