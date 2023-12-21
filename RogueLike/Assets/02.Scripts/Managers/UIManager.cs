@@ -8,11 +8,11 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    // °ÔÀÓ ³» UI °ü¸®
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ UI ï¿½ï¿½ï¿½ï¿½
 
-    // È­¸é¿¡ Ç¥½ÃµÇ´Â UIÀÇ ÃÊ±âÈ­, °µ½Å, ¼û±è µîÀ» Ã³¸®
+    // È­ï¿½é¿¡ Ç¥ï¿½ÃµÇ´ï¿½ UIï¿½ï¿½ ï¿½Ê±ï¿½È­, ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½
 
-    // »ç¿ëÀÚ ÀÔ·Â¿¡ µû¸¥ ÀÌº¥Æ® Ã³¸® ´ã´ç
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·Â¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ìºï¿½Æ® Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½
 
     public bool GameIsPaused = false;
     public GameObject PauseMenuPanel;
@@ -55,6 +55,8 @@ public class UIManager : MonoBehaviour
     DataManager dataManager;
     private bool IsGameOver;
     public GameObject MainUI;
+    private Sprite basicSkillIcon;
+    public Image disable;
 
     private void Start()
     {
@@ -68,11 +70,11 @@ public class UIManager : MonoBehaviour
 
 
 
-        //±âº» UI¿¡ °ªµéÀÌ º¸ÀÌ°Ô ÃÊ±âÈ­, Setting to can see UI Stats
+        //ï¿½âº» UIï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì°ï¿½ ï¿½Ê±ï¿½È­, Setting to can see UI Stats
         //HP_txt.text = currentHealth + " / " + maxHealth;
 
 
-        //Stats ¼³Á¤¿¡ °ªµéÀÌ º¸ÀÌ°Ô ¼³Á¤
+        //Stats ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì°ï¿½ ï¿½ï¿½ï¿½ï¿½
         Level_stats.text = Level.ToString();
         HP_stats.text = maxHealth.ToString();
         power_stats.text = power.ToString();
@@ -80,7 +82,7 @@ public class UIManager : MonoBehaviour
         attackSpeed_stats.text = attackSpeed.ToString();
 
         HP_Bar.type = Image.Type.Filled;
-
+        basicSkillIcon = SkillIcon.sprite;
     }
 
 
@@ -105,10 +107,10 @@ public class UIManager : MonoBehaviour
             ReturnToStartScene();
         }
 
-        //Update¿¡¼­ È¹µæ½Ã·Î ¼öÁ¤ ÇÊ¿äÇÔ.
+        //Updateï¿½ï¿½ï¿½ï¿½ È¹ï¿½ï¿½Ã·ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¿ï¿½ï¿½ï¿½.
         CurrentGem_txt.text = dataManager.PlayerCurrentGold.ToString();
 
-        //HP¹Ù °ÔÀÌÁö º¯µ¿
+        //HPï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         ChangeDisplayHealth();
     }
 
@@ -116,7 +118,7 @@ public class UIManager : MonoBehaviour
     {
         UIClose(PauseMenuPanel);
         Time.timeScale = 1f;
-        Debug.Log("°ÔÀÓ Àç°³");
+        Debug.Log("ï¿½ï¿½ï¿½ï¿½ ï¿½ç°³");
         GameIsPaused = false;
     }
 
@@ -124,7 +126,7 @@ public class UIManager : MonoBehaviour
     {
         UIOpen(PauseMenuPanel);
         Time.timeScale = 0f;
-        Debug.Log("°ÔÀÓ Á¤Áö");
+        Debug.Log("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
         GameIsPaused = true;
     }
 
@@ -171,6 +173,8 @@ public class UIManager : MonoBehaviour
         UIClose(GameOverText);
 
         GameManager.instance.AudioManager.BGM("startSceneBGM");
+        Resume();
+        SkillIcon.sprite = basicSkillIcon;
     }
 
     public void MainUIActive()
