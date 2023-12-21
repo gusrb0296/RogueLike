@@ -26,7 +26,11 @@
 <p align="center">
   <img src="https://github.com/gusrb0296/RogueLike/assets/149379194/5df9b6bc-7749-419b-af46-381029da1bd7" width="49%"/>
   <img src="https://github.com/gusrb0296/RogueLike/assets/149379194/8241f9e5-5444-4e26-94ec-926bb30ba1ec" width="49%"/>
-  </p>
+</p>
+<p align="center">
+  <img src="https://github.com/gusrb0296/RogueLike/assets/149379194/0d664d37-db47-4fc0-b588-7a0ad72db896" width="49%"/>
+  <img src="https://github.com/gusrb0296/RogueLike/assets/149379194/8d981c75-96af-4cab-a6f3-aab2d8acfeb" width="49%"/>
+</p>
 <p align="center">
   <img src="https://github.com/gusrb0296/RogueLike/assets/149379194/fd97cdd8-2849-458d-93ce-ba2dd2542aac" width="49%"/>
   <img src="https://github.com/gusrb0296/RogueLike/assets/149379194/cc58fc1c-b94e-43ef-a821-d326926ae1b0" width="49%"/>
