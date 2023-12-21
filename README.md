@@ -18,6 +18,20 @@
 - 팀원4 `이준호` - GameManager
 - 팀원5 `나재민` - 아이템, 스킬
 
+## ▶️ 게임 스크린샷
+<p align="center">
+  <img src="https://github.com/gusrb0296/RogueLike/assets/149379194/d0d27cc1-c6cc-4eac-9e7b-b7318f62011b" width="49%"/>
+  <img src="https://github.com/gusrb0296/RogueLike/assets/149379194/22aa9a76-cfab-4c94-bb30-7d112db408c6" width="49%"/>
+</p>
+<p align="center">
+  <img src="https://github.com/gusrb0296/RogueLike/assets/149379194/5df9b6bc-7749-419b-af46-381029da1bd7" width="49%"/>
+  <img src="https://github.com/gusrb0296/RogueLike/assets/149379194/8241f9e5-5444-4e26-94ec-926bb30ba1ec" width="49%"/>
+  </p>
+<p align="center">
+  <img src="https://github.com/gusrb0296/RogueLike/assets/149379194/fd97cdd8-2849-458d-93ce-ba2dd2542aac" width="49%"/>
+  <img src="https://github.com/gusrb0296/RogueLike/assets/149379194/cc58fc1c-b94e-43ef-a821-d326926ae1b0" width="49%"/>
+</p>
+
 ## 🎮 만든 기능들 
 1. 랜덤 던전 생성
 2. 캐릭터 조작
