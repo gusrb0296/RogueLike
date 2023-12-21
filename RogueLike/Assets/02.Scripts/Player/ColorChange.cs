@@ -14,7 +14,7 @@ public class ColorChange : MonoBehaviour
 
     private void Awake()
     {
-        _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        _spriteRenderer = GameManager.instance.DataManager.Player.GetComponentInChildren<SpriteRenderer>();
     }
 
 

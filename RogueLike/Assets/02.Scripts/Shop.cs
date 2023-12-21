@@ -6,10 +6,16 @@ using UnityEngine;
 public class Shop : MonoBehaviour, IInteractable
 {
     public TextMeshProUGUI descText;
-    public GameObject testShop;
+    private GameObject testShop;
+
+    private void Awake()
+    {
+        testShop = GameManager.instance.UiManager.statsWindow;
+    }
+
     public void OnInteract(bool active)
     {
-        //TODO: 상점 열기
+        if (testShop == null) return;
         testShop.SetActive(active);
     }
 

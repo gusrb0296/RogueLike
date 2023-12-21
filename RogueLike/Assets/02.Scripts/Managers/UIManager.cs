@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    // °ÔÀÓ ³» UI °ü¸®
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ UI ï¿½ï¿½ï¿½ï¿½
 
-    // È­¸é¿¡ Ç¥½ÃµÇ´Â UIÀÇ ÃÊ±âÈ­, °µ½Å, ¼û±è µîÀ» Ã³¸®
+    // È­ï¿½é¿¡ Ç¥ï¿½ÃµÇ´ï¿½ UIï¿½ï¿½ ï¿½Ê±ï¿½È­, ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½
 
-    // »ç¿ëÀÚ ÀÔ·Â¿¡ µû¸¥ ÀÌº¥Æ® Ã³¸® ´ã´ç
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·Â¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ìºï¿½Æ® Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½
 
     public bool GameIsPaused = false;
     public GameObject PauseMenuPanel;
@@ -26,59 +27,64 @@ public class UIManager : MonoBehaviour
     public GameObject GameClearPanel;
     public Animator GameOverAnimation;
     public Image SkillIcon;
-    private float currentHealth;
-    private int currentGem;
-    private int needLvUpGem;
 
-    [Header("Stats InterFace")]
-    public TextMeshProUGUI Level_stats;
-    public TextMeshProUGUI HP_stats;
-    public TextMeshProUGUI power_stats;
-    public TextMeshProUGUI mobility_stats;
-    public TextMeshProUGUI attackSpeed_stats;
+    //private float currentHealth;
+    //private int currentGem;
+    //private int needLvUpGem;
 
-    [Header("Stats Modifier")]
-    public TextMeshProUGUI Gem_modifier;
-    public TextMeshProUGUI HP_modifier;
-    public TextMeshProUGUI power_modifier;
-    public TextMeshProUGUI mobility_modifier;
-    public TextMeshProUGUI attackSpeed_modifier;
+    //[Header("Stats InterFace")]
+    //public TextMeshProUGUI Level_stats;
+    //public TextMeshProUGUI HP_stats;
+    //public TextMeshProUGUI power_stats;
+    //public TextMeshProUGUI mobility_stats;
+    //public TextMeshProUGUI attackSpeed_stats;
 
-    [HideInInspector]
-    private float power;
-    private float mobility = 0.5f;
-    private float attackSpeed;
-    private int Level = 1;
-    private int maxHealth;
+    //[Header("Stats Modifier")]
+    //public TextMeshProUGUI Gem_modifier;
+    //public TextMeshProUGUI HP_modifier;
+    //public TextMeshProUGUI power_modifier;
+    //public TextMeshProUGUI mobility_modifier;
+    //public TextMeshProUGUI attackSpeed_modifier;
+
+    //[HideInInspector]
+    //private float power;
+    //private float mobility = 0.5f;
+    //private float attackSpeed;
+    //private int Level = 1;
+    //private int maxHealth;
 
     DataManager dataManager;
+    private bool IsGameOver;
+    public GameObject MainUI;
+    private Sprite basicSkillIcon;
+    public Image disable;
 
-
+    public GameObject statsWindow;
     private void Start()
     {
         dataManager = GameManager.instance.DataManager;
 
-        maxHealth = dataManager.PlayerCurrentStats.maxHealth;
-        power = dataManager.PlayerCurrentStats.attackSO.power;
-        attackSpeed = dataManager.PlayerCurrentStats.attackSO.attackSpeed;
-        //mobility = dataManager.PlayerCurrentStats.speed;
-        currentHealth = dataManager.PlayerCurrentStats.currentHealth;
+        //maxHealth = dataManager.PlayerCurrentStats.maxHealth;
+        //power = dataManager.PlayerCurrentStats.attackSO.power;
+        //attackSpeed = dataManager.PlayerCurrentStats.attackSO.attackSpeed;
+        ////mobility = dataManager.PlayerCurrentStats.speed;
+        //currentHealth = dataManager.PlayerCurrentStats.currentHealth;
 
 
 
-        //±âº» UI¿¡ °ªµéÀÌ º¸ÀÌ°Ô ÃÊ±âÈ­, Setting to can see UI Stats
-        HP_txt.text = currentHealth + " / " + maxHealth;
+        ////ï¿½âº» UIï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì°ï¿½ ï¿½Ê±ï¿½È­, Setting to can see UI Stats
+        ////HP_txt.text = currentHealth + " / " + maxHealth;
 
 
-        //Stats ¼³Á¤¿¡ °ªµéÀÌ º¸ÀÌ°Ô ¼³Á¤
-        Level_stats.text = Level.ToString();
-        HP_stats.text = maxHealth.ToString();
-        power_stats.text = power.ToString();
-        //mobility_stats.text = mobility.ToString();
-        attackSpeed_stats.text = attackSpeed.ToString();
+        ////Stats ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì°ï¿½ ï¿½ï¿½ï¿½ï¿½
+        //Level_stats.text = Level.ToString();
+        //HP_stats.text = maxHealth.ToString();
+        //power_stats.text = power.ToString();
+        ////mobility_stats.text = mobility.ToString();
+        //attackSpeed_stats.text = attackSpeed.ToString();
 
         HP_Bar.type = Image.Type.Filled;
-
+        basicSkillIcon = SkillIcon.sprite;
     }
 
 
@@ -97,24 +103,32 @@ public class UIManager : MonoBehaviour
                 Pause();
             }
         }
-        //Update¿¡¼­ È¹µæ½Ã·Î ¼öÁ¤ ÇÊ¿äÇÔ.
+
+        if (Input.GetKeyDown(KeyCode.Return) && IsGameOver == true)
+        {
+            ReturnToStartScene();
+        }
+
+        //Updateï¿½ï¿½ï¿½ï¿½ È¹ï¿½ï¿½Ã·ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¿ï¿½ï¿½ï¿½.
         CurrentGem_txt.text = dataManager.PlayerCurrentGold.ToString();
+
+        //HPï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        ChangeDisplayHealth();
     }
 
     public void Resume()
     {
         UIClose(PauseMenuPanel);
         Time.timeScale = 1f;
-        Debug.Log("°ÔÀÓ Àç°³");
+        Debug.Log("ï¿½ï¿½ï¿½ï¿½ ï¿½ç°³");
         GameIsPaused = false;
     }
 
     private void Pause()
     {
-        GameOverAnim();
         UIOpen(PauseMenuPanel);
         Time.timeScale = 0f;
-        Debug.Log("°ÔÀÓ Á¤Áö");
+        Debug.Log("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
         GameIsPaused = true;
     }
 
@@ -131,7 +145,7 @@ public class UIManager : MonoBehaviour
     public void ChangeDisplayHealth()
     {
         HP_Bar.fillAmount = (float)dataManager.PlayerCurrentStats.currentHealth / (float)dataManager.PlayerCurrentStats.maxHealth;
-        HP_txt.text = dataManager.PlayerCurrentStats.currentHealth + " / " + maxHealth;
+        HP_txt.text = dataManager.PlayerCurrentStats.currentHealth + " / " + dataManager.PlayerCurrentStats.maxHealth;
     }
 
     public void GameOverAnim()
@@ -139,7 +153,7 @@ public class UIManager : MonoBehaviour
         UIOpen(GameOverText);
         GameOverAnimation.SetTrigger("GameOver");
 
-        Invoke("TimeScaleZero", 1.5f);
+        Invoke("GameOver", 1.5f);
     }
 
     public void GameClearAnim()
@@ -147,10 +161,27 @@ public class UIManager : MonoBehaviour
         UIOpen(GameClearPanel);
     }
 
-    private void TimeScaleZero()
+    private void GameOver()
     {
-        Time.timeScale = 0f;
+        IsGameOver = true;
     }
 
-    
+    public void ReturnToStartScene()
+    {
+        IsGameOver = false;
+        //Scene currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene("StartScene");
+        UIClose(MainUI);
+        UIClose(GameOverText);
+
+        GameManager.instance.AudioManager.BGM("startSceneBGM");
+        Resume();
+        SkillIcon.sprite = basicSkillIcon;
+    }
+
+    public void MainUIActive()
+    {
+        UIOpen(MainUI);
+        UIClose(GameClearPanel);
+    }
 }
