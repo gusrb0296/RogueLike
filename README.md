@@ -29,7 +29,7 @@
 </p>
 <p align="center">
   <img src="https://github.com/gusrb0296/RogueLike/assets/149379194/0d664d37-db47-4fc0-b588-7a0ad72db896" width="49%"/>
-  <img src="https://github.com/gusrb0296/RogueLike/assets/149379194/8d981c75-96af-4cab-a6f3-aab2d8acfeb" width="49%"/>
+  <img src="https://github.com/gusrb0296/RogueLike/assets/149379194/8d981c75-96af-4cab-a6f3-aab2d8acfebe" width="49%"/>
 </p>
 <p align="center">
   <img src="https://github.com/gusrb0296/RogueLike/assets/149379194/fd97cdd8-2849-458d-93ce-ba2dd2542aac" width="49%"/>
