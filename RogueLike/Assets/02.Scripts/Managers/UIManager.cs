@@ -27,30 +27,31 @@ public class UIManager : MonoBehaviour
     public GameObject GameClearPanel;
     public Animator GameOverAnimation;
     public Image SkillIcon;
-    private float currentHealth;
-    private int currentGem;
-    private int needLvUpGem;
 
-    [Header("Stats InterFace")]
-    public TextMeshProUGUI Level_stats;
-    public TextMeshProUGUI HP_stats;
-    public TextMeshProUGUI power_stats;
-    public TextMeshProUGUI mobility_stats;
-    public TextMeshProUGUI attackSpeed_stats;
+    //private float currentHealth;
+    //private int currentGem;
+    //private int needLvUpGem;
 
-    [Header("Stats Modifier")]
-    public TextMeshProUGUI Gem_modifier;
-    public TextMeshProUGUI HP_modifier;
-    public TextMeshProUGUI power_modifier;
-    public TextMeshProUGUI mobility_modifier;
-    public TextMeshProUGUI attackSpeed_modifier;
+    //[Header("Stats InterFace")]
+    //public TextMeshProUGUI Level_stats;
+    //public TextMeshProUGUI HP_stats;
+    //public TextMeshProUGUI power_stats;
+    //public TextMeshProUGUI mobility_stats;
+    //public TextMeshProUGUI attackSpeed_stats;
 
-    [HideInInspector]
-    private float power;
-    private float mobility = 0.5f;
-    private float attackSpeed;
-    private int Level = 1;
-    private int maxHealth;
+    //[Header("Stats Modifier")]
+    //public TextMeshProUGUI Gem_modifier;
+    //public TextMeshProUGUI HP_modifier;
+    //public TextMeshProUGUI power_modifier;
+    //public TextMeshProUGUI mobility_modifier;
+    //public TextMeshProUGUI attackSpeed_modifier;
+
+    //[HideInInspector]
+    //private float power;
+    //private float mobility = 0.5f;
+    //private float attackSpeed;
+    //private int Level = 1;
+    //private int maxHealth;
 
     DataManager dataManager;
     private bool IsGameOver;
@@ -63,24 +64,24 @@ public class UIManager : MonoBehaviour
     {
         dataManager = GameManager.instance.DataManager;
 
-        maxHealth = dataManager.PlayerCurrentStats.maxHealth;
-        power = dataManager.PlayerCurrentStats.attackSO.power;
-        attackSpeed = dataManager.PlayerCurrentStats.attackSO.attackSpeed;
-        //mobility = dataManager.PlayerCurrentStats.speed;
-        currentHealth = dataManager.PlayerCurrentStats.currentHealth;
+        //maxHealth = dataManager.PlayerCurrentStats.maxHealth;
+        //power = dataManager.PlayerCurrentStats.attackSO.power;
+        //attackSpeed = dataManager.PlayerCurrentStats.attackSO.attackSpeed;
+        ////mobility = dataManager.PlayerCurrentStats.speed;
+        //currentHealth = dataManager.PlayerCurrentStats.currentHealth;
 
 
 
-        //�⺻ UI�� ������ ���̰� �ʱ�ȭ, Setting to can see UI Stats
-        //HP_txt.text = currentHealth + " / " + maxHealth;
+        ////�⺻ UI�� ������ ���̰� �ʱ�ȭ, Setting to can see UI Stats
+        ////HP_txt.text = currentHealth + " / " + maxHealth;
 
 
-        //Stats ������ ������ ���̰� ����
-        Level_stats.text = Level.ToString();
-        HP_stats.text = maxHealth.ToString();
-        power_stats.text = power.ToString();
-        //mobility_stats.text = mobility.ToString();
-        attackSpeed_stats.text = attackSpeed.ToString();
+        ////Stats ������ ������ ���̰� ����
+        //Level_stats.text = Level.ToString();
+        //HP_stats.text = maxHealth.ToString();
+        //power_stats.text = power.ToString();
+        ////mobility_stats.text = mobility.ToString();
+        //attackSpeed_stats.text = attackSpeed.ToString();
 
         HP_Bar.type = Image.Type.Filled;
         basicSkillIcon = SkillIcon.sprite;
